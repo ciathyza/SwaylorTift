@@ -1,0 +1,6 @@
+framework module swaylortift {
+  umbrella header "swaylortift-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -22,4 +22,3 @@ public func delay(by delayTime:Timespan, qosClass:DispatchQoS.QoSClass? = nil, _
 	let dispatchQueue = qosClass != nil ? DispatchQueue.global(qos: qosClass!) : DispatchQueue.main
 	dispatchQueue.asyncAfter(deadline: DispatchTime.now() + delayTime, execute: closure)
 }
-

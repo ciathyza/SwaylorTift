@@ -1,0 +1,16 @@
+PODS:
+  - swaylortift (1.0.0)
+
+DEPENDENCIES:
+  - swaylortift (from `swaylortift.podspec`)
+
+EXTERNAL SOURCES:
+  swaylortift:
+    :path: swaylortift.podspec
+
+SPEC CHECKSUMS:
+  swaylortift: 128a85813ded97f843eae7d8f1fa62187329504d
+
+PODFILE CHECKSUM: 795a70bc96ed10668ad3e6da526dd4466c9ad383
+
+COCOAPODS: 1.6.1

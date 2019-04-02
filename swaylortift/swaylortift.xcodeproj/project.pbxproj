@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0E83E88009D2B3C2D137AC /* Pods_swaylortiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2E3559B1C36015F53CFF89 /* Pods_swaylortiftTests.framework */; };
+		33C5F4AE23B4A8F45ADB518B /* Pods_swaylortift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C210263EEED35D0952E31B7 /* Pods_swaylortift.framework */; };
 		5B61B71B22530E4C00707B73 /* swaylortift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B61B71122530E4B00707B73 /* swaylortift.framework */; };
-		5B61B72022530E4C00707B73 /* swaylortiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B61B71F22530E4C00707B73 /* swaylortiftTests.swift */; };
 		5B61B72222530E4C00707B73 /* swaylortift.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B61B71422530E4B00707B73 /* swaylortift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78369005A3B4EB9CC330C1B9 /* Metatype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78369AC3ADCD090E21504026 /* Metatype.swift */; };
 		7836904350E871C36D0B46B2 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783698AD97265CF2DADEA2F2 /* Int.swift */; };
@@ -22,6 +23,7 @@
 		78369753A5AC705F9A138AE5 /* UInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78369B441987121FA76A6B84 /* UInt.swift */; };
 		7836975C37AEEAD3546C3F82 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783693B73FD144573397E2D8 /* UIColor.swift */; };
 		7836977E6A57170BBBF3EB04 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78369084DF1F704F19039780 /* StopWatch.swift */; };
+		7836981793A3B61D30D5671C /* swaylortiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7836988C0F31E634FB5B2425 /* swaylortiftTests.swift */; };
 		783698379CC2C8BC3C34681C /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783693EA4645952A3C41F4C9 /* TimeInterval.swift */; };
 		783698928A2209A0EB5AF156 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7836935BA81C48A3BFC38672 /* Character.swift */; };
 		783698C0AAFCC97815B8904B /* FrequencyTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783698D22646176DFBE5DB27 /* FrequencyTable.swift */; };
@@ -53,12 +55,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D2E3559B1C36015F53CFF89 /* Pods_swaylortiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swaylortiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CF1EB849F7910F3D78079A0 /* Pods-swaylortiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swaylortiftTests.debug.xcconfig"; path = "Target Support Files/Pods-swaylortiftTests/Pods-swaylortiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		508D6AF398BA4F1529204088 /* Pods-swaylortiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swaylortiftTests.release.xcconfig"; path = "Target Support Files/Pods-swaylortiftTests/Pods-swaylortiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		5B61B71122530E4B00707B73 /* swaylortift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = swaylortift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B61B71422530E4B00707B73 /* swaylortift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swaylortift.h; sourceTree = "<group>"; };
 		5B61B71522530E4B00707B73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B61B71A22530E4C00707B73 /* swaylortiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swaylortiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B61B71F22530E4C00707B73 /* swaylortiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swaylortiftTests.swift; sourceTree = "<group>"; };
 		5B61B72122530E4C00707B73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C210263EEED35D0952E31B7 /* Pods_swaylortift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swaylortift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78369084DF1F704F19039780 /* StopWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		7836916B3FFF140448EF3CAD /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		7836924331D6780D64016E48 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
@@ -71,6 +76,7 @@
 		78369549197CFABFADC09DA4 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		783696A5F0D596766E502D30 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		78369840B5D892897F5C413B /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		7836988C0F31E634FB5B2425 /* swaylortiftTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = swaylortiftTests.swift; sourceTree = "<group>"; };
 		783698AD97265CF2DADEA2F2 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		783698D22646176DFBE5DB27 /* FrequencyTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyTable.swift; sourceTree = "<group>"; };
 		783699B2AB03A97541F6A2A2 /* NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
@@ -89,6 +95,8 @@
 		78369F3DA8858CD2572E9ACA /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		78369F5D8C0D8056C0F10BAD /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		78369FEBBA05BD1C5703B5D4 /* LogFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogFile.swift; sourceTree = "<group>"; };
+		C3EF0FEC4E2352B3DC6AB5D0 /* Pods-swaylortift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swaylortift.debug.xcconfig"; path = "Target Support Files/Pods-swaylortift/Pods-swaylortift.debug.xcconfig"; sourceTree = "<group>"; };
+		F27B405E1D4BE0090A658516 /* Pods-swaylortift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swaylortift.release.xcconfig"; path = "Target Support Files/Pods-swaylortift/Pods-swaylortift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C5F4AE23B4A8F45ADB518B /* Pods_swaylortift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,18 +113,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B61B71B22530E4C00707B73 /* swaylortift.framework in Frameworks */,
+				1A0E83E88009D2B3C2D137AC /* Pods_swaylortiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FA76E7BA772E3FB5FC105C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3EF0FEC4E2352B3DC6AB5D0 /* Pods-swaylortift.debug.xcconfig */,
+				F27B405E1D4BE0090A658516 /* Pods-swaylortift.release.xcconfig */,
+				4CF1EB849F7910F3D78079A0 /* Pods-swaylortiftTests.debug.xcconfig */,
+				508D6AF398BA4F1529204088 /* Pods-swaylortiftTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		5B61B70722530E4B00707B73 = {
 			isa = PBXGroup;
 			children = (
 				5B61B71322530E4B00707B73 /* swaylortift */,
 				5B61B71E22530E4C00707B73 /* swaylortiftTests */,
 				5B61B71222530E4B00707B73 /* Products */,
+				0FA76E7BA772E3FB5FC105C5 /* Pods */,
+				B01060E65014BDD8AD62E96E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,8 +165,8 @@
 		5B61B71E22530E4C00707B73 /* swaylortiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				5B61B71F22530E4C00707B73 /* swaylortiftTests.swift */,
 				5B61B72122530E4C00707B73 /* Info.plist */,
+				78369D1E7E2C9320223BCF84 /* Source */,
 			);
 			path = swaylortiftTests;
 			sourceTree = "<group>";
@@ -208,6 +232,23 @@
 			path = Structs;
 			sourceTree = "<group>";
 		};
+		78369D1E7E2C9320223BCF84 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				7836988C0F31E634FB5B2425 /* swaylortiftTests.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		B01060E65014BDD8AD62E96E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C210263EEED35D0952E31B7 /* Pods_swaylortift.framework */,
+				0D2E3559B1C36015F53CFF89 /* Pods_swaylortiftTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -226,6 +267,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B61B72522530E4C00707B73 /* Build configuration list for PBXNativeTarget "swaylortift" */;
 			buildPhases = (
+				D4F2F3CFEA68CAC77BB22680 /* [CP] Check Pods Manifest.lock */,
 				5B61B70C22530E4B00707B73 /* Headers */,
 				5B61B70D22530E4B00707B73 /* Sources */,
 				5B61B70E22530E4B00707B73 /* Frameworks */,
@@ -244,9 +286,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B61B72822530E4C00707B73 /* Build configuration list for PBXNativeTarget "swaylortiftTests" */;
 			buildPhases = (
+				136D1A8EDF4756E35726FDF8 /* [CP] Check Pods Manifest.lock */,
 				5B61B71622530E4C00707B73 /* Sources */,
 				5B61B71722530E4C00707B73 /* Frameworks */,
 				5B61B71822530E4C00707B73 /* Resources */,
+				7B403D36891EB88D485CCE49 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,6 +355,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		136D1A8EDF4756E35726FDF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swaylortiftTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B403D36891EB88D485CCE49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swaylortiftTests/Pods-swaylortiftTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/swaylortift/swaylortift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/swaylortift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swaylortiftTests/Pods-swaylortiftTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4F2F3CFEA68CAC77BB22680 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swaylortift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5B61B70D22530E4B00707B73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -353,7 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B61B72022530E4C00707B73 /* swaylortiftTests.swift in Sources */,
+				7836981793A3B61D30D5671C /* swaylortiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +605,7 @@
 		};
 		5B61B72622530E4C00707B73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3EF0FEC4E2352B3DC6AB5D0 /* Pods-swaylortift.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -516,6 +630,7 @@
 		};
 		5B61B72722530E4C00707B73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F27B405E1D4BE0090A658516 /* Pods-swaylortift.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -540,6 +655,7 @@
 		};
 		5B61B72922530E4C00707B73 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CF1EB849F7910F3D78079A0 /* Pods-swaylortiftTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = swaylortiftTests/Info.plist;
@@ -557,6 +673,7 @@
 		};
 		5B61B72A22530E4C00707B73 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 508D6AF398BA4F1529204088 /* Pods-swaylortiftTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = swaylortiftTests/Info.plist;
