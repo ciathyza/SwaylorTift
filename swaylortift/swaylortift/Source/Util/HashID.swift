@@ -291,8 +291,8 @@ open class HashID_<T>: HashIDGenerator where T: UnsignedInteger
 		while hash.count < minLength
 		{
 			shuffle(&alphabet, alphabet)
-			let lrange = Range<Int>(0 ..< half_length)
-			let rrange = Range<Int>(half_length ..< (alphabet.count))
+			let lrange = (0 ..< half_length)
+			let rrange = (half_length ..< (alphabet.count))
 			let alphabet_right = alphabet[rrange]
 			let alphabet_left = alphabet[lrange]
 			hash = Array<Char>(alphabet_right) + hash + Array<Char>(alphabet_left)
@@ -393,7 +393,7 @@ open class HashID_<T>: HashIDGenerator where T: UnsignedInteger
 		salt = salt + alphabet
 		let lsaltARange = (self.salt.count + 1) ..< salt.count
 		let lsaltRange = 0 ..< alphabet.count
-		return (Range<Int>(lsaltARange), Range<Int>(lsaltRange))
+		return (lsaltARange, lsaltRange)
 	}
 }
 
