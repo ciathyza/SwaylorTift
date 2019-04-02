@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double swaylortiftVersionNumber;
-FOUNDATION_EXPORT const unsigned char swaylortiftVersionString[];
+FOUNDATION_EXPORT double SwaylorTiftVersionNumber;
+FOUNDATION_EXPORT const unsigned char SwaylorTiftVersionString[];
 

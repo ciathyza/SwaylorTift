@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-@interface PodsDummy_swaylortift : NSObject
+@interface PodsDummy_SwaylorTift : NSObject
 @end
-@implementation PodsDummy_swaylortift
+@implementation PodsDummy_SwaylorTift
 @end

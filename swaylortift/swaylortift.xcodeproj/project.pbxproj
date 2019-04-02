@@ -387,13 +387,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-swaylortiftTests/Pods-swaylortiftTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/swaylortift/swaylortift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwaylorTift/SwaylorTift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/swaylortift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwaylorTift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

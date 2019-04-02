@@ -1,5 +1,5 @@
-framework module swaylortift {
-  umbrella header "swaylortift-umbrella.h"
+framework module SwaylorTift {
+  umbrella header "SwaylorTift-umbrella.h"
 
   export *
   module * { export * }
