@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85ebd238-6a14-493d-9f13-05f257453b5d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Log.swift" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Log.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Assert.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift.xcodeproj/project.pbxproj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,10 +15,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Log.swift">
+        <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Assert.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
-              <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+            <state relative-caret-position="495">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -67,6 +68,7 @@
         <option value="$PROJECT_DIR$/swaylortift/swaylortiftTests/swaylortiftTests.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/HashID.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Log.swift" />
+        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Assert.swift" />
       </list>
     </option>
   </component>
@@ -157,12 +159,12 @@
       <updated>1554176120661</updated>
       <workItem from="1554176124072" duration="4673000" />
       <workItem from="1554183176881" duration="235000" />
-      <workItem from="1554856277618" duration="988000" />
+      <workItem from="1554856277618" duration="1490000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5896000" />
+    <option name="totallyTimeSpent" value="6398000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="23" width="1920" height="1057" extended-state="6" />
@@ -426,8 +428,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Log.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+        <state relative-caret-position="370">
+          <caret line="112" column="79" lean-forward="true" selection-start-line="112" selection-start-column="79" selection-end-line="112" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Assert.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
