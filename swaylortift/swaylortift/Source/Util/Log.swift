@@ -50,8 +50,13 @@ public struct LogMode:OptionSet
 // ------------------------------------------------------------------------------------------------
 public struct Log
 {
+	// ----------------------------------------------------------------------------------------------------
+	// MARK: - Properties
+	// ----------------------------------------------------------------------------------------------------
+	
 	public static let DELIMITER = "----------------------------------------------------------------------------------------------------"
 	public static let DELIMITER_STRONG = "===================================================================================================="
+	public static let DEFAULT_CATEGORY = ""
 	
 	public static var mode:LogMode = .None
 	public static var enabled = true
@@ -68,105 +73,149 @@ public struct Log
 	// MARK: - Logging API
 	// ----------------------------------------------------------------------------------------------------
 	
-	public static func system(_ category:String = ">", _ items:Any...)
+	public static func system(_ items:Any...)
 	{
-		if (!enabled || logLevel.rawValue > LogLevel.System.rawValue)
-		{
-			return
-		}
+		if (!enabled || logLevel.rawValue > LogLevel.System.rawValue) { return }
+		output(DEFAULT_CATEGORY, LogLevel.System, items: items)
+	}
+	
+	
+	public static func system(category:String = DEFAULT_CATEGORY, _ items:Any...)
+	{
+		if (!enabled || logLevel.rawValue > LogLevel.System.rawValue) { return }
 		output(category, LogLevel.System, items: items)
 	}
 	
 	
-	public static func trace(_ category:String = ">", _ items:Any...)
+	public static func trace(_ items:Any...)
 	{
-		if (!enabled || logLevel.rawValue > LogLevel.Trace.rawValue)
-		{
-			return
-		}
+		if (!enabled || logLevel.rawValue > LogLevel.Trace.rawValue) { return }
+		output(DEFAULT_CATEGORY, LogLevel.Trace, items: items)
+	}
+	
+	
+	public static func trace(category:String = DEFAULT_CATEGORY, _ items:Any...)
+	{
+		if (!enabled || logLevel.rawValue > LogLevel.Trace.rawValue) { return }
 		output(category, LogLevel.Trace, items: items)
 	}
 	
 	
-	public static func debug(_ category:String = ">", _ items:Any...)
+	public static func debug(_ items:Any...)
 	{
-		if (!enabled || logLevel.rawValue > LogLevel.Debug.rawValue)
-		{
-			return
-		}
+		if (!enabled || logLevel.rawValue > LogLevel.Debug.rawValue) { return }
+		output(DEFAULT_CATEGORY, LogLevel.Debug, items: items)
+	}
+	
+	
+	public static func debug(category:String = DEFAULT_CATEGORY, _ items:Any...)
+	{
+		if (!enabled || logLevel.rawValue > LogLevel.Debug.rawValue) { return }
 		output(category, LogLevel.Debug, items: items)
 	}
 	
 	
-	public static func info(_ category:String = ">", _ items:Any...)
+	public static func info(_ items:Any...)
 	{
-		if (!enabled || logLevel.rawValue > LogLevel.Info.rawValue)
-		{
-			return
-		}
+		if (!enabled || logLevel.rawValue > LogLevel.Info.rawValue) { return }
+		output(DEFAULT_CATEGORY, LogLevel.Info, items: items)
+	}
+	
+	
+	public static func info(category:String = DEFAULT_CATEGORY, _ items:Any...)
+	{
+		if (!enabled || logLevel.rawValue > LogLevel.Info.rawValue) { return }
 		output(category, LogLevel.Info, items: items)
 	}
 	
 	
-	public static func notice(_ category:String = ">", _ items:Any...)
+	public static func notice(_ items:Any...)
 	{
-		if (!enabled || logLevel.rawValue > LogLevel.Notice.rawValue)
-		{
-			return
-		}
+		if (!enabled || logLevel.rawValue > LogLevel.Notice.rawValue) { return }
+		output(DEFAULT_CATEGORY, LogLevel.Notice, items: items)
+	}
+	
+	
+	public static func notice(category:String = DEFAULT_CATEGORY, _ items:Any...)
+	{
+		if (!enabled || logLevel.rawValue > LogLevel.Notice.rawValue) { return }
 		output(category, LogLevel.Notice, items: items)
 	}
 	
 	
-	public static func warning(_ category:String = ">", _ items:Any...)
+	public static func warning(_ items:Any...)
 	{
-		if (!enabled || logLevel.rawValue > LogLevel.Warning.rawValue)
-		{
-			return
-		}
+		if (!enabled || logLevel.rawValue > LogLevel.Warning.rawValue) { return }
+		output(DEFAULT_CATEGORY, LogLevel.Warning, items: items)
+	}
+	
+	
+	public static func warning(category:String = DEFAULT_CATEGORY, _ items:Any...)
+	{
+		if (!enabled || logLevel.rawValue > LogLevel.Warning.rawValue) { return }
 		output(category, LogLevel.Warning, items: items)
 	}
 	
 	
-	public static func error(_ category:String = ">", _ items:Any...)
+	public static func error(_ items:Any...)
 	{
-		if (!enabled || logLevel.rawValue > LogLevel.Error.rawValue)
-		{
-			return
-		}
+		if (!enabled || logLevel.rawValue > LogLevel.Error.rawValue) { return }
+		output(DEFAULT_CATEGORY, LogLevel.Error, items: items)
+	}
+	
+	
+	public static func error(category:String = DEFAULT_CATEGORY, _ items:Any...)
+	{
+		if (!enabled || logLevel.rawValue > LogLevel.Error.rawValue) { return }
 		output(category, LogLevel.Error, items: items)
 	}
 	
 	
-	public static func fatal(_ category:String = ">", _ items:Any...)
+	public static func fatal(_ items:Any...)
 	{
-		if (!enabled || logLevel.rawValue > LogLevel.Fatal.rawValue)
-		{
-			return
-		}
+		if (!enabled || logLevel.rawValue > LogLevel.Fatal.rawValue) { return }
+		output(DEFAULT_CATEGORY, LogLevel.Fatal, items: items)
+	}
+	
+	
+	public static func fatal(category:String = DEFAULT_CATEGORY, _ items:Any...)
+	{
+		if (!enabled || logLevel.rawValue > LogLevel.Fatal.rawValue) { return }
 		output(category, LogLevel.Fatal, items: items)
 	}
 	
 	
-	public static func delimiter(_ category:String = ">")
+	public static func delimiter()
 	{
-		if (!enabled)
-		{
-			return
-		}
+		if (!enabled) { return }
+		output(DEFAULT_CATEGORY, LogLevel.Trace, items: [Log.DELIMITER])
+	}
+	
+	
+	public static func delimiter(category:String = DEFAULT_CATEGORY)
+	{
+		if (!enabled) { return }
 		output(category, LogLevel.Trace, items: [Log.DELIMITER])
 	}
 	
 	
-	public static func delimiterStrong(_ category:String = ">")
+	public static func delimiterStrong()
 	{
-		if (!enabled)
-		{
-			return
-		}
+		if (!enabled) { return }
+		output(DEFAULT_CATEGORY, LogLevel.Trace, items: [Log.DELIMITER_STRONG])
+	}
+	
+	
+	public static func delimiterStrong(category:String = DEFAULT_CATEGORY)
+	{
+		if (!enabled) { return }
 		output(category, LogLevel.Trace, items: [Log.DELIMITER_STRONG])
 	}
 	
+	
+	// ----------------------------------------------------------------------------------------------------
+	// MARK: - Private Methods
+	// ----------------------------------------------------------------------------------------------------
 	
 	/**
 	 * print items to the console
@@ -175,9 +224,7 @@ public struct Log
 	private static func output(_ category:String, _ logLevel:LogLevel, items:[Any], _ file:String = #file, _ function:String = #function, _ line:Int = #line)
 	{
 		let prefix = modePrefix(Date(), file: file, function: function, line: line)
-		let stringItem = items.map {
-			"\($0)"
-		}.joined(separator: Log.separator)
+		let stringItem = items.map { "\($0)" }.joined(separator: Log.separator)
 		let line = "\(category)\(Log.prompt)\(Log.getLogLevelName(logLevel: logLevel))\(prefix)\(stringItem)"
 		Swift.print(line, terminator: Log.terminator)
 		
