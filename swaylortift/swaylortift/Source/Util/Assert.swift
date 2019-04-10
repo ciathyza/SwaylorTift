@@ -12,7 +12,7 @@ import Foundation
 ///
 /// Provides utility methods that can be used during development.
 ///
-class Assert
+public struct Assert
 {
 	///
 	/// Asserts a specific code position as being To do. Fails the app with fatal error.
