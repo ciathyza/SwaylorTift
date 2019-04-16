@@ -10,24 +10,24 @@
 import Foundation
 
 
-/**
- * Represents a list of strings which are seperated into columns. When creating a
- * new TabularText you specify the number of columns that the TabularText should have
- * and then you add as many strings as there are columns with the add() method. The
- * TabularText class cares about adding spacing to any strings so that they can be
- * easily read in a tabular format. A fixed width font is recommended for the use of
- * the output. The toString() method returns the formatted text result.
- */
+///
+/// Represents a list of strings which are seperated into columns. When creating a
+/// new TabularText you specify the number of columns that the TabularText should have
+/// and then you add as many strings as there are columns with the add() method. The
+/// TabularText class cares about adding spacing to any strings so that they can be
+/// easily read in a tabular format. A fixed width font is recommended for the use of
+/// the output. The toString() method returns the formatted text result.
+///
 public class TabularText
 {
 	//-----------------------------------------------------------------------------------------
 	// Properties
 	//-----------------------------------------------------------------------------------------
 	
-	/**
-	 * The width of a text line, in characters before the screen width is reached.
-	 * This is used to automatically calculate the column width.
-	 */
+	///
+	/// The width of a text line, in characters before the screen width is reached.
+	///	This is used to automatically calculate the column width.
+	///
 	private static var _lineWidth = 0
 	
 	private var _columns:[[String]]
@@ -46,21 +46,21 @@ public class TabularText
 	//-----------------------------------------------------------------------------------------
 	// Derrived Properties
 	//-----------------------------------------------------------------------------------------
-	
-	/**
-	 * The text of the TabularText.
-	 */
+
+	///
+	/// The text of the TabularText.
+	///
 	public var text:String
 	{
 		return toString();
 	}
 	
-	
-	/**
-	 * The width of the TabularText, in characters. this value should only be checked
-	 * after all rows have been added because the width can change depending on
-	 * different row lengths.
-	 */
+
+	///
+	/// The width of the TabularText, in characters. this value should only be checked
+	///	after all rows have been added because the width can change depending on
+	///	different row lengths.
+	///
 	public var width:Int
 	{
 		return _width;
@@ -71,23 +71,19 @@ public class TabularText
 	// Init
 	//-----------------------------------------------------------------------------------------
 	
-	/**
-	 * Creates a new TabularText instance.
-	 *
-	 * @param columns the number of columns that the TabularText should have.
-	 * @param sort If true the columns are alphabetically sorted.
-	 * @param div The String that is used to divide columns visually. If null
-	 *        a single whitespace will be used by default.
-	 * @param fill An optional String that is used to fill whitespace between
-	 *        columns. This string should only be 1 character long. If null a
-	 *        whitespace is used as the fill.
-	 * @param rowLeading Optional lead characters that any row should start with.
-	 * @param colMaxLength If this value is larger than 0, columns will be cropped
-	 *        at the length specified by this value. This can be used to prevent
-	 *        very long column texts from wrapping to the next line.
-	 * @param header An array of header items.
-	 */
-	public init(_ columns:Int, _ sort:Bool = false, _ div:String = " ", _ fill:String = " ", _ rowLeading:String = "", _ colMaxLength:Int = 0, _ header:[String]? = nil, _ hasFooter:Bool = false)
+	///
+	/// Creates a new TabularText instance.
+	///
+	/// Parameters:
+	///    - columns the number of columns that the TabularText should have.
+	///    - sort If true the columns are alphabetically sorted.
+	///    - div The String that is used to divide columns visually. If null a single whitespace will be used by default.
+	///    - fill An optional String that is used to fill whitespace between columns. This string should only be 1 character long. If null a whitespace is used as the fill.
+	///    - rowLeading Optional lead characters that any row should start with.
+	///    - colMaxLength If this value is larger than 0, columns will be cropped at the length specified by this value. This can be used to prevent very long column texts from wrapping to the next line.
+	///    - header An array of header items.
+	///
+	public init(_ columns:Int, _ sort:Bool = false, _ div:String = String.Space, _ fill:String = String.Space, _ rowLeading:String = String.Empty, _ colMaxLength:Int = 0, _ header:[String]? = nil, _ hasFooter:Bool = false)
 	{
 		_div = div
 		_fill = fill
@@ -120,14 +116,15 @@ public class TabularText
 	//-----------------------------------------------------------------------------------------
 	// Public Methods
 	//-----------------------------------------------------------------------------------------
-	
-	/**
-	 * Adds a row of Strings to the TabularText.
-	 *
-	 * @param row A row of strings to add. Every string is part of a column. If there
-	 *            are more strings specified than the ColumnText has columns, they are
-	 *            ignored.
-	 */
+
+	///
+	/// Adds a row of Strings to the TabularText.
+	///
+	/// Parameters:
+	///	 - row A row of strings to add. Every string is part of a column. If there
+	///	 are more strings specified than the ColumnText has columns, they are
+	///	 ignored.
+	///
 	public func add(_ row:[String])
 	{
 		var l = row.count
@@ -171,15 +168,13 @@ public class TabularText
 		_width += _rowLeading.count + (_columns.count - 1) * _div.count
 	}
 	
-	
-	/**
-	 * Returns a String Representation of the TabularText.
-	 *
-	 * @return A String Representation of the TabularText.
-	 */
+
+	///
+	/// Returns a String Representation of the TabularText.
+	///
 	public func toString() -> String
 	{
-		var result = ""
+		var result = String.Empty
 		let colCount = _columns.count
 		let rowCount = _columns[0].count
 		
@@ -202,7 +197,7 @@ public class TabularText
 				{
 					if (_hasHeader && r == 0) || (_hasFooter && r == rowCount - 1)
 					{
-						col[r] = TabularText.pad(str, maxLen, " ")
+						col[r] = TabularText.pad(str, maxLen, String.Space)
 					}
 					else
 					{
@@ -245,13 +240,10 @@ public class TabularText
 		return "\(result)"
 	}
 	
-	
-	/**
-	 * Calculates the text line width for use with automatic column width calculation.
-	 *
-	 * @param viewWidth
-	 * @param charWidth
-	 */
+
+	///
+	/// Calculates the text line width for use with automatic column width calculation.
+	///
 	public static func calculateLineWidth(viewWidth:Int, charWidth:Int, offset:Int = 0)
 	{
 		_lineWidth = (viewWidth / charWidth) - offset
@@ -262,9 +254,9 @@ public class TabularText
 	// Private Methods
 	//-----------------------------------------------------------------------------------------
 	
-	/**
-	 * Sorts all the arrays in _columns by using sort indices.
-	 */
+	///
+	/// Sorts all the arrays in _columns by using sort indices.
+	///
 	private static func sort(_ columns:inout [[String]], _ rowCount:Int, _ hasHeader:Bool, _ hasFooter:Bool)
 	{
 		var tmpHeader = [String]()
@@ -318,10 +310,10 @@ public class TabularText
 		}
 	}
 	
-	
-	/**
-	 * Ultility method to add whitespace padding to the specified string.
-	 */
+
+	///
+	/// Ultility method to add whitespace padding to the specified string.
+	///
 	private static func pad(_ s:String, _ maxLen:Int, _ fill:String) -> String
 	{
 		var str = s

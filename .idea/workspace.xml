@@ -2,8 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85ebd238-6a14-493d-9f13-05f257453b5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Assert.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/Podfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Local Podspecs/swaylortift.podspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Local Podspecs/swaylortift.podspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Manifest.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-swaylortiftTests/Pods-swaylortiftTests.debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-swaylortiftTests/Pods-swaylortiftTests.debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-swaylortiftTests/Pods-swaylortiftTests.release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-swaylortiftTests/Pods-swaylortiftTests.release.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/swaylortift/swaylortift-Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/swaylortift/swaylortift-Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Target Support Files/swaylortift/swaylortift.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Target Support Files/swaylortift/swaylortift.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swaylortift.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift.podspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/String.swift" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/String.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Globals.swift" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Globals.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Assert.swift" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Assert.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Dice.swift" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Dice.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/ExecutionTimer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/ExecutionTimer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/File.swift" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/File.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Interval.swift" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Interval.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/JSON.swift" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/JSON.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Log.swift" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Log.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/LogFile.swift" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/LogFile.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/StopWatch.swift" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/StopWatch.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/TabularText.swift" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/TabularText.swift" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,14 +33,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_376F691E-1DE7-422E-8FEB-915D8A8858C1" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_B048AF16-C2A9-4BCF-B8B2-C2E3EA7D378C" />
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Assert.swift">
+        <entry file="file://$PROJECT_DIR$/Podfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="225">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -39,7 +61,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Globals.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Dictionary.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Bundle.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Character.swift" />
@@ -52,23 +73,27 @@
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/UInt.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Structs/FrequencyTable.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Structs/SortedArray.swift" />
-        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Dice.swift" />
-        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/ExecutionTimer.swift" />
-        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Interval.swift" />
-        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/JSON.swift" />
-        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/LogFile.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Metatype.swift" />
-        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/StopWatch.swift" />
-        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/TabularText.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Array.swift" />
-        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/String.swift" />
-        <option value="$PROJECT_DIR$/Podfile" />
         <option value="$PROJECT_DIR$/Autumn.podspec" />
-        <option value="$PROJECT_DIR$/swaylortift.podspec" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortiftTests/swaylortiftTests.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/HashID.swift" />
-        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Log.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Assert.swift" />
+        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Dice.swift" />
+        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/ExecutionTimer.swift" />
+        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Globals.swift" />
+        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Interval.swift" />
+        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/JSON.swift" />
+        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/File.swift" />
+        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/LogFile.swift" />
+        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Log.swift" />
+        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/StopWatch.swift" />
+        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/String.swift" />
+        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/TabularText.swift" />
+        <option value="$PROJECT_DIR$/swaylortift.podspec" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/SwaylorTift.podspec" />
+        <option value="$PROJECT_DIR$/Podfile" />
       </list>
     </option>
   </component>
@@ -86,10 +111,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Cidr.FilesView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Pods" type="1d218c8b:XcodeProjectNode" />
+            </path>
             <path>
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="swaylortift" type="1d218c8b:XcodeProjectNode" />
@@ -116,7 +145,17 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Cidr.FilesView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="swaylortift" type="b2602c69:ProjectViewProjectNode" />
+              <item name="swaylor-tift" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -160,11 +199,12 @@
       <workItem from="1554176124072" duration="4673000" />
       <workItem from="1554183176881" duration="235000" />
       <workItem from="1554856277618" duration="1490000" />
+      <workItem from="1555382002041" duration="5011000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6398000" />
+    <option name="totallyTimeSpent" value="12390000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="23" width="1920" height="1057" extended-state="6" />
@@ -174,7 +214,7 @@
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4995064" visible="true" weight="0.16927083" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32938856" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -185,7 +225,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32971373" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info anchor="right" id="Json Parser" order="2" />
@@ -199,139 +239,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Int.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="843">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/TimeInterval.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1387">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/UIApplication.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/UIColor.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-128">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/UIDevice.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/UIView.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/UInt.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Structs/FrequencyTable.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="808">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Structs/SortedArray.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Dice.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/ExecutionTimer.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1635">
-          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/File.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Interval.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/JSON.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/LogFile.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Metatype.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/StopWatch.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="883">
-          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/TabularText.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="803">
-          <caret line="337" lean-forward="true" selection-start-line="337" selection-end-line="337" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Bundle.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Character.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -367,43 +274,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/NSObject.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/String.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="appcode.project-settings://ec529b46">
       <provider selected="true" editor-type-id="AppCode.ProjectSettings" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Globals.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="40" lean-forward="true" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift.podspec">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Podfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/swaylortift/swaylortiftTests/Source/swaylortiftTests.swift">
       <provider selected="true" editor-type-id="text-editor">
@@ -412,10 +284,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Dice.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/ExecutionTimer.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/HashID.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="392" column="30" lean-forward="true" selection-start-line="392" selection-start-column="30" selection-end-line="392" selection-end-column="30" />
+        <state relative-caret-position="525">
+          <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Assert.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/JSON.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2596">
+          <caret line="179" lean-forward="true" selection-start-line="179" selection-end-line="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Log.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3630">
+          <caret line="241" selection-start-line="241" selection-end-line="241" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/LogFile.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="984">
+          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/File.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Metatype.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/StopWatch.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1485">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/String.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/TabularText.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="34" lean-forward="true" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Globals.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Bundle.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
@@ -426,17 +392,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Log.swift">
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Int.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="112" column="79" lean-forward="true" selection-start-line="112" selection-start-column="79" selection-end-line="112" selection-end-column="79" />
+        <state relative-caret-position="1230">
+          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Assert.swift">
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/NSObject.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="780">
+          <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/TimeInterval.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/UIApplication.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/UIColor.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-131">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/UIDevice.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/UInt.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/UIView.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Structs/FrequencyTable.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Structs/SortedArray.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="30">
+            <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Interval.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="46" column="17" lean-forward="true" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SwaylorTift.podspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Podfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>

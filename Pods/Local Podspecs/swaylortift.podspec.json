@@ -1,6 +1,6 @@
 {
   "name": "SwaylorTift",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -9,15 +9,17 @@
   "authors": {
     "Ciathyza": "ciathyza@ciathyza.com"
   },
-  "summary": "Utils & Extensions for iOS Swift Projects.",
+  "summary": "Utils and Extensions for iOS Swift Projects.",
   "platforms": {
     "ios": "10.0"
   },
   "source": {
     "git": "https://github.com/ciathyza/swaylor-tift.git",
     "branch": "master",
-    "tag": "1.0.2"
+    "tag": "1.0.4"
   },
+  "frameworks": "UIKit",
   "source_files": "swaylortift/swaylortift/Source/**/*.{swift,h,m}",
+  "swift_version": "4.2",
   "requires_arc": true
 }

@@ -10,9 +10,9 @@
 import Foundation
 
 
-/**
- * A util class that can be used to measure time duration precisely.
- */
+///
+/// A util class that can be used to measure time duration precisely.
+///
 public class ExecutionTimer
 {
 	// ------------------------------------------------------------------------------------------------

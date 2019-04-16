@@ -10,6 +10,9 @@
 import Foundation
 
 
+///
+/// Used to invoke code blocks at certain intervals.
+///
 class Interval
 {
 	// ----------------------------------------------------------------------------------------------------

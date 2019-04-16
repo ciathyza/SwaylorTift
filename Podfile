@@ -11,7 +11,7 @@ target 'swaylortiftTests' do
 	project 'swaylortift/swaylortift.xcodeproj'
 	use_frameworks!
 	inherit! :search_paths
-	pod 'SwaylorTift', :path => 'swaylortift.podspec'
+	pod 'SwaylorTift', :path => 'SwaylorTift.podspec'
 end
 
 post_install do |installer|
