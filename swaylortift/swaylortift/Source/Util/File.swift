@@ -15,10 +15,11 @@ public class File
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Methods
 	// ----------------------------------------------------------------------------------------------------
-	
+
+	///
 	/// Appends text data to a file. If the file doesn't exist yet, it is created.
 	///
-	public class func append(filePath:String, content:String, encoding:String.Encoding = .utf16)
+	public class func append(filePath:String, content:String, encoding:String.Encoding = .utf16) -> Bool
 	{
 		if let fileHandle = FileHandle(forWritingAtPath: filePath)
 		{
@@ -37,15 +38,18 @@ public class File
 			}
 			catch
 			{
-				Log.error("Failed to write to \(filePath).")
+				Log.error(category: SWAYLOR_TIFT_NAME, "Failed to write to \(filePath).")
+				return false
 			}
 		}
+		return true
 	}
 	
 	
+	///
 	/// Deletes the file at the specified file path.
 	///
-	public class func delete(filePath:String)
+	public class func delete(filePath:String) -> Bool
 	{
 		do
 		{
@@ -53,6 +57,9 @@ public class File
 		}
 		catch
 		{
+			Log.error(category: SWAYLOR_TIFT_NAME, "Failed to delete file at \(filePath).")
+			return false
 		}
+		return true
 	}
 }

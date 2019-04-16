@@ -33,7 +33,7 @@ class JSON
 			}
 			catch
 			{
-				Log.error("Failed to write JSON data [\(encodedData)] to \"\(path)\".")
+				Log.error(category: SWAYLOR_TIFT_NAME, "Failed to write JSON data [\(encodedData)] to \"\(path)\".")
 				return false
 			}
 		}
@@ -54,7 +54,7 @@ class JSON
 		{
 			return encodedData
 		}
-		Log.error("Failed to encode \(obj).")
+		Log.error(category: SWAYLOR_TIFT_NAME, "Failed to encode \(obj).")
 		return nil
 	}
 	
@@ -97,19 +97,19 @@ class JSON
 				stream.close()
 				if let error = error
 				{
-					Log.error("Failed to write JSON data: \(error.localizedDescription)")
+					Log.error(category: SWAYLOR_TIFT_NAME, "Failed to write JSON data: \(error.localizedDescription)")
 					success = false
 				}
 			}
 			else
 			{
-				Log.error("Could not open JSON file stream at \(path).")
+				Log.error(category: SWAYLOR_TIFT_NAME, "Could not open JSON file stream at \(path).")
 				success = false
 			}
 		}
 		else
 		{
-			Log.error("Data is not a valid format for JSON serialization: \(data)")
+			Log.error(category: SWAYLOR_TIFT_NAME, "Data is not a valid format for JSON serialization: \(data)")
 			success = false
 		}
 		return success
@@ -148,7 +148,7 @@ class JSON
 		}
 		else
 		{
-			Log.error("Data is not a valid format for JSON serialization: \(data)")
+			Log.error(category: SWAYLOR_TIFT_NAME, "Data is not a valid format for JSON serialization: \(data)")
 		}
 		return nil
 	}
@@ -172,7 +172,7 @@ class JSON
 		}
 		catch
 		{
-			Log.error("Failed to deserialize JSON data: \(data).")
+			Log.error(category: SWAYLOR_TIFT_NAME, "Failed to deserialize JSON data: \(data).")
 		}
 		return [String:Any]()
 	}

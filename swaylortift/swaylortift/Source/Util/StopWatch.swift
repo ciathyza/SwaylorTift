@@ -10,6 +10,9 @@
 import Foundation
 
 
+///
+/// Stopwatch used to measure duration of code execution.
+///
 class StopWatch
 {
 	// ----------------------------------------------------------------------------------------------------
@@ -32,6 +35,9 @@ class StopWatch
 	// MARK: - Methods
 	// ----------------------------------------------------------------------------------------------------
 	
+	///
+	/// Starts the stopwatch.
+	///
 	public func start()
 	{
 		if started { return }
@@ -48,6 +54,9 @@ class StopWatch
 	}
 	
 	
+	///
+	/// Stops the stopwatch.
+	///
 	public func stop()
 	{
 		if !started { return }
@@ -60,12 +69,18 @@ class StopWatch
 	// MARK: - Class Methods
 	// ----------------------------------------------------------------------------------------------------
 	
+	///
+	/// The measured duration as (HH, MM, SS).
+	///
 	public class func secondsToHoursMinutesSeconds(seconds:Int) -> (Int, Int, Int)
 	{
 		return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
 	}
 	
 	
+	///
+	/// The measured duration as (HH, MM, SS).
+	///
 	public class func secondsToHoursMinutesSeconds(seconds:Double) -> (Int, Int, Int)
 	{
 		let (hr, minf) = modf(seconds / 3600)
@@ -74,6 +89,9 @@ class StopWatch
 	}
 	
 	
+	///
+	/// The measured duration in milliseconds.
+	///
 	public class func secondsToMilliseconds(seconds:Double) -> UInt
 	{
 		return UInt(seconds * 1000)

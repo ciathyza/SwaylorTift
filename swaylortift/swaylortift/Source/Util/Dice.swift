@@ -10,15 +10,14 @@
 import Foundation
 
 
+///
+/// Random number generations that simulate rolling dice.
+///
 public class Dice
 {
-	/**
-	 * Rolls a set of dice with the specified maximum number.
-	 *
-	 * @param maxValue The maximum value of a single die.
-	 * @param diceCount The amount of dice to roll.
-	 * @return The rolled die.
-	 */
+	///
+	/// Rolls a set of dice with the specified maximum value and dice count.
+	///
 	public class func roll(maxValue:UInt, diceCount:UInt = 1) -> UInt
 	{
 		var v:UInt = 0;

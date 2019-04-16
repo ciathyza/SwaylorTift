@@ -10,6 +10,9 @@
 import Foundation
 
 
+///
+/// Represents a log file to which log data can be written to.
+///
 public class LogFile
 {
 	// ----------------------------------------------------------------------------------------------------
@@ -22,10 +25,10 @@ public class LogFile
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Init
 	// ----------------------------------------------------------------------------------------------------
-	
-	/**
-	 * Creates a new log file with given path.
-	 */
+
+	///
+	/// Creates a new log file with given path.
+	///
 	public init(_ filePath:String)
 	{
 		self.filePath = filePath
@@ -36,10 +39,10 @@ public class LogFile
 	// MARK: - Methods
 	// ----------------------------------------------------------------------------------------------------
 	
-	/**
-	 * Appends text data to the file. If the file doesn't exist yet, it is created.
-	 */
-	public func append(content:String, encoding:String.Encoding = .utf16)
+	///
+	/// Appends text data to the file. If the file doesn't exist yet, it is created.
+	///
+	public func append(content:String, encoding:String.Encoding = .utf16) -> Bool
 	{
 		if let fileHandle = FileHandle(forWritingAtPath: filePath)
 		{
@@ -58,16 +61,18 @@ public class LogFile
 			}
 			catch
 			{
-				Log.error("", "Failed to write to \(filePath).")
+				Log.error(category: SWAYLOR_TIFT_NAME, "Failed to write to \(filePath).")
+				return false
 			}
 		}
+		return true
 	}
 	
 	
-	/**
-	 * Deletes the file.
-	 */
-	public func delete()
+	///
+	/// Deletes the file.
+	///
+	public func delete() -> Bool
 	{
 		do
 		{
@@ -75,6 +80,8 @@ public class LogFile
 		}
 		catch
 		{
+			return false
 		}
+		return true
 	}
 }
