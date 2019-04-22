@@ -10,7 +10,9 @@
 import Foundation
 
 
+///
 /// Data structure to retrieve random values with their frequency taken into account.
+///
 public struct FrequencyTable<T>
 {
 	// MARK: - Sub Types
@@ -23,6 +25,7 @@ public struct FrequencyTable<T>
 	private let frequentValues:[T]
 	
 	// MARK: - Initializers
+	
 	/// Creates a new FrequencyTable instance with values and their frequencies provided.
 	///
 	/// - Parameters:
@@ -43,6 +46,7 @@ public struct FrequencyTable<T>
 	
 	
 	// MARK: - Computed Instance Properties
+	
 	/// - Returns: A random value taking frequencies into account or nil if values empty.
 	public var sample:T?
 	{
@@ -50,6 +54,7 @@ public struct FrequencyTable<T>
 	}
 	
 	// MARK: - Instance Methods
+	
 	/// Returns an array of random values taking frequencies into account or nil if values empty.
 	///
 	/// - Parameters:

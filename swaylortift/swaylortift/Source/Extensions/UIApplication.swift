@@ -12,6 +12,9 @@ import UIKit
 
 extension UIApplication
 {
+	///
+	/// The application version found in the main bundle, aka CFBundleShortVersionString.
+	///
 	public static var appVersion:String
 	{
 		if let appVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString")
@@ -21,6 +24,9 @@ extension UIApplication
 		return ""
 	}
 	
+	///
+	/// The application build number found in the main bundle, aka kCFBundleVersionKey.
+	///
 	public static var buildNumber:String
 	{
 		if let buildNum = Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String)
@@ -30,6 +36,9 @@ extension UIApplication
 		return ""
 	}
 	
+	///
+	/// Pretty-printed version string of app version + build number, e.g. 1.2.1.733
+	///
 	public static var versionString:String
 	{
 		return "\(appVersion).\(buildNumber)"

@@ -12,22 +12,6 @@ import Foundation
 
 extension NSObject
 {
-	public class func dump(_ obj:Any) -> String
-	{
-		let table = TabularText(2, true, " ", " ", "", 120, ["Property", "Value"])
-		let mirror = Mirror(reflecting: obj)
-		mirror.children.forEach
-		{
-			child in
-			if let label = child.label
-			{
-				table.add([label, "\(child.value)"])
-			}
-		}
-		return table.toString()
-	}
-	
-	
 	public class func swizzleMethods(_ origSelector:Selector, withSelector:Selector, forClass:AnyClass)
 	{
 		let originalMethod = class_getInstanceMethod(forClass, origSelector)
@@ -44,6 +28,7 @@ extension NSObject
 	}
 	
 	
+	///
 	/// Creates a new object of self with its concrete type maintained.
 	///
 	public func createNew() -> Self
@@ -52,6 +37,9 @@ extension NSObject
 	}
 	
 	
+	///
+	/// Dumps a property-value list of the object.
+	///
 	public func dumpObj() -> String
 	{
 		var result = "[\(String(describing: type(of: self))) "
@@ -59,9 +47,28 @@ extension NSObject
 		mirror.children.forEach
 		{
 			child in
-			result += "\n\t> \(child.label!)=\(child.value)"
+				result += "\n\t> \(child.label!)=\(child.value)"
 		}
 		return "\(result)]"
+	}
+	
+	
+	///
+	/// Dumps a formatted property-value table of the object.
+	///
+	public class func dump(_ obj:Any) -> String
+	{
+		let table = TabularText(2, true, String.Space, String.Space, String.Empty, 120, ["Property", "Value"])
+		let mirror = Mirror(reflecting: obj)
+		mirror.children.forEach
+		{
+			child in
+				if let label = child.label
+				{
+					table.add([label, "\(child.value)"])
+				}
+		}
+		return table.toString()
 	}
 	
 	

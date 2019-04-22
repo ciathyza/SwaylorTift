@@ -19,18 +19,23 @@ extension String
 	public static let Empty = ""
 	public static let Space = " "
 	public static let LF    = "\n"
+	public static let Numbers = "0123456789"
+	public static let Alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	public static let AlphabetAndNumbers = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 	
 	
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Enums
 	// ----------------------------------------------------------------------------------------------------
 	
+	///
 	/// The type of allowed characters.
 	///
 	/// - Numeric:          Allow all numbers from 0 to 9.
 	/// - Alphabetic:       Allow all alphabetic characters ignoring case.
 	/// - AlphaNumeric:     Allow both numbers and alphabetic characters ignoring case.
 	/// - AllCharactersIn:  Allow all characters appearing within the specified String.
+	///
 	public enum AllowedCharacters
 	{
 		case numeric
@@ -43,17 +48,26 @@ extension String
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Properties
 	// ----------------------------------------------------------------------------------------------------
-	
+
+	///
+	/// Convenience accessor for the NSLocalized string.
+	///
 	public var localized:String
 	{
 		return NSLocalizedString(self, comment: "")
 	}
-	
+
+	///
+	/// Length of the string.
+	///
 	public var length:Int
 	{
 		return self.count
 	}
 	
+	///
+	/// The string as a NSString.
+	///
 	public var ns:NSString
 	{
 		return self as NSString
@@ -69,45 +83,57 @@ extension String
 		return ns.deletingPathExtension
 	}
 	
-	/**
-	 * Trims whitespace from start and end of string.
-	 */
+	///
+	/// Trims whitespace from start and end of string.
+	///
 	public var trimmed:String
 	{
 		return self.trimmingCharacters(in: .whitespacesAndNewlines)
 	}
 	
+	///
+	/// Strips all whitespace from the string.
+	///
 	public var stripped:String
 	{
 		return components(separatedBy: .whitespaces).joined()
 	}
 	
+	///
+	/// Checks whether the string can be interpreted as a number.
+	///
 	public var isNumber:Bool
 	{
 		return !self.isEmpty && self.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
 	}
-	
-	/**
-	 * Returns: `true` if contains any cahracters other than whitespace or newline characters, else `no`.
-	 */
+
+	///
+	/// Returns false if string contains any characters other than whitespace or newline characters, else true.
+	///
 	public var isBlank:Bool
 	{
 		return trimmed.isEmpty
 	}
 	
-	/**
-	 * Returns: A random character from the `CharacterView` or `nil` if empty.
-	 */
+	///
+	/// Returns a random character from the CharacterView or nil if empty.
+	///
 	public var sample:Character?
 	{
 		return isEmpty ? nil : self[index(startIndex, offsetBy: Int(randomBelow: count)!)]
 	}
 	
+	///
+	/// Obscures the string with "*" character.
+	///
 	public var obscured:String
 	{
 		return String(repeating: "*", count: count)
 	}
-	
+
+	///
+	/// Converts the string to an Integer.
+	///
 	public var toInt:Int
 	{
 		if let n = Int(self)
@@ -117,6 +143,9 @@ extension String
 		return 0
 	}
 	
+	///
+	/// Converts the string to an unsigned Integer.
+	///
 	public var toUInt:UInt
 	{
 		if let n = UInt(self)
@@ -131,6 +160,7 @@ extension String
 	// MARK: - Init
 	// ----------------------------------------------------------------------------------------------------
 	
+	///
 	/// Create new instance with random numeric/alphabetic/alphanumeric String of given length.
 	///
 	/// - Parameters:
@@ -140,15 +170,15 @@ extension String
 	public init(randomWithLength length:Int, allowedCharactersType:AllowedCharacters)
 	{
 		let allowedCharsString:String =
-				{
-					switch allowedCharactersType
-					{
-						case .numeric: return "0123456789"
-						case .alphabetic: return "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-						case .alphaNumeric: return "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-						case .allCharactersIn(let allowedCharactersString): return allowedCharactersString
-					}
-				}()
+		{
+			switch allowedCharactersType
+			{
+				case .numeric: return String.Numbers
+				case .alphabetic: return String.Alphabet
+				case .alphaNumeric: return String.AlphabetAndNumbers
+				case .allCharactersIn(let allowedCharactersString): return allowedCharactersString
+			}
+		}()
 		
 		self.init(allowedCharsString.sample(size: length)!)
 	}
@@ -158,28 +188,27 @@ extension String
 	// MARK: - Methods
 	// ----------------------------------------------------------------------------------------------------
 	
+	///
 	/// Returns a given number of random characters from the `CharacterView`.
 	///
 	/// - Parameters:
-	///   - size: The number of random characters wanted.
+	///    - size: The number of random characters wanted.
 	/// - Returns: A `CharacterView` with the given number of random characters or `nil` if empty.
+	///
 	public func sample(size:Int) -> String?
 	{
-		if isEmpty
-		{
-			return nil
-		}
+		if isEmpty { return nil }
 		
 		var sampleElements = String()
-		size.times
-		{
-			sampleElements.append(sample!)
-		}
+		size.times { sampleElements.append(sample!) }
 		
 		return sampleElements
 	}
 	
 	
+	///
+	/// Splits the string into an array where it finds the given separator.
+	///
 	public func split(_ separator:String) -> [String]
 	{
 		return self.components(separatedBy: separator)
@@ -224,10 +253,10 @@ extension String
 		return self.substr(from: 0, to: to)
 	}
 	
-	
-	/**
-	 * Returns the specified number of chars from the left of the string.
-	 */
+
+	///
+	/// Returns the specified number of characters from the left of the string.
+	///
 	public func left(_ to:Int) -> String
 	{
 		var t = to
@@ -243,9 +272,9 @@ extension String
 	}
 	
 	
-	/**
-	 * Returns the specified number of chars from the right of the string.
-	 */
+	///
+	/// Returns the specified number of characters from the right of the string.
+	///
 	public func right(_ from:Int) -> String
 	{
 		var f = from
@@ -261,9 +290,9 @@ extension String
 	}
 	
 	
-	/**
-	 * Returns the specified number of chars from the given start point of the string.
-	 */
+	///
+	/// Returns the specified number of characters from the given start point of the string.
+	///
 	public func mid(_ from:Int, _ count:Int = -1) -> String
 	{
 		var f = from
@@ -275,10 +304,10 @@ extension String
 		return x.left(count == -1 ? x.count : count)
 	}
 	
-	
-	/**
-	 * Returns the substring that is found after the specified search string.
-	 */
+
+	///
+	/// Returns the substring that is found after the specified search string.
+	///
 	public func midAfter(_ search:String, _ count:Int = -1) -> String
 	{
 		let r = self.range(of: search)
@@ -307,6 +336,21 @@ extension String
 		{
 			return []
 		}
+	}
+	
+
+	///
+	/// Generates a string of random letters and numbers.
+	///
+	static func random(_ length:Int) -> String
+	{
+		var s = String.Empty
+		for _ in 0 ..< length
+		{
+			let r = Int(arc4random_uniform(UInt32(String.AlphabetAndNumbers.count)))
+			s += String(String.AlphabetAndNumbers[String.AlphabetAndNumbers.index(String.AlphabetAndNumbers.startIndex, offsetBy: r)])
+		}
+		return s
 	}
 }
 

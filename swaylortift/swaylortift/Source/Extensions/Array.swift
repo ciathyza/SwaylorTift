@@ -16,6 +16,7 @@ extension Array
 	// MARK: - Properties
 	// ----------------------------------------------------------------------------------------------------
 	
+	///
 	/// Returns a random element from the `Array`.
 	/// - Returns: A random element from the array or `nil` if empty.
 	///
@@ -32,7 +33,8 @@ extension Array
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Methods
 	// ----------------------------------------------------------------------------------------------------
-	
+
+	///
 	/// Checks wether the array contains the specified object.
 	///
 	/// - Parameters:
@@ -45,7 +47,8 @@ extension Array
 		return contains(where: { $0 as AnyObject === object as AnyObject })
 	}
 	
-	
+
+	///
 	/// Returns a given number of random elements from the `Array`.
 	///
 	/// - Parameters:
@@ -66,7 +69,8 @@ extension Array
 		return sampleElements
 	}
 	
-	
+
+	///
 	/// Combines each element with each element of a given array.
 	///
 	/// Also known as: Cartesian product.
@@ -90,7 +94,8 @@ extension Array
 		return combinations
 	}
 	
-	
+
+	///
 	/// Sorts the collection in place by the order specified in the closure.
 	///
 	/// NOTE: The default `sort` method is not stable, this one allows to explicitly specify it to be stable.
@@ -109,7 +114,8 @@ extension Array
 		stableMergeSort(by: areInIncreasingOrder)
 	}
 	
-	
+
+	///
 	/// Returns the elements of the sequence, sorted.
 	///
 	/// NOTE: The default `sorted` method is not stable, this one allows to explicitly specify it to be stable.
@@ -129,7 +135,8 @@ extension Array
 		return copy
 	}
 	
-	
+
+	///
 	/// Sorts the array in-place using a stable merge sort algorithm.
 	///
 	mutating func stableMergeSort(by areInIncreasingOrder:@escaping (Element, Element) -> Bool)
@@ -181,6 +188,7 @@ extension Array
 
 extension Array where Element:Comparable
 {
+	///
 	/// Sorts the collection in place by the order specified in the closure.
 	/// NOTE: The default `sort` method is not stable, this one allows to explicitly specify it to be stable.
 	///
@@ -192,7 +200,8 @@ extension Array where Element:Comparable
 		sort(by: { lhs, rhs in lhs < rhs }, stable: stable)
 	}
 	
-	
+
+	///
 	/// Returns the elements of the sequence, sorted.
 	/// NOTE: The default `sorted` method is not stable, this one allows to explicitly specify it to be stable.
 	///

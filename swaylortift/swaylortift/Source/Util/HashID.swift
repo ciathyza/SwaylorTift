@@ -20,7 +20,6 @@ public struct HashIDOptions
 	static var MIN_ALPHABET_LENGTH:Int = 16
 	static var SEP_DIV:Double          = 3.5
 	static var GUARD_DIV:Double        = 12
-	static var ALPHABET:String         = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 	static var SEPARATORS:String       = "cfhistuCFHISTU"
 }
 
@@ -66,7 +65,7 @@ open class HashID_<T>: HashIDGenerator where T: UnsignedInteger
 	
 	public init(salt:String!, minHashLength:UInt = 0, alphabet:String? = nil)
 	{
-		var _alphabet = (alphabet != nil) ? alphabet! : HashIDOptions.ALPHABET
+		var _alphabet = (alphabet != nil) ? alphabet! : String.AlphabetAndNumbers
 		var _seps = HashIDOptions.SEPARATORS
 		
 		self.minHashLength = minHashLength

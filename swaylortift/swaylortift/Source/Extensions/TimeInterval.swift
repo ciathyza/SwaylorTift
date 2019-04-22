@@ -10,7 +10,9 @@
 import Foundation
 
 
+///
 /// A typealias to keep backwards compatibility with version 2.0.x and 2.1.x.
+///
 public typealias Timespan = TimeInterval
 
 

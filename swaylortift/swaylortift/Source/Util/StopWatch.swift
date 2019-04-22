@@ -13,7 +13,7 @@ import Foundation
 ///
 /// Stopwatch used to measure duration of code execution.
 ///
-class StopWatch
+public class StopWatch
 {
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Properties

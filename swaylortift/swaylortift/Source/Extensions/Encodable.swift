@@ -12,6 +12,9 @@ import Foundation
 
 extension Encodable
 {
+	///
+	/// Returns a flat-mapped dictionary of the encodable, or nil.
+	///
 	public var dictionary:[String:Any]?
 	{
 		guard let data = try? JSONEncoder().encode(self) else

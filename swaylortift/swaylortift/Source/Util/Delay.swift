@@ -10,19 +10,13 @@
 import Foundation
 
 
-extension Double
+struct Delay
 {
 	///
-	/// Rounds the double to decimal places value.
+	/// Executes a code block after x seconds on the main dispatch queue.
 	///
-	/// - Parameters:
-	/// 	- places: The number of decimal places.
-	///
-	/// - Returns: the rounded value.
-	///
-	public func rounded(_ places:Int) -> Double
+	public static func executeAfter(_ seconds:Double, _ block:@escaping () -> Void)
 	{
-		let divisor = pow(10.0, Double(places))
-		return (self * divisor).rounded() / divisor
+		DispatchQueue.main.asyncAfter(deadline: .now() + seconds, execute: block)
 	}
 }

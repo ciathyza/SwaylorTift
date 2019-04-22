@@ -10,9 +10,9 @@
 import UIKit
 
 
-/**
- * RBG Color structure.
- */
+///
+/// RBG Color structure.
+///
 public struct RGBColor
 {
 	let R:Int
@@ -21,9 +21,9 @@ public struct RGBColor
 }
 
 
-/**
- * UI Color extensions.
- */
+///
+/// UI Color extensions.
+///
 extension UIColor
 {
 	public var rgbColor:RGBColor
@@ -45,9 +45,9 @@ extension UIColor
 	}
 	
 	
-	/**
-	 * Swizzle description method with own colorDescription. colorDescription will used instead of description.
-	 */
+	///
+	/// Swizzle description method with own colorDescription. colorDescription will be used instead of description.
+	///
 	public class func swizzleDescription()
 	{
 		let instance = UIColor.red
@@ -55,9 +55,9 @@ extension UIColor
 	}
 	
 	
-	/**
-	 * Restore back original description method.
-	 */
+	///
+	/// Restore back original description method.
+	///
 	public class func undoDesriptionSwizzling()
 	{
 		let instance = UIColor.red
@@ -79,9 +79,9 @@ extension RGBColor: CustomStringConvertible
 // ------------------------------------------------------------------------------------------------
 extension RGBColor: RGBColorType
 {
-	/**
-	 * Color representation for XcodeColors console log.
-	 */
+	///
+	/// Color representation for XcodeColors console log.
+	///
 	public var colorCode:String
 	{
 		return "\(R),\(G),\(B)"

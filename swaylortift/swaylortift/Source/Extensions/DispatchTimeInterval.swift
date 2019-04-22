@@ -12,7 +12,9 @@ import Foundation
 
 extension DispatchTimeInterval
 {
-	/// - Returns: The time in seconds using the`TimeInterval` type.
+	///
+	/// Returns the time in seconds using the TimeInterval type.
+	///
 	public var timeInterval:TimeInterval
 	{
 		switch self

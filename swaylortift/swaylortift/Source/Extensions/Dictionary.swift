@@ -16,6 +16,7 @@ extension Dictionary
 	// MARK: - Methods
 	// ----------------------------------------------------------------------------------------------------
 	
+	///
 	/// Initializes a new `Dictionary` and fills it with keys and values arrays.
 	///
 	/// - Parameters:
@@ -35,7 +36,8 @@ extension Dictionary
 		}
 	}
 	
-	
+
+	///
 	/// Merge given `Dictionary` into this `Dictionary` overriding existing values for matching keys.
 	///
 	/// - Parameters:
@@ -49,7 +51,8 @@ extension Dictionary
 		}
 	}
 	
-	
+
+	///
 	/// Create new merged `Dictionary` with the given `Dictionary` merged into this `Dictionary`
 	/// overriding existing values for matching keys.
 	///

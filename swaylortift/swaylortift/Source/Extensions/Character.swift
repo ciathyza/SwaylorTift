@@ -12,6 +12,9 @@ import Foundation
 
 extension Character
 {
+	///
+	/// The scalar unicode code point of the character.
+	///
 	func unicodeScalarCodePoint() -> UInt32
 	{
 		let characterString = String(self)

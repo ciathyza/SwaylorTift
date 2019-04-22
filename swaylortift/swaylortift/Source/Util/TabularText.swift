@@ -113,6 +113,19 @@ public class TabularText
 	}
 	
 	
+	///
+	/// Creates a new TabularText instance.
+	///
+	/// Parameters:
+	///    - columns the number of columns that the TabularText should have.
+	///    - header An array of header items.
+	///
+	public convenience init(_ columns:Int, _ header:[String])
+	{
+		self.init(columns, false, String.Space, String.Space, String.Empty, 0, header, false)
+	}
+	
+	
 	//-----------------------------------------------------------------------------------------
 	// Public Methods
 	//-----------------------------------------------------------------------------------------

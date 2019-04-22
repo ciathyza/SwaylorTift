@@ -13,20 +13,21 @@ import Foundation
 ///
 /// Used to invoke code blocks at certain intervals.
 ///
-class Interval
+public class Interval
 {
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Properties
 	// ----------------------------------------------------------------------------------------------------
 	
-	internal var timer:Timer?
-	internal var counter = 0
+	private var _timer:Timer?
+	private var _counter = 0
 	
 	
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Methods
 	// ----------------------------------------------------------------------------------------------------
 	
+	///
 	/// Calls a closure at a specified interval.
 	///
 	/// - Parameters:
@@ -35,10 +36,11 @@ class Interval
 	/// 	- callback: Closure to be called at every interval.
 	///
 	/// - Returns: nil.
+	///
 	public func start(interval:TimeInterval = 1.0, repeats:Int = 0, callback:(() -> Void)? = nil)
 	{
-		counter = 0
-		timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true)
+		_counter = 0
+		_timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true)
 		{
 			t in
 				if let closure = callback
@@ -49,8 +51,8 @@ class Interval
 				{
 					return
 				}
-				self.counter += 1
-				if (self.counter < repeats)
+				self._counter += 1
+				if (self._counter < repeats)
 				{
 					return
 				}
@@ -59,15 +61,21 @@ class Interval
 	}
 	
 	
+	///
+	/// Fires the interval once.
+	///
 	public func fire()
 	{
-		timer?.fire()
+		_timer?.fire()
 	}
 	
 	
+	///
+	/// Stops the interval.
+	///
 	public func stop()
 	{
-		timer?.invalidate()
-		timer = nil
+		_timer?.invalidate()
+		_timer = nil
 	}
 }

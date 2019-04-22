@@ -12,9 +12,9 @@ import UIKit
 
 extension UIView
 {
-	/**
-	 * Captures an image of the current screen.
-	 */
+	///
+	/// Captures an image of the current screen.
+	///
 	public func captureScreen() -> UIImage
 	{
 		UIGraphicsBeginImageContextWithOptions(bounds.size, isOpaque, 0)
@@ -22,5 +22,32 @@ extension UIView
 		let image = UIGraphicsGetImageFromCurrentImageContext()!
 		UIGraphicsEndImageContext()
 		return image
+	}
+	
+	
+	///
+	/// Provides a reference to the view's parent view controller.
+	///
+	public var parentViewController:UIViewController?
+	{
+		var parentResponder:UIResponder? = self
+		while parentResponder != nil
+		{
+			parentResponder = parentResponder!.next
+			if let viewController = parentResponder as? UIViewController
+			{
+				return viewController
+			}
+		}
+		return nil
+	}
+	
+	
+	///
+	/// Removes all sub views from the view.
+	///
+	public func removeAllSubViews()
+	{
+		self.subviews.forEach({ $0.removeFromSuperview() })
 	}
 }

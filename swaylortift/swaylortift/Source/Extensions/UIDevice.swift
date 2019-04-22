@@ -12,6 +12,7 @@ import UIKit
 
 extension UIDevice
 {
+	///
 	/// Checks whether the app is currently running on simulator or not.
 	///
 	public static var isSimulator:Bool

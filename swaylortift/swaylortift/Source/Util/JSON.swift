@@ -13,7 +13,7 @@ import Foundation
 ///
 /// Provides JSON util methods.
 ///
-class JSON
+public class JSON
 {
 	/// Encodes and writes data to a JSON file.
 	///
