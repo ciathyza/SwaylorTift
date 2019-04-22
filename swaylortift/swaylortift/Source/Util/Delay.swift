@@ -10,7 +10,7 @@
 import Foundation
 
 
-struct Delay
+public struct Delay
 {
 	///
 	/// Executes a code block after x seconds on the main dispatch queue.
