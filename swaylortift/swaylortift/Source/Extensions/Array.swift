@@ -33,7 +33,20 @@ extension Array
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Methods
 	// ----------------------------------------------------------------------------------------------------
-
+	
+	///
+	/// Returns the element at the given index or nil if the index is out of bounds.
+	///
+	public func at(_ index:Int) -> Element?
+	{
+		if (index < 0 || index > self.count - 1)
+		{
+			return nil
+		}
+		return self[index]
+	}
+	
+	
 	///
 	/// Checks wether the array contains the specified object.
 	///

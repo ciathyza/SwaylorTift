@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85ebd238-6a14-493d-9f13-05f257453b5d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swaylortift.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift.podspec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Delay.swift" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Delay.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Array.swift" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Array.swift" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/swaylortift-dpsbwoglwjqqcyetrbdxowkzhibx/Build/Intermediates.noindex/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,10 +17,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/swaylortift.podspec">
+        <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Array.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="531">
+              <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -54,7 +55,6 @@
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Optional.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Assert.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/TabularText.swift" />
-        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Array.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Bundle.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Character.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Dictionary.swift" />
@@ -78,6 +78,7 @@
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Globals.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/String.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Delay.swift" />
+        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Array.swift" />
         <option value="$PROJECT_DIR$/swaylortift.podspec" />
       </list>
     </option>
@@ -126,7 +127,7 @@
               <item name="swaylortift" type="462c0819:PsiDirectoryNode" />
               <item name="swaylortift" type="462c0819:PsiDirectoryNode" />
               <item name="Source" type="462c0819:PsiDirectoryNode" />
-              <item name="Util" type="462c0819:PsiDirectoryNode" />
+              <item name="Extensions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -213,12 +214,12 @@
       <workItem from="1555382002041" duration="6018000" />
       <workItem from="1555402622200" duration="2251000" />
       <workItem from="1555475036060" duration="11000" />
-      <workItem from="1555894295882" duration="5441000" />
+      <workItem from="1555894295882" duration="6515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21100000" />
+    <option name="totallyTimeSpent" value="22174000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -493,13 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Array.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/String.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
@@ -516,8 +510,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/swaylortift.podspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="240">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Array.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
         </state>
       </provider>
     </entry>

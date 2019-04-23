@@ -1,6 +1,6 @@
 {
   "name": "SwaylorTift",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -16,7 +16,7 @@
   "source": {
     "git": "https://github.com/ciathyza/swaylor-tift.git",
     "branch": "master",
-    "tag": "1.0.6"
+    "tag": "1.0.7"
   },
   "frameworks": "UIKit",
   "source_files": "swaylortift/swaylortift/Source/**/*.{swift,h,m}",
