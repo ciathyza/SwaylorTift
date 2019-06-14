@@ -48,14 +48,14 @@ public struct Log
 	
 	public static let DELIMITER = "----------------------------------------------------------------------------------------------------"
 	public static let DELIMITER_STRONG = "===================================================================================================="
-	public static let DEFAULT_CATEGORY = ""
+	public static let DEFAULT_CATEGORY = String.Empty
 	
 	public static var mode:LogMode = .None
 	public static var enabled = true
 	public static var logLevel = LogLevel.System
 	public static var prompt = "> "
-	public static var separator = " "
-	public static var terminator = "\n"
+	public static var separator = String.Space
+	public static var terminator = String.LF
 	
 	public static var logFilePath:String?
 	public static var logFile:LogFile?
@@ -68,140 +68,140 @@ public struct Log
 	public static func system(_ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.System.rawValue) { return }
-		output(DEFAULT_CATEGORY, LogLevel.System, items: items, file: file, function: function, line: line)
+		output(logLevel: LogLevel.System, items: items, category: DEFAULT_CATEGORY, file: file, function: function, line: line)
 	}
 	
 	
 	public static func system(category:String = DEFAULT_CATEGORY, _ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.System.rawValue) { return }
-		output(category, LogLevel.System, items: items, file: file, function: function, line: line)
+		output(logLevel: LogLevel.System, items: items, category: category, file: file, function: function, line: line)
 	}
 	
 	
 	public static func trace(_ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Trace.rawValue) { return }
-		output(DEFAULT_CATEGORY, LogLevel.Trace, items: items, file: file, function: function, line: line)
+		output(logLevel: LogLevel.Trace, items: items, category: DEFAULT_CATEGORY, file: file, function: function, line: line)
 	}
 
 
 	public static func trace(category:String = DEFAULT_CATEGORY, _ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Trace.rawValue) { return }
-		output(category, LogLevel.Trace, items: items, file: file, function: function, line: line)
+		output(logLevel: LogLevel.Trace, items: items, category: category, file: file, function: function, line: line)
 	}
 	
 	
 	public static func debug(_ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Debug.rawValue) { return }
-		output(DEFAULT_CATEGORY, LogLevel.Debug, items: items, file: file, function: function, line: line)
+		output(logLevel: LogLevel.Debug, items: items, category: DEFAULT_CATEGORY, file: file, function: function, line: line)
 	}
 	
 	
 	public static func debug(category:String = DEFAULT_CATEGORY, _ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Debug.rawValue) { return }
-		output(category, LogLevel.Debug, items: items, file: file, function: function, line: line)
+		output(logLevel: LogLevel.Debug, items: items, category: category, file: file, function: function, line: line)
 	}
 	
 	
 	public static func info(_ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Info.rawValue) { return }
-		output(DEFAULT_CATEGORY, LogLevel.Info, items: items, file: file, function: function, line: line)
+		output(logLevel: LogLevel.Info, items: items, category: DEFAULT_CATEGORY, file: file, function: function, line: line)
 	}
 	
 	
 	public static func info(category:String = DEFAULT_CATEGORY, _ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Info.rawValue) { return }
-		output(category, LogLevel.Info, items: items, file: file, function: function, line: line)
+		output(logLevel: LogLevel.Info, items: items, category: category, file: file, function: function, line: line)
 	}
 	
 	
 	public static func notice(_ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Notice.rawValue) { return }
-		output(DEFAULT_CATEGORY, LogLevel.Notice, items: items, file: file, function: function, line: line)
+		output(logLevel: LogLevel.Notice, items: items, category: DEFAULT_CATEGORY, file: file, function: function, line: line)
 	}
 	
 	
 	public static func notice(category:String = DEFAULT_CATEGORY, _ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Notice.rawValue) { return }
-		output(category, LogLevel.Notice, items: items, file: file, function: function, line: line)
+		output(logLevel: LogLevel.Notice, items: items, category: category, file: file, function: function, line: line)
 	}
 	
 	
 	public static func warning(_ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Warning.rawValue) { return }
-		output(DEFAULT_CATEGORY, LogLevel.Warning, items: items, file: file, function: function, line: line)
+		output(logLevel: LogLevel.Warning, items: items, category: DEFAULT_CATEGORY, file: file, function: function, line: line)
 	}
 	
 	
 	public static func warning(category:String = DEFAULT_CATEGORY, _ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Warning.rawValue) { return }
-		output(category, LogLevel.Warning, items: items, file: file, function: function, line: line)
+		output(logLevel: LogLevel.Warning, items: items, category: category, file: file, function: function, line: line)
 	}
 	
 	
 	public static func error(_ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Error.rawValue) { return }
-		output(DEFAULT_CATEGORY, LogLevel.Error, items: items, file: file, function: function, line: line)
+		output(logLevel: LogLevel.Error, items: items, category: DEFAULT_CATEGORY, file: file, function: function, line: line)
 	}
 	
 	
 	public static func error(category:String = DEFAULT_CATEGORY, _ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Error.rawValue) { return }
-		output(category, LogLevel.Error, items: items, file: file, function: function, line: line)
+		output(logLevel: LogLevel.Error, items: items, category: category, file: file, function: function, line: line)
 	}
 	
 	
 	public static func fatal(_ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Fatal.rawValue) { return }
-		output(DEFAULT_CATEGORY, LogLevel.Fatal, items: items, file: file, function: function, line: line)
+		output(logLevel: LogLevel.Fatal, items: items, category: DEFAULT_CATEGORY, file: file, function: function, line: line)
 	}
 	
 	
 	public static func fatal(category:String = DEFAULT_CATEGORY, _ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Fatal.rawValue) { return }
-		output(category, LogLevel.Fatal, items: items, file: file, function: function, line: line)
+		output(logLevel: LogLevel.Fatal, items: items, category: category, file: file, function: function, line: line)
 	}
 	
 	
 	public static func delimiter()
 	{
 		if (!enabled) { return }
-		output(DEFAULT_CATEGORY, LogLevel.Trace, items: [Log.DELIMITER])
+		output(logLevel: LogLevel.Debug, items: [Log.DELIMITER], category: DEFAULT_CATEGORY)
 	}
 	
 	
 	public static func delimiter(category:String = DEFAULT_CATEGORY)
 	{
 		if (!enabled) { return }
-		output(category, LogLevel.Trace, items: [Log.DELIMITER])
+		output(logLevel: LogLevel.Debug, items: [Log.DELIMITER], category: category)
 	}
 	
 	
 	public static func delimiterStrong()
 	{
 		if (!enabled) { return }
-		output(DEFAULT_CATEGORY, LogLevel.Trace, items: [Log.DELIMITER_STRONG])
+		output(logLevel: LogLevel.Debug, items: [Log.DELIMITER_STRONG], category: DEFAULT_CATEGORY)
 	}
 	
 	
 	public static func delimiterStrong(category:String = DEFAULT_CATEGORY)
 	{
 		if (!enabled) { return }
-		output(category, LogLevel.Trace, items: [Log.DELIMITER_STRONG])
+		output(logLevel: LogLevel.Debug, items: [Log.DELIMITER_STRONG], category: category)
 	}
 	
 	
@@ -209,15 +209,11 @@ public struct Log
 	// MARK: - Private Methods
 	// ----------------------------------------------------------------------------------------------------
 	
-	/**
-	 * print items to the console
-	 * - parameter items:      items to print
-	 */
-	private static func output(_ category:String, _ logLevel:LogLevel, items:[Any], file:String? = nil, function:String? = nil, line:Int? = nil)
+	private static func output(logLevel:LogLevel, items:[Any], category:String, file:String? = nil, function:String? = nil, line:Int? = nil)
 	{
 		let prefix = modePrefix(Date(), file: file, function: function, line: line)
-		let stringItem = items.map { "\($0)" }.joined(separator: Log.separator)
-		let line = "\(category)\(Log.prompt)\(Log.getLogLevelName(logLevel: logLevel))\(prefix)\(stringItem)"
+		let itemsString = items.map { "\($0)" }.joined(separator: Log.separator)
+		let line = "\(Log.prompt)\(Log.getLogLevelName(logLevel: logLevel))\(category)\(prefix)\(itemsString)"
 		Swift.print(line, terminator: Log.terminator)
 		
 		if let logFilePath = Log.logFilePath
