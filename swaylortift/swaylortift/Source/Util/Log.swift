@@ -213,7 +213,7 @@ public struct Log
 	{
 		let prefix = modePrefix(Date(), file: file, function: function, line: line)
 		let itemsString = items.map { "\($0)" }.joined(separator: Log.separator)
-		let line = "\(Log.prompt)\(Log.getLogLevelName(logLevel: logLevel))\(category)\(prefix)\(itemsString)"
+		let line = "\(Log.prompt)\(Log.getLogLevelName(logLevel: logLevel))\(category) \(prefix)\(itemsString)"
 		Swift.print(line, terminator: Log.terminator)
 		
 		if let logFilePath = Log.logFilePath
