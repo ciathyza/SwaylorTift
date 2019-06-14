@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85ebd238-6a14-493d-9f13-05f257453b5d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/swaylortift.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift.podspec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Array.swift" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Array.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Log.swift" beforeDir="false" afterPath="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Log.swift" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/swaylortift-dpsbwoglwjqqcyetrbdxowkzhibx/Build/Intermediates.noindex/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,14 +14,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_B048AF16-C2A9-4BCF-B8B2-C2E3EA7D378C" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_59479D41-17E2-4C0E-B960-34CE742230DD" />
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Array.swift">
+        <entry file="file://$PROJECT_DIR$/swaylortift.podspec">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+            <state relative-caret-position="30">
+              <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -48,7 +49,6 @@
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/ExecutionTimer.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/File.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/LogFile.swift" />
-        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Log.swift" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/SwaylorTift.podspec" />
         <option value="$PROJECT_DIR$/Podfile" />
@@ -79,14 +79,16 @@
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/String.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Delay.swift" />
         <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Array.swift" />
+        <option value="$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Log.swift" />
         <option value="$PROJECT_DIR$/swaylortift.podspec" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1440" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -96,6 +98,36 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="swaylortift" type="1d218c8b:XcodeProjectNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="swaylortift" type="1d218c8b:XcodeProjectNode" />
+              <item name="swaylortift" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="swaylortift" type="1d218c8b:XcodeProjectNode" />
+              <item name="swaylortift" type="fcab9f18:XcodeViewNode" />
+              <item name="Source" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="swaylortift" type="1d218c8b:XcodeProjectNode" />
+              <item name="swaylortift" type="fcab9f18:XcodeViewNode" />
+              <item name="Source" type="fcab9f18:XcodeViewNode" />
+              <item name="Util" type="fcab9f18:XcodeViewNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="Cidr.FilesView">
         <subPane>
           <expand>
@@ -129,39 +161,13 @@
               <item name="Source" type="462c0819:PsiDirectoryNode" />
               <item name="Extensions" type="462c0819:PsiDirectoryNode" />
             </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
             <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="Pods" type="1d218c8b:XcodeProjectNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="swaylortift" type="1d218c8b:XcodeProjectNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="swaylortift" type="1d218c8b:XcodeProjectNode" />
-              <item name="swaylortift" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="swaylortift" type="1d218c8b:XcodeProjectNode" />
-              <item name="swaylortift" type="fcab9f18:XcodeViewNode" />
-              <item name="Source" type="fcab9f18:XcodeViewNode" />
-            </path>
-            <path>
-              <item name="" type="efc3779f:XcodeRootNode" />
-              <item name="swaylortift" type="1d218c8b:XcodeProjectNode" />
-              <item name="swaylortift" type="fcab9f18:XcodeViewNode" />
-              <item name="Source" type="fcab9f18:XcodeViewNode" />
-              <item name="Util" type="fcab9f18:XcodeViewNode" />
+              <item name="swaylortift" type="b2602c69:ProjectViewProjectNode" />
+              <item name="swaylor-tift" type="462c0819:PsiDirectoryNode" />
+              <item name="swaylortift" type="462c0819:PsiDirectoryNode" />
+              <item name="swaylortift" type="462c0819:PsiDirectoryNode" />
+              <item name="Source" type="462c0819:PsiDirectoryNode" />
+              <item name="Util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -173,7 +179,7 @@
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="swaylortift" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/AppCode" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/swaylortift.xcworkspace" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Swift" />
@@ -215,19 +221,20 @@
       <workItem from="1555402622200" duration="2251000" />
       <workItem from="1555475036060" duration="11000" />
       <workItem from="1555894295882" duration="6515000" />
+      <workItem from="1560485241829" duration="2095000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22174000" />
+    <option name="totallyTimeSpent" value="24269000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="1440" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4995064" visible="true" weight="0.22569445" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4995064" visible="true" weight="0.19322917" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32893157" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -247,7 +254,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
-      <window_info anchor="right" id="Structure" order="6" sideWeight="0.5004936" side_tool="true" weight="0.22777778" />
+      <window_info anchor="right" id="Structure" order="6" sideWeight="0.5004936" side_tool="true" visible="true" weight="0.17239584" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,13 +438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Log.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/LogFile.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="980">
@@ -508,17 +508,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift.podspec">
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Array.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="456">
+          <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Extensions/Array.swift">
+    <entry file="file://$PROJECT_DIR$/swaylortift/swaylortift/Source/Util/Log.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+        <state relative-caret-position="471">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swaylortift.podspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
         </state>
       </provider>
     </entry>

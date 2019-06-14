@@ -10,7 +10,6 @@
 import UIKit
 
 
-// ------------------------------------------------------------------------------------------------
 public enum LogLevel:UInt
 {
 	case System  = 0
@@ -24,18 +23,12 @@ public enum LogLevel:UInt
 }
 
 
-// ------------------------------------------------------------------------------------------------
 public struct LogMode:OptionSet
 {
 	public let rawValue:UInt
-	
-	
-	public init(rawValue:UInt)
-	{
-		self.rawValue = rawValue
-	}
-	
-	
+
+	public init(rawValue:UInt) { self.rawValue = rawValue }
+
 	public static let None = LogMode(rawValue: 0)
 	public static let FileName = LogMode(rawValue: 1 << 0)
 	public static let FuncName = LogMode(rawValue: 1 << 1)
@@ -47,7 +40,6 @@ public struct LogMode:OptionSet
 }
 
 
-// ------------------------------------------------------------------------------------------------
 public struct Log
 {
 	// ----------------------------------------------------------------------------------------------------
@@ -73,115 +65,115 @@ public struct Log
 	// MARK: - Logging API
 	// ----------------------------------------------------------------------------------------------------
 	
-	public static func system(_ items:Any...)
+	public static func system(_ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.System.rawValue) { return }
-		output(DEFAULT_CATEGORY, LogLevel.System, items: items)
+		output(DEFAULT_CATEGORY, LogLevel.System, items: items, file: file, function: function, line: line)
 	}
 	
 	
-	public static func system(category:String = DEFAULT_CATEGORY, _ items:Any...)
+	public static func system(category:String = DEFAULT_CATEGORY, _ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.System.rawValue) { return }
-		output(category, LogLevel.System, items: items)
+		output(category, LogLevel.System, items: items, file: file, function: function, line: line)
 	}
 	
 	
-	public static func trace(_ items:Any...)
+	public static func trace(_ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Trace.rawValue) { return }
-		output(DEFAULT_CATEGORY, LogLevel.Trace, items: items)
+		output(DEFAULT_CATEGORY, LogLevel.Trace, items: items, file: file, function: function, line: line)
 	}
-	
-	
-	public static func trace(category:String = DEFAULT_CATEGORY, _ items:Any...)
+
+
+	public static func trace(category:String = DEFAULT_CATEGORY, _ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Trace.rawValue) { return }
-		output(category, LogLevel.Trace, items: items)
+		output(category, LogLevel.Trace, items: items, file: file, function: function, line: line)
 	}
 	
 	
-	public static func debug(_ items:Any...)
+	public static func debug(_ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Debug.rawValue) { return }
-		output(DEFAULT_CATEGORY, LogLevel.Debug, items: items)
+		output(DEFAULT_CATEGORY, LogLevel.Debug, items: items, file: file, function: function, line: line)
 	}
 	
 	
-	public static func debug(category:String = DEFAULT_CATEGORY, _ items:Any...)
+	public static func debug(category:String = DEFAULT_CATEGORY, _ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Debug.rawValue) { return }
-		output(category, LogLevel.Debug, items: items)
+		output(category, LogLevel.Debug, items: items, file: file, function: function, line: line)
 	}
 	
 	
-	public static func info(_ items:Any...)
+	public static func info(_ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Info.rawValue) { return }
-		output(DEFAULT_CATEGORY, LogLevel.Info, items: items)
+		output(DEFAULT_CATEGORY, LogLevel.Info, items: items, file: file, function: function, line: line)
 	}
 	
 	
-	public static func info(category:String = DEFAULT_CATEGORY, _ items:Any...)
+	public static func info(category:String = DEFAULT_CATEGORY, _ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Info.rawValue) { return }
-		output(category, LogLevel.Info, items: items)
+		output(category, LogLevel.Info, items: items, file: file, function: function, line: line)
 	}
 	
 	
-	public static func notice(_ items:Any...)
+	public static func notice(_ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Notice.rawValue) { return }
-		output(DEFAULT_CATEGORY, LogLevel.Notice, items: items)
+		output(DEFAULT_CATEGORY, LogLevel.Notice, items: items, file: file, function: function, line: line)
 	}
 	
 	
-	public static func notice(category:String = DEFAULT_CATEGORY, _ items:Any...)
+	public static func notice(category:String = DEFAULT_CATEGORY, _ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Notice.rawValue) { return }
-		output(category, LogLevel.Notice, items: items)
+		output(category, LogLevel.Notice, items: items, file: file, function: function, line: line)
 	}
 	
 	
-	public static func warning(_ items:Any...)
+	public static func warning(_ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Warning.rawValue) { return }
-		output(DEFAULT_CATEGORY, LogLevel.Warning, items: items)
+		output(DEFAULT_CATEGORY, LogLevel.Warning, items: items, file: file, function: function, line: line)
 	}
 	
 	
-	public static func warning(category:String = DEFAULT_CATEGORY, _ items:Any...)
+	public static func warning(category:String = DEFAULT_CATEGORY, _ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Warning.rawValue) { return }
-		output(category, LogLevel.Warning, items: items)
+		output(category, LogLevel.Warning, items: items, file: file, function: function, line: line)
 	}
 	
 	
-	public static func error(_ items:Any...)
+	public static func error(_ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Error.rawValue) { return }
-		output(DEFAULT_CATEGORY, LogLevel.Error, items: items)
+		output(DEFAULT_CATEGORY, LogLevel.Error, items: items, file: file, function: function, line: line)
 	}
 	
 	
-	public static func error(category:String = DEFAULT_CATEGORY, _ items:Any...)
+	public static func error(category:String = DEFAULT_CATEGORY, _ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Error.rawValue) { return }
-		output(category, LogLevel.Error, items: items)
+		output(category, LogLevel.Error, items: items, file: file, function: function, line: line)
 	}
 	
 	
-	public static func fatal(_ items:Any...)
+	public static func fatal(_ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Fatal.rawValue) { return }
-		output(DEFAULT_CATEGORY, LogLevel.Fatal, items: items)
+		output(DEFAULT_CATEGORY, LogLevel.Fatal, items: items, file: file, function: function, line: line)
 	}
 	
 	
-	public static func fatal(category:String = DEFAULT_CATEGORY, _ items:Any...)
+	public static func fatal(category:String = DEFAULT_CATEGORY, _ items:Any..., file:String = #file, function:String = #function, line:Int = #line)
 	{
 		if (!enabled || logLevel.rawValue > LogLevel.Fatal.rawValue) { return }
-		output(category, LogLevel.Fatal, items: items)
+		output(category, LogLevel.Fatal, items: items, file: file, function: function, line: line)
 	}
 	
 	
@@ -221,7 +213,7 @@ public struct Log
 	 * print items to the console
 	 * - parameter items:      items to print
 	 */
-	private static func output(_ category:String, _ logLevel:LogLevel, items:[Any], _ file:String = #file, _ function:String = #function, _ line:Int = #line)
+	private static func output(_ category:String, _ logLevel:LogLevel, items:[Any], file:String? = nil, function:String? = nil, line:Int? = nil)
 	{
 		let prefix = modePrefix(Date(), file: file, function: function, line: line)
 		let stringItem = items.map { "\($0)" }.joined(separator: Log.separator)
@@ -324,29 +316,27 @@ struct ColorLog
 extension Log
 {
 	/// Create an output string for the currect log Mode
-	static func modePrefix(_ date:Date, file:String, function:String, line:Int) -> String
+	static func modePrefix(_ date:Date, file:String?, function:String?, line:Int?) -> String
 	{
-		var result:String = ""
+		var result:String = String.Empty
 		if mode.contains(.Date)
 		{
 			let formatter = DateFormatter()
 			formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS "
-			
 			let s = formatter.string(from: date)
 			result += s
 		}
 		if mode.contains(.FileName)
 		{
-			let filename = file.lastPathComponent.stringByDeletingPathExtension
-			result += "\(filename)."
+			if let file = file { result += "\(file.lastPathComponent.stringByDeletingPathExtension)." }
 		}
 		if mode.contains(.FuncName)
 		{
-			result += "\(function)"
+			if let function = function { result += "\(function)" }
 		}
 		if mode.contains(.Line)
 		{
-			result += "[\(line)]"
+			if let line = line { result += "[\(line)]" }
 		}
 		
 		if !result.isEmpty
