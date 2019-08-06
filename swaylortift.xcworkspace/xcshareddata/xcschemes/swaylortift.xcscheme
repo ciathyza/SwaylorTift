@@ -16,7 +16,7 @@
                BlueprintIdentifier = "5B61B71022530E4B00707B73"
                BuildableName = "swaylortift.framework"
                BlueprintName = "swaylortift"
-               ReferencedContainer = "container:swaylortift.xcodeproj">
+               ReferencedContainer = "container:swaylortift/swaylortift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "5B61B71022530E4B00707B73"
             BuildableName = "swaylortift.framework"
             BlueprintName = "swaylortift"
-            ReferencedContainer = "container:swaylortift.xcodeproj">
+            ReferencedContainer = "container:swaylortift/swaylortift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
