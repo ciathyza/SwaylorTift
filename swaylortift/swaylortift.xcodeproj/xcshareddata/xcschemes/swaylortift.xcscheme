@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5B61B71022530E4B00707B73"
-               BuildableName = "swaylortift.framework"
-               BlueprintName = "swaylortift"
-               ReferencedContainer = "container:swaylortift.xcodeproj">
+               BlueprintIdentifier = "5BA64D6822F96897006735E9"
+               BuildableName = "SwaylorTift.framework"
+               BlueprintName = "SwaylorTift"
+               ReferencedContainer = "container:SwaylorTift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5BA64D7122F96897006735E9"
+               BuildableName = "SwaylorTiftTests.xctest"
+               BlueprintName = "SwaylorTiftTests"
+               ReferencedContainer = "container:SwaylorTift.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "5BA64D6822F96897006735E9"
+            BuildableName = "SwaylorTift.framework"
+            BlueprintName = "SwaylorTift"
+            ReferencedContainer = "container:SwaylorTift.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -44,10 +64,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5B61B71022530E4B00707B73"
-            BuildableName = "swaylortift.framework"
-            BlueprintName = "swaylortift"
-            ReferencedContainer = "container:swaylortift.xcodeproj">
+            BlueprintIdentifier = "5BA64D6822F96897006735E9"
+            BuildableName = "SwaylorTift.framework"
+            BlueprintName = "SwaylorTift"
+            ReferencedContainer = "container:SwaylorTift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -59,6 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "5BA64D6822F96897006735E9"
+            BuildableName = "SwaylorTift.framework"
+            BlueprintName = "SwaylorTift"
+            ReferencedContainer = "container:SwaylorTift.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

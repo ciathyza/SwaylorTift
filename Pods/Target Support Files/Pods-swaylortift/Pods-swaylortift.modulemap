@@ -1,5 +1,5 @@
-framework module Pods_swaylortift {
-  umbrella header "Pods-swaylortift-umbrella.h"
+framework module Pods_SwaylorTift {
+  umbrella header "Pods-SwaylorTift-umbrella.h"
 
   export *
   module * { export * }

@@ -1,14 +1,14 @@
-workspace 'swaylortift.xcworkspace'
+workspace 'SwaylorTift.xcworkspace'
 platform :ios, '10.0'
 inhibit_all_warnings!
 
-target 'swaylortift' do
-	project 'swaylortift/swaylortift.xcodeproj'
+target 'SwaylorTift' do
+	project 'SwaylorTift/SwaylorTift.xcodeproj'
 	use_frameworks!
 end
 
-target 'swaylortiftTests' do
-	project 'swaylortift/swaylortift.xcodeproj'
+target 'SwaylorTiftTests' do
+	project 'SwaylorTift/SwaylorTift.xcodeproj'
 	use_frameworks!
 	inherit! :search_paths
 	pod 'SwaylorTift', :path => 'SwaylorTift.podspec'

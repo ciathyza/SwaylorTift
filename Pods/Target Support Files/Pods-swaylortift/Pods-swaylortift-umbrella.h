@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_swaylortiftVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_swaylortiftVersionString[];
+FOUNDATION_EXPORT double Pods_SwaylorTiftVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_SwaylorTiftVersionString[];
 
