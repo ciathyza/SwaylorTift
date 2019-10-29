@@ -18,6 +18,8 @@ extension String
 	
 	public static let Empty = ""
 	public static let Space = " "
+	public static let Period = "."
+	public static let Comma = ","
 	public static let LF    = "\n"
 	public static let Numbers = "0123456789"
 	public static let Alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -54,7 +56,7 @@ extension String
 	///
 	public var localized:String
 	{
-		return NSLocalizedString(self, comment: "")
+		return NSLocalizedString(self, comment: String.Empty)
 	}
 
 	///
