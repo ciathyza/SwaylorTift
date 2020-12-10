@@ -18,10 +18,10 @@ public class LogFile
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Properties
 	// ----------------------------------------------------------------------------------------------------
-	
-	public private(set) var filePath = ""
-	
-	
+
+	public private(set) var filePath = String.Empty
+
+
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Init
 	// ----------------------------------------------------------------------------------------------------
@@ -29,20 +29,20 @@ public class LogFile
 	///
 	/// Creates a new log file with given path.
 	///
-	public init(_ filePath:String)
+	public init(_ filePath: String)
 	{
 		self.filePath = filePath
 	}
-	
-	
+
+
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Methods
 	// ----------------------------------------------------------------------------------------------------
-	
+
 	///
 	/// Appends text data to the file. If the file doesn't exist yet, it is created.
 	///
-	public func append(content:String, encoding:String.Encoding = .utf16) -> Bool
+	public func append(content: String, encoding: String.Encoding = .utf16) -> Bool
 	{
 		if let fileHandle = FileHandle(forWritingAtPath: filePath)
 		{
@@ -67,8 +67,8 @@ public class LogFile
 		}
 		return true
 	}
-	
-	
+
+
 	///
 	/// Deletes the file.
 	///

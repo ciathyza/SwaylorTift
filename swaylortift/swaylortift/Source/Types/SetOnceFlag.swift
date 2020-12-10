@@ -19,10 +19,16 @@ public class SetOnceFlag
 
 	public var value: Bool
 	{
-		get { return _value > 0 ? true : false }
+		get
+		{
+			_value > 0 ? true : false
+		}
 		set
 		{
-			if (_value > -1) { return }
+			if (_value > -1)
+			{
+				return
+			}
 			_value = newValue ? 1 : 0
 		}
 	}

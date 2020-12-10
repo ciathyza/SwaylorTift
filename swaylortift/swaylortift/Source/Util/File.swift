@@ -19,7 +19,7 @@ public class File
 	///
 	/// Appends text data to a file. If the file doesn't exist yet, it is created.
 	///
-	public class func append(filePath:String, content:String, encoding:String.Encoding = .utf16) -> Bool
+	public class func append(filePath: String, content: String, encoding: String.Encoding = .utf16) -> Bool
 	{
 		if let fileHandle = FileHandle(forWritingAtPath: filePath)
 		{
@@ -44,12 +44,12 @@ public class File
 		}
 		return true
 	}
-	
-	
+
+
 	///
 	/// Deletes the file at the specified file path.
 	///
-	public class func delete(filePath:String) -> Bool
+	public class func delete(filePath: String) -> Bool
 	{
 		do
 		{

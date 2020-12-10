@@ -20,7 +20,7 @@ extension Double
 	///
 	/// - Returns: the rounded value.
 	///
-	public func rounded(_ places:Int) -> Double
+	public func rounded(_ places: Int) -> Double
 	{
 		let divisor = pow(10.0, Double(places))
 		return (self * divisor).rounded() / divisor

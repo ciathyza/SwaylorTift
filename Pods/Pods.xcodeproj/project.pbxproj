@@ -7,53 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		003FB0B9CF193367B5DB138B3BB86D9D /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CECDC34A97CC11352E8B9F7D87A576 /* Array.swift */; };
-		01487F681ED5EB4EE4E24CC017DBC344 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DA1B95E075DD7D1B92D3CF101A82B5 /* Int.swift */; };
-		04F58818159EE76C9DF970619AED6F04 /* SwaylorTift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9755D3B90F372A9D89328F0B7418315D /* SwaylorTift-dummy.m */; };
+		096761F34C32837B94017E56B89C41CA /* TabularText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665392F7E48679D00ABDF8C5839EF977 /* TabularText.swift */; };
+		0D258FC6CB2540090516B3FF3A74EE6D /* Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DE1A031FA6063CB518496B2B47FF98 /* Assert.swift */; };
 		1192515744D2EEC3FEBCF3A5E6C50FE2 /* Pods-SwaylorTift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DF740395E4BF38AD73B54CF7FD0CFA /* Pods-SwaylorTift-dummy.m */; };
-		11DB81B8971C9CA97EE91C709E1529CA /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2792913FB2251B6D8B236FA0C104B3D5 /* JSON.swift */; };
-		16EDC02EAF99CFF53934A0DDF4512218 /* SwaylorTift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A13AC755EEB0BA30E80C8C4B457A4C5 /* SwaylorTift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		19388B11442AA1D2DEBA02507AB51BB3 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3721F909C518AAC9703BAB791BA991 /* Dice.swift */; };
-		296EEDABA3B64DE58A197C275C202C4B /* SortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32CD6B030C548CC0B931B56BFEDFF9D /* SortedArray.swift */; };
-		30DCFFAEE40C23B238ADB8543DD738D3 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63647FD7A9A67E4A356A132D3B02FC22 /* StopWatch.swift */; };
-		347B3893A653FFB718F4D552B59ED11D /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8FDFFABFD634E37C0BB346D74A127D /* Dictionary.swift */; };
-		3CB066AEEED0E1713ED07931CF7BE1E6 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F9A742C587D6EEC2E699872D1CCB69 /* UIDevice.swift */; };
-		3D9661EA21ECC56B7B2D5CC563512041 /* ExecutionTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED26CBD7AF323B2485A671714D04D61 /* ExecutionTimer.swift */; };
-		3DA66629E1035216EBCF86253D77F122 /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58807B08165D5445B4CFD1B91C1FFDFB /* Interval.swift */; };
-		423E5508B4B9F06CD6C218F0FBA87F7B /* UInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7797A590FFB2F4972AD571778FFF38 /* UInt.swift */; };
-		4BE70705893898695635888DF3331E11 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD4968A8874DA36ED70351629EC1EC4 /* File.swift */; };
-		4D2690DAD3FC4D999B2BE4F1CBDFD7D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		53F8AFC98D44E69508714920ED2C78AD /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583FEC4B17C481D2ABA9CB90F2A8A61F /* NSObject.swift */; };
-		5B779277ECB2452BECBA6D1218D75B8E /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2AF84D97281ED40ED67D82DAF253AF /* Encodable.swift */; };
-		5E502EE56C695F88D47D1AFEA49CE0D1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BD68EE35B9B27FEC5F7F786B8FE8A /* UIColor.swift */; };
-		6C1612A77F0DC289D812FF1445653AF2 /* Pods-SwaylorTiftTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE1A03C33BD5BE879BF30E0FC5BBF38 /* Pods-SwaylorTiftTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EEFCF23B7576AD6F261C02F5DA4E5D3 /* FrequencyTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12FEB3D893DC8AAF555A30338A875819 /* FrequencyTable.swift */; };
-		7946C9D28DED0ED76FFFC853D1407DD3 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8416740C779D34C3202776749A5A172 /* Bundle.swift */; };
-		828B3B4E90DF93AA8EBBF794DF7D3DA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
-		88588C2D8F0CFDA57D2B243C38D02F9D /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7167B5D50B722FE639BCEE354933D9B /* Optional.swift */; };
+		13B16D09D2D5C8D7B0B434B191C2EA25 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A8649064E4B03D8C33149C761DBA70 /* Globals.swift */; };
+		23C737C3885710C95E81A3DD23C047E9 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CBE33CAAE03F35D067D2B83C3AA278 /* JSON.swift */; };
+		25E4A59E2668C1EE1A221549AAFE3B94 /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F84DC219312B4F3A0309CA48234FFC9 /* Interval.swift */; };
+		3AC6A527EE6205F93F0061EC37174E34 /* HashID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399CE4F5622FD83A39865AFEDC9B8180 /* HashID.swift */; };
+		3BAED9EC85589333B688A4415B92CCC6 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CCFBCE28EF24B49B2AFC61DCA7CF22 /* Dictionary.swift */; };
+		3CF26AA26F5B250AA60402257030CBFC /* FrequencyTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DAB941DE624D77805D4604B16FFEEA /* FrequencyTable.swift */; };
+		3D863E1AB7EA489243EA54EE7E50A1BA /* SetOnceFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D526A5AAB0AF91A6AB5A34A9B9C91EF /* SetOnceFlag.swift */; };
+		4830D71B0BA8C1E1F173D93558C25D8C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655CED326B25D0AE89B1AAA2CF08B78 /* File.swift */; };
+		48FF75F1514D46DA64BC99FEB8B00682 /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90979D4F158FCEA9FF7B1E7536FC56ED /* Dice.swift */; };
+		65078000EC23C73F48DD7DE1B1DB409B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3675B123E965EDDEE5432CBFD392345 /* UIView.swift */; };
+		6A28847799EDB5598ADC9372C08F6E05 /* SwaylorTift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A8E0E9D550D4BD259D750C43CCA65F09 /* SwaylorTift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AFFBFBCC79E839B378454095D618230 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEC5FB68D7EE0F248A34A611600C0E0 /* Int.swift */; };
+		6B3E4FEC47FCCEFF5E14207FDD45D994 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F34EC7F3C1493779000C90E8B084BB /* Character.swift */; };
+		750563D48DCA9FB3CAC521C7C580FAE9 /* Pods-SwaylorTiftTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A2777E2B4368F74EEF1F3982E36480 /* Pods-SwaylorTiftTests-dummy.m */; };
+		78F688D76419B703A578C9F92D059959 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		7C9BDC28F72D47D3A62AAF2A855FEBFF /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07FD9A885CB3A24B2A033DDA3E847B3 /* Optional.swift */; };
+		830C1A1FE93604A7AF533B529EDF4E7B /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F35E2013215CAE5DC64DB5DC5C85A0 /* UIDevice.swift */; };
+		8729A8BFB052032D6C6BBD4D61521B10 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF6991B861E01843A1768BB64AE93C9 /* UIColor.swift */; };
 		916BD815CFCF19E3A7ADA0D6E9043B43 /* Pods-SwaylorTift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 242071D4CBCCF5B3C3A58AE4EFFD211F /* Pods-SwaylorTift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9DDAE73C29D21A669F0598A4A10926B6 /* Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED7CFE29A91CA8EEF7C09A0048C90D2 /* Assert.swift */; };
-		A19DA60A71002B5FAA67B6618EE713C6 /* TabularText.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED270F8D82E3BD88662BD607536533E7 /* TabularText.swift */; };
-		B33F763AF02D62A36A4FF7341CD5299C /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2505B1CC4B4CCB8AD545F2B48470979 /* TimeInterval.swift */; };
-		B8F90FC87D9438EB1CDD29950553DA97 /* DispatchTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A77D6602AD9A4481E4A81F1B63E9812 /* DispatchTimeInterval.swift */; };
-		BB30CBED6D126702C48F27067EB53F65 /* HashID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1144CCAD3CB12F5341A8A64E3EBA20F6 /* HashID.swift */; };
-		BE5587581CE90B58C9866D04411829B8 /* LogFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9B4691D750706B8D2C8FF8894F4CF0 /* LogFile.swift */; };
-		C2CF4EC9DEB4CB20C7DE925791A2C902 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3D82FF6E5226FDE576E12DDC83842B /* Double.swift */; };
-		D1CE405974160E8AA18E76A6EEDC6718 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A65D18C63590A0377593088BFF4DA5D /* Globals.swift */; };
-		D7D24D20FDA5CC774BC325FB1BD33EB2 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFC1163B613D68CA9B1CD9DE9AC88B /* Log.swift */; };
-		D9A0FC6A72823FE96B0D015D1B52FF95 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4C5205BA960DB93AC528165CB85CBB /* Delay.swift */; };
-		D9B6092EE1D4C38F190CAB074F0D523E /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B47716D710DF4938D164B64F6828F3 /* Character.swift */; };
-		DA206C735170D6BD53DC6D7162A46117 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6E5601A3D7678E3DCC91D57FB649B8 /* UIView.swift */; };
-		DC7CEFB31CA3B9FEA70EEE7345C263C2 /* Metatype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22771A30AE0C5B1D75F2E0654F0C3061 /* Metatype.swift */; };
-		E06542B7E38529FF6F65BC33112A5110 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B79325D0052569DA89F39A3A613D75 /* String.swift */; };
-		E0DF7D03BFEDB8125515FFC6C1B5C7E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
-		F29988AF1851AC0017145C2299C4C7CF /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FC58A41202CCA96F68161D2E5A229 /* UIApplication.swift */; };
-		F4AE3A4215546AFEFB92A1AF86556F70 /* Pods-SwaylorTiftTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A2777E2B4368F74EEF1F3982E36480 /* Pods-SwaylorTiftTests-dummy.m */; };
+		A26D8DF467A33E189F4570F51F107296 /* ExecutionTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3ADE31AD9575CABE7CF5B525EE82361 /* ExecutionTimer.swift */; };
+		A3C8D885D61A3B88A5B583DA62734483 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA38B7339981FA1E18B8173D962D549 /* String.swift */; };
+		A41843A989E04B52869474BCFA7063FA /* LogFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8364D157F29188925F46A7CA91A3C9 /* LogFile.swift */; };
+		A91F08DE8E443C32566390A9D17D9197 /* Pods-SwaylorTiftTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE1A03C33BD5BE879BF30E0FC5BBF38 /* Pods-SwaylorTiftTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC3F293E0A6B3C23B500B04360EAB5C4 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316980E55397D964F9D8ADEE19FA85A6 /* Delay.swift */; };
+		B196BBA832BCCC4F024EA1D34B20B3B5 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3500870ADFC942AEA6794AC954B9F8 /* Bundle.swift */; };
+		B76160378C1EF9CF7773B404ADAE3B53 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4FD692F07418A8DD494436A3B5049D /* NSObject.swift */; };
+		BB3EBFAF15325508F5B4C19DF7B745A2 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66CD9565D23BA1A8CFED2F6965AD8F /* TimeInterval.swift */; };
+		BC31CAC6F3843F82D3770526CC9B33E7 /* UInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267354AD4A3E7B8191A17DEC67D93EC8 /* UInt.swift */; };
+		C336A95A643290890C5C80C28222E0B0 /* Metatype.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF7C40CE8D09E2833BFBBC3D8E348B0 /* Metatype.swift */; };
+		C7DCF2AEAB5DB8EA6877813492DDE2D2 /* SwaylorTift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 640ACEDEA6129E2457DA004864D5F45B /* SwaylorTift-dummy.m */; };
+		CECF5D46CA6905E9FC5B66D2705A8C10 /* SortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7293292E12BFF33B4DF6B8D2D28BCE69 /* SortedArray.swift */; };
+		D07B743EC28FA893220F70A66F481F16 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8007AC87141AF718C95885EDFB360F /* Encodable.swift */; };
+		D17C53B2B05DDC46C45327B0C6A9CE96 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D94F667EABAE99D78C962C11C64CE18 /* StopWatch.swift */; };
+		D51ECEC09B959090F9BF0B1F445BBB57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		D8F2CBA20FBF756FE72711C603E9791A /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A669ECF2539528B34E5752614C3A59D0 /* UIApplication.swift */; };
+		E2B288AC6A52B78F894F87A68F9AE679 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444F9FCEA6F82FA165E6F0439E9CE4A3 /* Log.swift */; };
+		EE9BA9A14F9430C1C088452DC440EE8B /* DispatchTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A9EFB4DF17ACF4CAF605FE61D335D /* DispatchTimeInterval.swift */; };
+		F2BDC8431DE8E8EA5CD0408CC6DD14F6 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AADBCC3B1731853C0C00EB161333B9 /* Double.swift */; };
 		F7B84522B1699573B1E4651023B8E412 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		F85525BC105E6E7CFD8DF2537D5DEE9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		FF29655ADB213D148555920127EB7F17 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6087F27FC5C08861D0F9330ABC7B33F /* Array.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CC0B461DE2F49802FF7CFE0CB6738568 /* PBXContainerItemProxy */ = {
+		571C4280872CBA7C4DAF3C38A242F712 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -63,79 +64,81 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1144CCAD3CB12F5341A8A64E3EBA20F6 /* HashID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HashID.swift; sourceTree = "<group>"; };
-		12FEB3D893DC8AAF555A30338A875819 /* FrequencyTable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FrequencyTable.swift; sourceTree = "<group>"; };
-		1A13AC755EEB0BA30E80C8C4B457A4C5 /* SwaylorTift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwaylorTift-umbrella.h"; sourceTree = "<group>"; };
-		1A77D6602AD9A4481E4A81F1B63E9812 /* DispatchTimeInterval.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DispatchTimeInterval.swift; sourceTree = "<group>"; };
+		0F8007AC87141AF718C95885EDFB360F /* Encodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		0F84DC219312B4F3A0309CA48234FFC9 /* Interval.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
+		13A8649064E4B03D8C33149C761DBA70 /* Globals.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Globals.swift; path = SwaylorTift/SwaylorTift/Source/Globals.swift; sourceTree = "<group>"; };
+		14AADBCC3B1731853C0C00EB161333B9 /* Double.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		19F34EC7F3C1493779000C90E8B084BB /* Character.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		1BC969C139D1CB56AF83D0D37FA2A4D2 /* Pods-SwaylorTiftTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwaylorTiftTests-Info.plist"; sourceTree = "<group>"; };
 		1D2427493388203496B87C81D65967D5 /* Pods-SwaylorTift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwaylorTift.debug.xcconfig"; sourceTree = "<group>"; };
 		1DE1A03C33BD5BE879BF30E0FC5BBF38 /* Pods-SwaylorTiftTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwaylorTiftTests-umbrella.h"; sourceTree = "<group>"; };
-		22771A30AE0C5B1D75F2E0654F0C3061 /* Metatype.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Metatype.swift; sourceTree = "<group>"; };
 		242071D4CBCCF5B3C3A58AE4EFFD211F /* Pods-SwaylorTift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwaylorTift-umbrella.h"; sourceTree = "<group>"; };
-		2792913FB2251B6D8B236FA0C104B3D5 /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
-		2A65D18C63590A0377593088BFF4DA5D /* Globals.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Globals.swift; path = SwaylorTift/SwaylorTift/Source/Globals.swift; sourceTree = "<group>"; };
-		2C8FDFFABFD634E37C0BB346D74A127D /* Dictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		267354AD4A3E7B8191A17DEC67D93EC8 /* UInt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UInt.swift; sourceTree = "<group>"; };
+		29D353D66B0A11D4A53EA0769030FC86 /* swaylortift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = swaylortift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2CD0E7E993F8F4E77B01D7E067138EBA /* Pods-SwaylorTiftTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwaylorTiftTests.modulemap"; sourceTree = "<group>"; };
+		2E4FD692F07418A8DD494436A3B5049D /* NSObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		34B47716D710DF4938D164B64F6828F3 /* Character.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		316980E55397D964F9D8ADEE19FA85A6 /* Delay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
+		33CBE33CAAE03F35D067D2B83C3AA278 /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		399CE4F5622FD83A39865AFEDC9B8180 /* HashID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HashID.swift; sourceTree = "<group>"; };
 		3BDEA46209314EFF343AFD5F4BBC7F1C /* Pods_SwaylorTift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwaylorTift.framework; path = "Pods-SwaylorTift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD6DB14F69AD7B26E770CF3B839AA7F /* Pods-SwaylorTiftTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwaylorTiftTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		3ED7CFE29A91CA8EEF7C09A0048C90D2 /* Assert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Assert.swift; sourceTree = "<group>"; };
+		4042F2BB09B01162AD62F7EE7A6C493F /* SwaylorTift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwaylorTift-Info.plist"; sourceTree = "<group>"; };
 		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		444F9FCEA6F82FA165E6F0439E9CE4A3 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		44DE1A031FA6063CB518496B2B47FF98 /* Assert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Assert.swift; sourceTree = "<group>"; };
+		4655CED326B25D0AE89B1AAA2CF08B78 /* File.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		4E8364D157F29188925F46A7CA91A3C9 /* LogFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogFile.swift; sourceTree = "<group>"; };
+		525F2C388F9F1B64FCBDBCF37C51B684 /* SwaylorTift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwaylorTift.xcconfig; sourceTree = "<group>"; };
 		54A2777E2B4368F74EEF1F3982E36480 /* Pods-SwaylorTiftTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwaylorTiftTests-dummy.m"; sourceTree = "<group>"; };
-		553E5249740F6EF524188DAEACFE5122 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		583FEC4B17C481D2ABA9CB90F2A8A61F /* NSObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
-		58807B08165D5445B4CFD1B91C1FFDFB /* Interval.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
-		5FD4968A8874DA36ED70351629EC1EC4 /* File.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		63647FD7A9A67E4A356A132D3B02FC22 /* StopWatch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
-		64F9A742C587D6EEC2E699872D1CCB69 /* UIDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
-		684A09971AAAF7B751419C5C983E6458 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		640ACEDEA6129E2457DA004864D5F45B /* SwaylorTift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwaylorTift-dummy.m"; sourceTree = "<group>"; };
+		64CCFBCE28EF24B49B2AFC61DCA7CF22 /* Dictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		665392F7E48679D00ABDF8C5839EF977 /* TabularText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabularText.swift; sourceTree = "<group>"; };
 		6A961EA783F09A1AF15629B8DB9F5F1C /* Pods-SwaylorTift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwaylorTift-acknowledgements.plist"; sourceTree = "<group>"; };
 		6C889F454FCC8BD0C136AC8E5730294B /* Pods_SwaylorTiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SwaylorTiftTests.framework; path = "Pods-SwaylorTiftTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D94F667EABAE99D78C962C11C64CE18 /* StopWatch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		6FA3E1F30888B120D11F10C5077221E2 /* Pods-SwaylorTiftTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwaylorTiftTests-frameworks.sh"; sourceTree = "<group>"; };
+		6FF6991B861E01843A1768BB64AE93C9 /* UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		7293292E12BFF33B4DF6B8D2D28BCE69 /* SortedArray.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SortedArray.swift; sourceTree = "<group>"; };
 		73C94F0D1A3A7CE7D1CCA9F773834170 /* Pods-SwaylorTift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwaylorTift-acknowledgements.markdown"; sourceTree = "<group>"; };
+		77DAB941DE624D77805D4604B16FFEEA /* FrequencyTable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FrequencyTable.swift; sourceTree = "<group>"; };
 		78DF740395E4BF38AD73B54CF7FD0CFA /* Pods-SwaylorTift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwaylorTift-dummy.m"; sourceTree = "<group>"; };
-		7B199307948F80CBEAC21720C64508C4 /* SwaylorTift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwaylorTift-Info.plist"; sourceTree = "<group>"; };
-		7BB5BD39A10DDF53DD48F51FD0E630F1 /* SwaylorTift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwaylorTift.modulemap; sourceTree = "<group>"; };
-		89764ED85E1118386C8DB50795AD7222 /* SwaylorTift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwaylorTift.xcconfig; sourceTree = "<group>"; };
+		8BF89EE064D0874C59A6B1BAC49BA983 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		90979D4F158FCEA9FF7B1E7536FC56ED /* Dice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
 		962881BDC54030708C8FE338280C6EA0 /* Pods-SwaylorTift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwaylorTift.release.xcconfig"; sourceTree = "<group>"; };
 		966AA2043BFE48D6AC5A9C0BEC8639BE /* Pods-SwaylorTiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwaylorTiftTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9755D3B90F372A9D89328F0B7418315D /* SwaylorTift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwaylorTift-dummy.m"; sourceTree = "<group>"; };
+		9D526A5AAB0AF91A6AB5A34A9B9C91EF /* SetOnceFlag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SetOnceFlag.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AA3D82FF6E5226FDE576E12DDC83842B /* Double.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
-		ADAFC1163B613D68CA9B1CD9DE9AC88B /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		B1CECDC34A97CC11352E8B9F7D87A576 /* Array.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		9EEC5FB68D7EE0F248A34A611600C0E0 /* Int.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		A669ECF2539528B34E5752614C3A59D0 /* UIApplication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		A8E0E9D550D4BD259D750C43CCA65F09 /* SwaylorTift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwaylorTift-umbrella.h"; sourceTree = "<group>"; };
+		ABA38B7339981FA1E18B8173D962D549 /* String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		AF66CD9565D23BA1A8CFED2F6965AD8F /* TimeInterval.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
+		B07FD9A885CB3A24B2A033DDA3E847B3 /* Optional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		B1870BDB43C29DD1D5849A30BA7191ED /* SwaylorTift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwaylorTift-prefix.pch"; sourceTree = "<group>"; };
 		B4E52C7BDE964F4B6C812D546BE89EFF /* Pods-SwaylorTiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwaylorTiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		B661819982F7C52D431B5165C200B27D /* Pods-SwaylorTift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwaylorTift-Info.plist"; sourceTree = "<group>"; };
-		B8CC455E96924A20EF2C511475D1C2ED /* SwaylorTift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwaylorTift-prefix.pch"; sourceTree = "<group>"; };
-		BA3721F909C518AAC9703BAB791BA991 /* Dice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
-		BC2AF84D97281ED40ED67D82DAF253AF /* Encodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
-		C4DA1B95E075DD7D1B92D3CF101A82B5 /* Int.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
-		C8B79325D0052569DA89F39A3A613D75 /* String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		CB4C5205BA960DB93AC528165CB85CBB /* Delay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
-		CD7797A590FFB2F4972AD571778FFF38 /* UInt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UInt.swift; sourceTree = "<group>"; };
-		CED26CBD7AF323B2485A671714D04D61 /* ExecutionTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExecutionTimer.swift; sourceTree = "<group>"; };
-		DE7FC58A41202CCA96F68161D2E5A229 /* UIApplication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
-		DF6E5601A3D7678E3DCC91D57FB649B8 /* UIView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		E02B8A372EAF13342196B4274AB283C7 /* SwaylorTift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SwaylorTift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		E2505B1CC4B4CCB8AD545F2B48470979 /* TimeInterval.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
-		E32CD6B030C548CC0B931B56BFEDFF9D /* SortedArray.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SortedArray.swift; sourceTree = "<group>"; };
+		BDF7C40CE8D09E2833BFBBC3D8E348B0 /* Metatype.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Metatype.swift; sourceTree = "<group>"; };
+		C0EAD17B3463E58EB75A18F79A5EA4EE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C3675B123E965EDDEE5432CBFD392345 /* UIView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		CE3500870ADFC942AEA6794AC954B9F8 /* Bundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		DF4A9EFB4DF17ACF4CAF605FE61D335D /* DispatchTimeInterval.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DispatchTimeInterval.swift; sourceTree = "<group>"; };
 		E3A9277A880FFC8CB35003EAF6B4A90D /* Pods-SwaylorTift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwaylorTift.modulemap"; sourceTree = "<group>"; };
-		E7167B5D50B722FE639BCEE354933D9B /* Optional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
-		ED270F8D82E3BD88662BD607536533E7 /* TabularText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabularText.swift; sourceTree = "<group>"; };
+		E3ADE31AD9575CABE7CF5B525EE82361 /* ExecutionTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExecutionTimer.swift; sourceTree = "<group>"; };
+		E6087F27FC5C08861D0F9330ABC7B33F /* Array.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		E9F35E2013215CAE5DC64DB5DC5C85A0 /* UIDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
+		F151DFEECC77537AE5C45FCD155FC05C /* SwaylorTift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwaylorTift.modulemap; sourceTree = "<group>"; };
 		F1A9FD5F4C31F1D3CC1F995282C97BD1 /* SwaylorTift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwaylorTift.framework; path = SwaylorTift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8416740C779D34C3202776749A5A172 /* Bundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		FF17FA59DC2D6456067F3D54EECD0309 /* Pods-SwaylorTiftTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwaylorTiftTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FF4BD68EE35B9B27FEC5F7F786B8FE8A /* UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		FF9B4691D750706B8D2C8FF8894F4CF0 /* LogFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6AD12F0E2D5C53DF3336BC7D4E2EE873 /* Frameworks */ = {
+		7080C5A4A2D1CC0876667D8193F6DFF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0DF7D03BFEDB8125515FFC6C1B5C7E4 /* Foundation.framework in Frameworks */,
+				D51ECEC09B959090F9BF0B1F445BBB57 /* Foundation.framework in Frameworks */,
+				78F688D76419B703A578C9F92D059959 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,18 +150,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA8D037A1640BD46802A346B96908697 /* Frameworks */ = {
+		D99A88C7B34685F2418BBFE9E9A67B21 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D2690DAD3FC4D999B2BE4F1CBDFD7D8 /* Foundation.framework in Frameworks */,
-				828B3B4E90DF93AA8EBBF794DF7D3DA1 /* UIKit.framework in Frameworks */,
+				F85525BC105E6E7CFD8DF2537D5DEE9F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00BB83A092702E40F4D5FADDEEC7516B /* SwaylorTift */ = {
+			isa = PBXGroup;
+			children = (
+				13A8649064E4B03D8C33149C761DBA70 /* Globals.swift */,
+				3BF745076C3B1FFD99883B8DEA76D4E2 /* Extensions */,
+				7B6F4C6D87B90C2025E45894873DA101 /* Pod */,
+				B8F049260D803FB0083F8A87466477A0 /* Structs */,
+				497DE5F6C49A1954AD7BA1D13D1FE6C9 /* Support Files */,
+				AE9F1196ADF2564690F5FF96192814ED /* Types */,
+				A154F3CD39435D61F734DB5050C8DA66 /* Util */,
+			);
+			name = SwaylorTift;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,43 +184,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		34516B13CB64BBDA98A4D2F42DADAA2B /* Extensions */ = {
+		3BF745076C3B1FFD99883B8DEA76D4E2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B1CECDC34A97CC11352E8B9F7D87A576 /* Array.swift */,
-				F8416740C779D34C3202776749A5A172 /* Bundle.swift */,
-				34B47716D710DF4938D164B64F6828F3 /* Character.swift */,
-				2C8FDFFABFD634E37C0BB346D74A127D /* Dictionary.swift */,
-				1A77D6602AD9A4481E4A81F1B63E9812 /* DispatchTimeInterval.swift */,
-				AA3D82FF6E5226FDE576E12DDC83842B /* Double.swift */,
-				BC2AF84D97281ED40ED67D82DAF253AF /* Encodable.swift */,
-				C4DA1B95E075DD7D1B92D3CF101A82B5 /* Int.swift */,
-				583FEC4B17C481D2ABA9CB90F2A8A61F /* NSObject.swift */,
-				E7167B5D50B722FE639BCEE354933D9B /* Optional.swift */,
-				C8B79325D0052569DA89F39A3A613D75 /* String.swift */,
-				E2505B1CC4B4CCB8AD545F2B48470979 /* TimeInterval.swift */,
-				DE7FC58A41202CCA96F68161D2E5A229 /* UIApplication.swift */,
-				FF4BD68EE35B9B27FEC5F7F786B8FE8A /* UIColor.swift */,
-				64F9A742C587D6EEC2E699872D1CCB69 /* UIDevice.swift */,
-				CD7797A590FFB2F4972AD571778FFF38 /* UInt.swift */,
-				DF6E5601A3D7678E3DCC91D57FB649B8 /* UIView.swift */,
+				E6087F27FC5C08861D0F9330ABC7B33F /* Array.swift */,
+				CE3500870ADFC942AEA6794AC954B9F8 /* Bundle.swift */,
+				19F34EC7F3C1493779000C90E8B084BB /* Character.swift */,
+				64CCFBCE28EF24B49B2AFC61DCA7CF22 /* Dictionary.swift */,
+				DF4A9EFB4DF17ACF4CAF605FE61D335D /* DispatchTimeInterval.swift */,
+				14AADBCC3B1731853C0C00EB161333B9 /* Double.swift */,
+				0F8007AC87141AF718C95885EDFB360F /* Encodable.swift */,
+				9EEC5FB68D7EE0F248A34A611600C0E0 /* Int.swift */,
+				2E4FD692F07418A8DD494436A3B5049D /* NSObject.swift */,
+				B07FD9A885CB3A24B2A033DDA3E847B3 /* Optional.swift */,
+				ABA38B7339981FA1E18B8173D962D549 /* String.swift */,
+				AF66CD9565D23BA1A8CFED2F6965AD8F /* TimeInterval.swift */,
+				A669ECF2539528B34E5752614C3A59D0 /* UIApplication.swift */,
+				6FF6991B861E01843A1768BB64AE93C9 /* UIColor.swift */,
+				E9F35E2013215CAE5DC64DB5DC5C85A0 /* UIDevice.swift */,
+				267354AD4A3E7B8191A17DEC67D93EC8 /* UInt.swift */,
+				C3675B123E965EDDEE5432CBFD392345 /* UIView.swift */,
 			);
 			name = Extensions;
 			path = SwaylorTift/SwaylorTift/Source/Extensions;
 			sourceTree = "<group>";
 		};
-		57589A04DA382D2D272B56F151383BB9 /* SwaylorTift */ = {
+		497DE5F6C49A1954AD7BA1D13D1FE6C9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2A65D18C63590A0377593088BFF4DA5D /* Globals.swift */,
-				34516B13CB64BBDA98A4D2F42DADAA2B /* Extensions */,
-				EFDC1366549E7B71643D9921A5A1B0FE /* Pod */,
-				72B6D45B559BC4A12C8BB1082B1A1BF9 /* Structs */,
-				780A4AFBBA383855E994113038378DCE /* Support Files */,
-				8994745FB1BD8402AB4E103BB8ED93EF /* Util */,
+				F151DFEECC77537AE5C45FCD155FC05C /* SwaylorTift.modulemap */,
+				525F2C388F9F1B64FCBDBCF37C51B684 /* SwaylorTift.xcconfig */,
+				640ACEDEA6129E2457DA004864D5F45B /* SwaylorTift-dummy.m */,
+				4042F2BB09B01162AD62F7EE7A6C493F /* SwaylorTift-Info.plist */,
+				B1870BDB43C29DD1D5849A30BA7191ED /* SwaylorTift-prefix.pch */,
+				A8E0E9D550D4BD259D750C43CCA65F09 /* SwaylorTift-umbrella.h */,
 			);
-			name = SwaylorTift;
-			path = ..;
+			name = "Support Files";
+			path = "Pods/Target Support Files/SwaylorTift";
 			sourceTree = "<group>";
 		};
 		604A8E6894999C8819C50885059B0801 /* Pods-SwaylorTift */ = {
@@ -239,56 +256,69 @@
 			path = "Target Support Files/Pods-SwaylorTiftTests";
 			sourceTree = "<group>";
 		};
-		72B6D45B559BC4A12C8BB1082B1A1BF9 /* Structs */ = {
+		782D6623E0B33D63333B44E915C8F80E /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				12FEB3D893DC8AAF555A30338A875819 /* FrequencyTable.swift */,
-				E32CD6B030C548CC0B931B56BFEDFF9D /* SortedArray.swift */,
+				00BB83A092702E40F4D5FADDEEC7516B /* SwaylorTift */,
 			);
-			name = Structs;
-			path = SwaylorTift/SwaylorTift/Source/Structs;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		780A4AFBBA383855E994113038378DCE /* Support Files */ = {
+		7B6F4C6D87B90C2025E45894873DA101 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				7BB5BD39A10DDF53DD48F51FD0E630F1 /* SwaylorTift.modulemap */,
-				89764ED85E1118386C8DB50795AD7222 /* SwaylorTift.xcconfig */,
-				9755D3B90F372A9D89328F0B7418315D /* SwaylorTift-dummy.m */,
-				7B199307948F80CBEAC21720C64508C4 /* SwaylorTift-Info.plist */,
-				B8CC455E96924A20EF2C511475D1C2ED /* SwaylorTift-prefix.pch */,
-				1A13AC755EEB0BA30E80C8C4B457A4C5 /* SwaylorTift-umbrella.h */,
+				C0EAD17B3463E58EB75A18F79A5EA4EE /* LICENSE */,
+				8BF89EE064D0874C59A6B1BAC49BA983 /* README.md */,
+				29D353D66B0A11D4A53EA0769030FC86 /* swaylortift.podspec */,
 			);
-			name = "Support Files";
-			path = "Pods/Target Support Files/SwaylorTift";
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		8994745FB1BD8402AB4E103BB8ED93EF /* Util */ = {
+		A154F3CD39435D61F734DB5050C8DA66 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				3ED7CFE29A91CA8EEF7C09A0048C90D2 /* Assert.swift */,
-				CB4C5205BA960DB93AC528165CB85CBB /* Delay.swift */,
-				BA3721F909C518AAC9703BAB791BA991 /* Dice.swift */,
-				CED26CBD7AF323B2485A671714D04D61 /* ExecutionTimer.swift */,
-				5FD4968A8874DA36ED70351629EC1EC4 /* File.swift */,
-				1144CCAD3CB12F5341A8A64E3EBA20F6 /* HashID.swift */,
-				58807B08165D5445B4CFD1B91C1FFDFB /* Interval.swift */,
-				2792913FB2251B6D8B236FA0C104B3D5 /* JSON.swift */,
-				ADAFC1163B613D68CA9B1CD9DE9AC88B /* Log.swift */,
-				FF9B4691D750706B8D2C8FF8894F4CF0 /* LogFile.swift */,
-				22771A30AE0C5B1D75F2E0654F0C3061 /* Metatype.swift */,
-				63647FD7A9A67E4A356A132D3B02FC22 /* StopWatch.swift */,
-				ED270F8D82E3BD88662BD607536533E7 /* TabularText.swift */,
+				44DE1A031FA6063CB518496B2B47FF98 /* Assert.swift */,
+				316980E55397D964F9D8ADEE19FA85A6 /* Delay.swift */,
+				90979D4F158FCEA9FF7B1E7536FC56ED /* Dice.swift */,
+				E3ADE31AD9575CABE7CF5B525EE82361 /* ExecutionTimer.swift */,
+				4655CED326B25D0AE89B1AAA2CF08B78 /* File.swift */,
+				399CE4F5622FD83A39865AFEDC9B8180 /* HashID.swift */,
+				0F84DC219312B4F3A0309CA48234FFC9 /* Interval.swift */,
+				33CBE33CAAE03F35D067D2B83C3AA278 /* JSON.swift */,
+				444F9FCEA6F82FA165E6F0439E9CE4A3 /* Log.swift */,
+				4E8364D157F29188925F46A7CA91A3C9 /* LogFile.swift */,
+				BDF7C40CE8D09E2833BFBBC3D8E348B0 /* Metatype.swift */,
+				6D94F667EABAE99D78C962C11C64CE18 /* StopWatch.swift */,
+				665392F7E48679D00ABDF8C5839EF977 /* TabularText.swift */,
 			);
 			name = Util;
 			path = SwaylorTift/SwaylorTift/Source/Util;
+			sourceTree = "<group>";
+		};
+		AE9F1196ADF2564690F5FF96192814ED /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				9D526A5AAB0AF91A6AB5A34A9B9C91EF /* SetOnceFlag.swift */,
+			);
+			name = Types;
+			path = SwaylorTift/SwaylorTift/Source/Types;
+			sourceTree = "<group>";
+		};
+		B8F049260D803FB0083F8A87466477A0 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				77DAB941DE624D77805D4604B16FFEEA /* FrequencyTable.swift */,
+				7293292E12BFF33B4DF6B8D2D28BCE69 /* SortedArray.swift */,
+			);
+			name = Structs;
+			path = SwaylorTift/SwaylorTift/Source/Structs;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				E678EB9FA885925763E20D96E5174D8B /* Development Pods */,
+				782D6623E0B33D63333B44E915C8F80E /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
 				D236F9E2093F13488F78FD3FB4ABD8FA /* Products */,
 				DF51BDCF6E098C8BA330CF83F756013B /* Targets Support Files */,
@@ -323,32 +353,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		E678EB9FA885925763E20D96E5174D8B /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				57589A04DA382D2D272B56F151383BB9 /* SwaylorTift */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		EFDC1366549E7B71643D9921A5A1B0FE /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				684A09971AAAF7B751419C5C983E6458 /* LICENSE */,
-				553E5249740F6EF524188DAEACFE5122 /* README.md */,
-				E02B8A372EAF13342196B4274AB283C7 /* SwaylorTift.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		545412339DF39683B278D3ECD0448DA0 /* Headers */ = {
+		04064E6C566A75A345555D0ED2B0895C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16EDC02EAF99CFF53934A0DDF4512218 /* SwaylorTift-umbrella.h in Headers */,
+				A91F08DE8E443C32566390A9D17D9197 /* Pods-SwaylorTiftTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,11 +372,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F204159EC3F4C592065449A831E47706 /* Headers */ = {
+		B0628942F64FB567846F7FFD7432A3EF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C1612A77F0DC289D812FF1445653AF2 /* Pods-SwaylorTiftTests-umbrella.h in Headers */,
+				6A28847799EDB5598ADC9372C08F6E05 /* SwaylorTift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,12 +403,12 @@
 		};
 		60E953E83271B3A9D4C2E8B1C07F6A33 /* SwaylorTift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1692C3240611F60774BC2915A5C65E50 /* Build configuration list for PBXNativeTarget "SwaylorTift" */;
+			buildConfigurationList = 9C79B8B99795164AA195235618FDCFF2 /* Build configuration list for PBXNativeTarget "SwaylorTift" */;
 			buildPhases = (
-				545412339DF39683B278D3ECD0448DA0 /* Headers */,
-				E1492E5CADD92ACAC3140C1FBED0395E /* Sources */,
-				EA8D037A1640BD46802A346B96908697 /* Frameworks */,
-				75F8033F6DB1B9428950D5CAC492651C /* Resources */,
+				B0628942F64FB567846F7FFD7432A3EF /* Headers */,
+				32A0EAF1171AC532AF98CE7C905533AF /* Sources */,
+				7080C5A4A2D1CC0876667D8193F6DFF7 /* Frameworks */,
+				079CC60602BF72317EFFA3E6CCFDFDF2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -409,17 +421,17 @@
 		};
 		C2194EDB24D2B503E734BB09D8901E29 /* Pods-SwaylorTiftTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A8F828F4C1E93DBB4561FD57AC6DA60F /* Build configuration list for PBXNativeTarget "Pods-SwaylorTiftTests" */;
+			buildConfigurationList = 26263CC3442D15014CD8A30543F34949 /* Build configuration list for PBXNativeTarget "Pods-SwaylorTiftTests" */;
 			buildPhases = (
-				F204159EC3F4C592065449A831E47706 /* Headers */,
-				B19FCBCB95CBF91317D229BA9BF71C74 /* Sources */,
-				6AD12F0E2D5C53DF3336BC7D4E2EE873 /* Frameworks */,
-				854C28E91DC898D58B029595E7F81D8B /* Resources */,
+				04064E6C566A75A345555D0ED2B0895C /* Headers */,
+				0B3D737CC2251BA58F1E752220A4F597 /* Sources */,
+				D99A88C7B34685F2418BBFE9E9A67B21 /* Frameworks */,
+				E03D9D5DE6B7FA9F91A923B065A33B01 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B1DB972978DB5C73BEFDC9D033B45823 /* PBXTargetDependency */,
+				92C232921F35E03C05B8CAB1A5083C69 /* PBXTargetDependency */,
 			);
 			name = "Pods-SwaylorTiftTests";
 			productName = "Pods-SwaylorTiftTests";
@@ -441,6 +453,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = D236F9E2093F13488F78FD3FB4ABD8FA /* Products */;
@@ -455,6 +468,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		079CC60602BF72317EFFA3E6CCFDFDF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		113D93CCFCA70350F20B1C8B11751D12 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,14 +482,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		75F8033F6DB1B9428950D5CAC492651C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		854C28E91DC898D58B029595E7F81D8B /* Resources */ = {
+		E03D9D5DE6B7FA9F91A923B065A33B01 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -479,11 +492,53 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B19FCBCB95CBF91317D229BA9BF71C74 /* Sources */ = {
+		0B3D737CC2251BA58F1E752220A4F597 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4AE3A4215546AFEFB92A1AF86556F70 /* Pods-SwaylorTiftTests-dummy.m in Sources */,
+				750563D48DCA9FB3CAC521C7C580FAE9 /* Pods-SwaylorTiftTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32A0EAF1171AC532AF98CE7C905533AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF29655ADB213D148555920127EB7F17 /* Array.swift in Sources */,
+				0D258FC6CB2540090516B3FF3A74EE6D /* Assert.swift in Sources */,
+				B196BBA832BCCC4F024EA1D34B20B3B5 /* Bundle.swift in Sources */,
+				6B3E4FEC47FCCEFF5E14207FDD45D994 /* Character.swift in Sources */,
+				AC3F293E0A6B3C23B500B04360EAB5C4 /* Delay.swift in Sources */,
+				48FF75F1514D46DA64BC99FEB8B00682 /* Dice.swift in Sources */,
+				3BAED9EC85589333B688A4415B92CCC6 /* Dictionary.swift in Sources */,
+				EE9BA9A14F9430C1C088452DC440EE8B /* DispatchTimeInterval.swift in Sources */,
+				F2BDC8431DE8E8EA5CD0408CC6DD14F6 /* Double.swift in Sources */,
+				D07B743EC28FA893220F70A66F481F16 /* Encodable.swift in Sources */,
+				A26D8DF467A33E189F4570F51F107296 /* ExecutionTimer.swift in Sources */,
+				4830D71B0BA8C1E1F173D93558C25D8C /* File.swift in Sources */,
+				3CF26AA26F5B250AA60402257030CBFC /* FrequencyTable.swift in Sources */,
+				13B16D09D2D5C8D7B0B434B191C2EA25 /* Globals.swift in Sources */,
+				3AC6A527EE6205F93F0061EC37174E34 /* HashID.swift in Sources */,
+				6AFFBFBCC79E839B378454095D618230 /* Int.swift in Sources */,
+				25E4A59E2668C1EE1A221549AAFE3B94 /* Interval.swift in Sources */,
+				23C737C3885710C95E81A3DD23C047E9 /* JSON.swift in Sources */,
+				E2B288AC6A52B78F894F87A68F9AE679 /* Log.swift in Sources */,
+				A41843A989E04B52869474BCFA7063FA /* LogFile.swift in Sources */,
+				C336A95A643290890C5C80C28222E0B0 /* Metatype.swift in Sources */,
+				B76160378C1EF9CF7773B404ADAE3B53 /* NSObject.swift in Sources */,
+				7C9BDC28F72D47D3A62AAF2A855FEBFF /* Optional.swift in Sources */,
+				3D863E1AB7EA489243EA54EE7E50A1BA /* SetOnceFlag.swift in Sources */,
+				CECF5D46CA6905E9FC5B66D2705A8C10 /* SortedArray.swift in Sources */,
+				D17C53B2B05DDC46C45327B0C6A9CE96 /* StopWatch.swift in Sources */,
+				A3C8D885D61A3B88A5B583DA62734483 /* String.swift in Sources */,
+				C7DCF2AEAB5DB8EA6877813492DDE2D2 /* SwaylorTift-dummy.m in Sources */,
+				096761F34C32837B94017E56B89C41CA /* TabularText.swift in Sources */,
+				BB3EBFAF15325508F5B4C19DF7B745A2 /* TimeInterval.swift in Sources */,
+				D8F2CBA20FBF756FE72711C603E9791A /* UIApplication.swift in Sources */,
+				8729A8BFB052032D6C6BBD4D61521B10 /* UIColor.swift in Sources */,
+				830C1A1FE93604A7AF533B529EDF4E7B /* UIDevice.swift in Sources */,
+				BC31CAC6F3843F82D3770526CC9B33E7 /* UInt.swift in Sources */,
+				65078000EC23C73F48DD7DE1B1DB409B /* UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,55 +550,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1492E5CADD92ACAC3140C1FBED0395E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				003FB0B9CF193367B5DB138B3BB86D9D /* Array.swift in Sources */,
-				9DDAE73C29D21A669F0598A4A10926B6 /* Assert.swift in Sources */,
-				7946C9D28DED0ED76FFFC853D1407DD3 /* Bundle.swift in Sources */,
-				D9B6092EE1D4C38F190CAB074F0D523E /* Character.swift in Sources */,
-				D9A0FC6A72823FE96B0D015D1B52FF95 /* Delay.swift in Sources */,
-				19388B11442AA1D2DEBA02507AB51BB3 /* Dice.swift in Sources */,
-				347B3893A653FFB718F4D552B59ED11D /* Dictionary.swift in Sources */,
-				B8F90FC87D9438EB1CDD29950553DA97 /* DispatchTimeInterval.swift in Sources */,
-				C2CF4EC9DEB4CB20C7DE925791A2C902 /* Double.swift in Sources */,
-				5B779277ECB2452BECBA6D1218D75B8E /* Encodable.swift in Sources */,
-				3D9661EA21ECC56B7B2D5CC563512041 /* ExecutionTimer.swift in Sources */,
-				4BE70705893898695635888DF3331E11 /* File.swift in Sources */,
-				6EEFCF23B7576AD6F261C02F5DA4E5D3 /* FrequencyTable.swift in Sources */,
-				D1CE405974160E8AA18E76A6EEDC6718 /* Globals.swift in Sources */,
-				BB30CBED6D126702C48F27067EB53F65 /* HashID.swift in Sources */,
-				01487F681ED5EB4EE4E24CC017DBC344 /* Int.swift in Sources */,
-				3DA66629E1035216EBCF86253D77F122 /* Interval.swift in Sources */,
-				11DB81B8971C9CA97EE91C709E1529CA /* JSON.swift in Sources */,
-				D7D24D20FDA5CC774BC325FB1BD33EB2 /* Log.swift in Sources */,
-				BE5587581CE90B58C9866D04411829B8 /* LogFile.swift in Sources */,
-				DC7CEFB31CA3B9FEA70EEE7345C263C2 /* Metatype.swift in Sources */,
-				53F8AFC98D44E69508714920ED2C78AD /* NSObject.swift in Sources */,
-				88588C2D8F0CFDA57D2B243C38D02F9D /* Optional.swift in Sources */,
-				296EEDABA3B64DE58A197C275C202C4B /* SortedArray.swift in Sources */,
-				30DCFFAEE40C23B238ADB8543DD738D3 /* StopWatch.swift in Sources */,
-				E06542B7E38529FF6F65BC33112A5110 /* String.swift in Sources */,
-				04F58818159EE76C9DF970619AED6F04 /* SwaylorTift-dummy.m in Sources */,
-				A19DA60A71002B5FAA67B6618EE713C6 /* TabularText.swift in Sources */,
-				B33F763AF02D62A36A4FF7341CD5299C /* TimeInterval.swift in Sources */,
-				F29988AF1851AC0017145C2299C4C7CF /* UIApplication.swift in Sources */,
-				5E502EE56C695F88D47D1AFEA49CE0D1 /* UIColor.swift in Sources */,
-				3CB066AEEED0E1713ED07931CF7BE1E6 /* UIDevice.swift in Sources */,
-				423E5508B4B9F06CD6C218F0FBA87F7B /* UInt.swift in Sources */,
-				DA206C735170D6BD53DC6D7162A46117 /* UIView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B1DB972978DB5C73BEFDC9D033B45823 /* PBXTargetDependency */ = {
+		92C232921F35E03C05B8CAB1A5083C69 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwaylorTift;
 			target = 60E953E83271B3A9D4C2E8B1C07F6A33 /* SwaylorTift */;
-			targetProxy = CC0B461DE2F49802FF7CFE0CB6738568 /* PBXContainerItemProxy */;
+			targetProxy = 571C4280872CBA7C4DAF3C38A242F712 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -612,6 +626,43 @@
 			};
 			name = Debug;
 		};
+		3853DEEAE7CE83F68F1B814DC275EBC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 525F2C388F9F1B64FCBDBCF37C51B684 /* SwaylorTift.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/SwaylorTift/SwaylorTift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwaylorTift/SwaylorTift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwaylorTift/SwaylorTift.modulemap";
+				PRODUCT_MODULE_NAME = SwaylorTift;
+				PRODUCT_NAME = SwaylorTift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		3D419E50471A5DCCB4543A9F5BB5E3E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 962881BDC54030708C8FE338280C6EA0 /* Pods-SwaylorTift.release.xcconfig */;
@@ -652,84 +703,7 @@
 			};
 			name = Release;
 		};
-		6C58C9BFD6A233F39B27FAAC33D52A12 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89764ED85E1118386C8DB50795AD7222 /* SwaylorTift.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/SwaylorTift/SwaylorTift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwaylorTift/SwaylorTift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwaylorTift/SwaylorTift.modulemap";
-				PRODUCT_MODULE_NAME = SwaylorTift;
-				PRODUCT_NAME = SwaylorTift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		793EBBE963F3BF1DD56AF70F2360DEF0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4E52C7BDE964F4B6C812D546BE89EFF /* Pods-SwaylorTiftTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-SwaylorTiftTests/Pods-SwaylorTiftTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SwaylorTiftTests/Pods-SwaylorTiftTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7BA4115F93CD2860505293A0BC9C2365 /* Debug */ = {
+		73318F129406A86452B6E92D0FED4A81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 966AA2043BFE48D6AC5A9C0BEC8639BE /* Pods-SwaylorTiftTests.debug.xcconfig */;
 			buildSettings = {
@@ -828,9 +802,9 @@
 			};
 			name = Release;
 		};
-		BC1D99447C4E5152BD013EE792C47509 /* Release */ = {
+		D94549A8A4628E9E019E0DFDC1958725 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89764ED85E1118386C8DB50795AD7222 /* SwaylorTift.xcconfig */;
+			baseConfigurationReference = 525F2C388F9F1B64FCBDBCF37C51B684 /* SwaylorTift.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -859,6 +833,46 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EB9E9C41BA7F45390E04B32D725733B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4E52C7BDE964F4B6C812D546BE89EFF /* Pods-SwaylorTiftTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwaylorTiftTests/Pods-SwaylorTiftTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwaylorTiftTests/Pods-SwaylorTiftTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -908,11 +922,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1692C3240611F60774BC2915A5C65E50 /* Build configuration list for PBXNativeTarget "SwaylorTift" */ = {
+		26263CC3442D15014CD8A30543F34949 /* Build configuration list for PBXNativeTarget "Pods-SwaylorTiftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6C58C9BFD6A233F39B27FAAC33D52A12 /* Debug */,
-				BC1D99447C4E5152BD013EE792C47509 /* Release */,
+				73318F129406A86452B6E92D0FED4A81 /* Debug */,
+				EB9E9C41BA7F45390E04B32D725733B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -935,11 +949,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A8F828F4C1E93DBB4561FD57AC6DA60F /* Build configuration list for PBXNativeTarget "Pods-SwaylorTiftTests" */ = {
+		9C79B8B99795164AA195235618FDCFF2 /* Build configuration list for PBXNativeTarget "SwaylorTift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7BA4115F93CD2860505293A0BC9C2365 /* Debug */,
-				793EBBE963F3BF1DD56AF70F2360DEF0 /* Release */,
+				3853DEEAE7CE83F68F1B814DC275EBC0 /* Debug */,
+				D94549A8A4628E9E019E0DFDC1958725 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

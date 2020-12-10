@@ -15,12 +15,12 @@ extension Array
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Properties
 	// ----------------------------------------------------------------------------------------------------
-	
+
 	///
 	/// Returns a random element from the `Array`.
 	/// - Returns: A random element from the array or `nil` if empty.
 	///
-	public var sample:Element?
+	public var sample: Element?
 	{
 		guard let randomIndex = Int(randomBelow: count) else
 		{
@@ -28,16 +28,16 @@ extension Array
 		}
 		return self[randomIndex]
 	}
-	
-	
+
+
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Methods
 	// ----------------------------------------------------------------------------------------------------
-	
+
 	///
 	/// Returns the element at the given index or nil if the index is out of bounds.
 	///
-	public func at(_ index:Int) -> Element?
+	public func at(_ index: Int) -> Element?
 	{
 		if (index < 0 || index > self.count - 1)
 		{
@@ -45,8 +45,8 @@ extension Array
 		}
 		return self[index]
 	}
-	
-	
+
+
 	///
 	/// Checks wether the array contains the specified object.
 	///
@@ -55,11 +55,11 @@ extension Array
 	///
 	/// - Returns: true or false.
 	///
-	public func containsObject(_ object:Any) -> Bool
+	public func containsObject(_ object: Any) -> Bool
 	{
-		return contains(where: { $0 as AnyObject === object as AnyObject })
+		contains(where: { $0 as AnyObject === object as AnyObject })
 	}
-	
+
 
 	///
 	/// Returns a given number of random elements from the `Array`.
@@ -68,20 +68,20 @@ extension Array
 	///   - size: The number of random elements wanted.
 	/// - Returns: An array with the given number of random elements or `nil` if empty.
 	///
-	public func sample(size:Int) -> [Element]?
+	public func sample(size: Int) -> [Element]?
 	{
 		if isEmpty
 		{
 			return nil
 		}
-		var sampleElements:[Element] = []
+		var sampleElements: [Element] = []
 		size.times
 		{
 			sampleElements.append(sample!)
 		}
 		return sampleElements
 	}
-	
+
 
 	///
 	/// Combines each element with each element of a given array.
@@ -92,7 +92,7 @@ extension Array
 	///   - other: Other array to combine the elements with.
 	/// - Returns: An array of tuples with the elements of both arrays combined.
 	///
-	public func combinations<T>(with other:[T]) -> [(Element, T)]
+	public func combinations<T>(with other: [T]) -> [(Element, T)]
 	{
 		var combinations = [(Element, T)]()
 		forEach
@@ -106,7 +106,7 @@ extension Array
 		}
 		return combinations
 	}
-	
+
 
 	///
 	/// Sorts the collection in place by the order specified in the closure.
@@ -117,16 +117,16 @@ extension Array
 	///   - stable: Speifies if the sorting algorithm should be stable.
 	///   - areInIncreasingOrder: The closure to specify the order of the elements to be sorted by.
 	///
-	public mutating func sort(by areInIncreasingOrder:@escaping (Element, Element) -> Bool, stable:Bool)
+	public mutating func sort(by areInIncreasingOrder: @escaping (Element, Element) -> Bool, stable: Bool)
 	{
 		guard stable else
 		{
-			sort(by: areInIncreasingOrder);
+			sort(by: areInIncreasingOrder)
 			return
 		}
 		stableMergeSort(by: areInIncreasingOrder)
 	}
-	
+
 
 	///
 	/// Returns the elements of the sequence, sorted.
@@ -137,7 +137,7 @@ extension Array
 	///   - stable: Speifies if the sorting algorithm should be stable.
 	///   - areInIncreasingOrder: The closure to specify the order of the elements to be sorted by.
 	///
-	public func sorted(by areInIncreasingOrder:@escaping (Element, Element) -> Bool, stable:Bool) -> [Element]
+	public func sorted(by areInIncreasingOrder: @escaping (Element, Element) -> Bool, stable: Bool) -> [Element]
 	{
 		guard stable else
 		{
@@ -147,30 +147,30 @@ extension Array
 		copy.stableMergeSort(by: areInIncreasingOrder)
 		return copy
 	}
-	
+
 
 	///
 	/// Sorts the array in-place using a stable merge sort algorithm.
 	///
-	mutating func stableMergeSort(by areInIncreasingOrder:@escaping (Element, Element) -> Bool)
+	mutating func stableMergeSort(by areInIncreasingOrder: @escaping (Element, Element) -> Bool)
 	{
 		var tmp = [Element]()
 		tmp.reserveCapacity(numericCast(count))
-		
-		
-		func merge(low:Int, mid:Int, high:Int)
+
+
+		func merge(low: Int, mid: Int, high: Int)
 		{
 			tmp.removeAll(keepingCapacity: true)
 			tmp.append(contentsOf: self[low ..< high])
-			
+
 			var i = 0, j = mid - low
 			let iMax = j, jMax = tmp.count
-			
+
 			for k in low ..< high
 			{
 				let tmpPosIsJ = i == iMax || (j != jMax && areInIncreasingOrder(tmp[j], tmp[i]))
 				self[k] = tmp[tmpPosIsJ ? j : i]
-				
+
 				if tmpPosIsJ
 				{
 					j += 1
@@ -181,8 +181,8 @@ extension Array
 				}
 			}
 		}
-		
-		
+
+
 		let n = count
 		var size = 1
 		while size < n
@@ -199,7 +199,7 @@ extension Array
 }
 
 
-extension Array where Element:Comparable
+extension Array where Element: Comparable
 {
 	///
 	/// Sorts the collection in place by the order specified in the closure.
@@ -208,11 +208,11 @@ extension Array where Element:Comparable
 	/// - Parameters:
 	///   - stable: Speifies if the sorting algorithm should be stable.
 	///
-	public mutating func sort(stable:Bool)
+	public mutating func sort(stable: Bool)
 	{
 		sort(by: { lhs, rhs in lhs < rhs }, stable: stable)
 	}
-	
+
 
 	///
 	/// Returns the elements of the sequence, sorted.
@@ -221,8 +221,8 @@ extension Array where Element:Comparable
 	/// - Parameters:
 	///   - stable: Speifies if the sorting algorithm should be stable.
 	///
-	public func sorted(stable:Bool) -> [Element]
+	public func sorted(stable: Bool) -> [Element]
 	{
-		return sorted(by: { lhs, rhs in lhs < rhs }, stable: stable)
+		sorted(by: { lhs, rhs in lhs < rhs }, stable: stable)
 	}
 }

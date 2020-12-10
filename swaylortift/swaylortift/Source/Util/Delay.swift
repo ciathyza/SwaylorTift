@@ -15,7 +15,7 @@ public struct Delay
 	///
 	/// Executes a code block after x seconds on the main dispatch queue.
 	///
-	public static func executeAfter(_ seconds:Double, _ block:@escaping () -> Void)
+	public static func executeAfter(_ seconds: Double, _ block: @escaping () -> Void)
 	{
 		DispatchQueue.main.asyncAfter(deadline: .now() + seconds, execute: block)
 	}

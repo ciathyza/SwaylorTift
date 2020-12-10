@@ -18,15 +18,15 @@ public class Interval
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Properties
 	// ----------------------------------------------------------------------------------------------------
-	
-	private var _timer:Timer?
+
+	private var _timer: Timer?
 	private var _counter = 0
-	
-	
+
+
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Methods
 	// ----------------------------------------------------------------------------------------------------
-	
+
 	///
 	/// Calls a closure at a specified interval.
 	///
@@ -37,7 +37,7 @@ public class Interval
 	///
 	/// - Returns: nil.
 	///
-	public func start(interval:TimeInterval = 1.0, repeats:Int = 0, callback:(() -> Void)? = nil)
+	public func start(interval: TimeInterval = 1.0, repeats: Int = 0, callback: (() -> Void)? = nil)
 	{
 		_counter = 0
 		_timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true)
@@ -59,8 +59,8 @@ public class Interval
 				self.stop()
 		}
 	}
-	
-	
+
+
 	///
 	/// Fires the interval once.
 	///
@@ -68,8 +68,8 @@ public class Interval
 	{
 		_timer?.fire()
 	}
-	
-	
+
+
 	///
 	/// Stops the interval.
 	///

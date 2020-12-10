@@ -23,7 +23,7 @@ public class JSON
 	///
 	/// - Returns: true if successful.
 	///
-	public static func encodeAndWriteToStream<T:Encodable>(_ obj:T, path:String) -> Bool
+	public static func encodeAndWriteToStream<T: Encodable>(_ obj: T, path: String) -> Bool
 	{
 		if let encodedData = try? JSONEncoder().encode(obj)
 		{
@@ -39,8 +39,8 @@ public class JSON
 		}
 		return true
 	}
-	
-	
+
+
 	/// Encodes a codable object to a JSON string.
 	///
 	/// - Parameters:
@@ -48,7 +48,7 @@ public class JSON
 	///
 	/// - Returns: A JSON Data or nil.
 	///
-	public static func encode<T:Encodable>(_ obj:T) -> Data?
+	public static func encode<T: Encodable>(_ obj: T) -> Data?
 	{
 		if let encodedData = try? JSONEncoder().encode(obj)
 		{
@@ -57,8 +57,8 @@ public class JSON
 		Log.error(category: SWAYLOR_TIFT_NAME, "Failed to encode \(obj).")
 		return nil
 	}
-	
-	
+
+
 	/// Encodes a codable object to a JSON string.
 	///
 	/// - Parameters:
@@ -66,7 +66,7 @@ public class JSON
 	///
 	/// - Returns: A JSON string or nil.
 	///
-	public static func encodeToString<T:Encodable>(_ obj:T) -> String?
+	public static func encodeToString<T: Encodable>(_ obj: T) -> String?
 	{
 		if let data = JSON.encode(obj)
 		{
@@ -74,8 +74,8 @@ public class JSON
 		}
 		return nil
 	}
-	
-	
+
+
 	/// Serializes and writes data to a JSON file.
 	///
 	/// - Parameters:
@@ -84,7 +84,7 @@ public class JSON
 	///
 	/// - Returns: true if successful.
 	///
-	public static func writeToStream(data:Any, path:String) -> Bool
+	public static func writeToStream(data: Any, path: String) -> Bool
 	{
 		var success = false
 		if JSONSerialization.isValidJSONObject(data)
@@ -92,7 +92,7 @@ public class JSON
 			if let stream = OutputStream(toFileAtPath: "\(path)", append: false)
 			{
 				stream.open()
-				var error:NSError?
+				var error: NSError?
 				JSONSerialization.writeJSONObject(data, to: stream, options: [], error: &error)
 				stream.close()
 				if let error = error
@@ -114,8 +114,8 @@ public class JSON
 		}
 		return success
 	}
-	
-	
+
+
 	/// Serializes a Serpent-serializable data strcture to JSON.
 	///
 	/// - Parameters:
@@ -123,13 +123,13 @@ public class JSON
 	///
 	/// - Returns: A Data? object.
 	///
-	public static func serialize(data:Any) -> Data?
+	public static func serialize(data: Any) -> Data?
 	{
 		if JSONSerialization.isValidJSONObject(data)
 		{
-			var json:Data?
+			var json: Data?
 			var success = true
-			
+
 			do
 			{
 				json = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
@@ -139,7 +139,7 @@ public class JSON
 				Log.error("Failed to serialize JSON data: \(data)")
 				success = false
 			}
-			
+
 			if (success && json != nil)
 			{
 				let jsonString = String.init(data: json!, encoding: .utf8)!
@@ -152,8 +152,8 @@ public class JSON
 		}
 		return nil
 	}
-	
-	
+
+
 	/// Deserializes given JSON data to a [String:Any] dictionary.
 	///
 	/// - Parameters:
@@ -161,11 +161,11 @@ public class JSON
 	///
 	/// - Returns: A dictionary of [String:Any].
 	///
-	public static func deserialize(data:Data) -> [String:Any]
+	public static func deserialize(data: Data) -> [String: Any]
 	{
 		do
 		{
-			if let deserializedData = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:Any]
+			if let deserializedData = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any]
 			{
 				return deserializedData
 			}
@@ -174,6 +174,6 @@ public class JSON
 		{
 			Log.error(category: SWAYLOR_TIFT_NAME, "Failed to deserialize JSON data: \(data).")
 		}
-		return [String:Any]()
+		return [String: Any]()
 	}
 }

@@ -21,8 +21,8 @@ public struct Assert
 	{
 		fatalError("TODO")
 	}
-	
-	
+
+
 	///
 	/// Asserts a specific code position as fatal error. Fails the app with fatal error.
 	///
@@ -30,12 +30,12 @@ public struct Assert
 	{
 		fatalError("Fatal error")
 	}
-	
-	
+
+
 	///
 	/// Asserts a specific code position as fatal error. Fails the app with fatal error.
 	///
-	public static func fatal(_ description:String) -> Never
+	public static func fatal(_ description: String) -> Never
 	{
 		fatalError(description)
 	}

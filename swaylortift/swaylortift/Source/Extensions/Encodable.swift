@@ -15,7 +15,7 @@ extension Encodable
 	///
 	/// Returns a flat-mapped dictionary of the encodable, or nil.
 	///
-	public var dictionary:[String:Any]?
+	public var dictionary: [String: Any]?
 	{
 		guard let data = try? JSONEncoder().encode(self) else
 		{
@@ -23,7 +23,7 @@ extension Encodable
 		}
 		return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap
 		{
-			$0 as? [String:Any]
+			$0 as? [String: Any]
 		}
 	}
 }

@@ -18,13 +18,13 @@ public class Dice
 	///
 	/// Rolls a set of dice with the specified maximum value and dice count.
 	///
-	public class func roll(maxValue:UInt, diceCount:UInt = 1) -> UInt
+	public class func roll(maxValue: UInt, diceCount: UInt = 1) -> UInt
 	{
-		var v:UInt = 0;
+		var v: UInt = 0
 		for _ in 0 ..< diceCount
 		{
 			v += UInt.random(inRange: 1 ... maxValue)
 		}
-		return v;
+		return v
 	}
 }

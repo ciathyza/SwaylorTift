@@ -15,9 +15,9 @@ import UIKit
 ///
 public struct RGBColor
 {
-	let R:Int
-	let G:Int
-	let B:Int
+	let R: Int
+	let G: Int
+	let B: Int
 }
 
 
@@ -26,25 +26,25 @@ public struct RGBColor
 ///
 extension UIColor
 {
-	public var rgbColor:RGBColor
+	public var rgbColor: RGBColor
 	{
-		var red:CGFloat = 0
-		var green:CGFloat = 0
-		var blue:CGFloat = 0
-		var alpha:CGFloat = 0
-		
+		var red: CGFloat = 0
+		var green: CGFloat = 0
+		var blue: CGFloat = 0
+		var alpha: CGFloat = 0
+
 		getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 		return RGBColor(R: Int(red * 255), G: Int(green * 255), B: Int(blue * 255))
 	}
-	
-	
+
+
 	@objc func colorDescription() -> String
 	{
 		let color = rgbColor
 		return "\(color) - " + ColorLog.background(color, object: " ")
 	}
-	
-	
+
+
 	///
 	/// Swizzle description method with own colorDescription. colorDescription will be used instead of description.
 	///
@@ -53,8 +53,8 @@ extension UIColor
 		let instance = UIColor.red
 		instance.swizzleMethods(#selector(getter:NSObjectProtocol.description), withSelector: #selector(UIColor.colorDescription))
 	}
-	
-	
+
+
 	///
 	/// Restore back original description method.
 	///
@@ -69,9 +69,9 @@ extension UIColor
 // ------------------------------------------------------------------------------------------------
 extension RGBColor: CustomStringConvertible
 {
-	public var description:String
+	public var description: String
 	{
-		return "RGB: \(R), \(G), \(B)"
+		"RGB: \(R), \(G), \(B)"
 	}
 }
 
@@ -82,8 +82,8 @@ extension RGBColor: RGBColorType
 	///
 	/// Color representation for XcodeColors console log.
 	///
-	public var colorCode:String
+	public var colorCode: String
 	{
-		return "\(R),\(G),\(B)"
+		"\(R),\(G),\(B)"
 	}
 }

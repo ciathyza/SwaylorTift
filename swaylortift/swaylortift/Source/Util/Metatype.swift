@@ -13,25 +13,31 @@ import Foundation
 ///
 /// Hashable wrapper for a metatype value.
 ///
-public struct Metatype<T>:Hashable
+public struct Metatype<T>: Hashable
 {
-	let base:T.Type
-	
-	
-	public static func ==(lhs:Metatype, rhs:Metatype) -> Bool
+	let base: T.Type
+
+
+	public static func == (lhs: Metatype, rhs: Metatype) -> Bool
 	{
-		return lhs.base == rhs.base
+		lhs.base == rhs.base
 	}
-	
-	
-	init(_ base:T.Type)
+
+
+	init(_ base: T.Type)
 	{
 		self.base = base
 	}
-	
-	
-	public var hashValue:Int
+
+
+	public func hash(into hasher: inout Hasher)
 	{
-		return ObjectIdentifier(base).hashValue
+		hasher.combine(ObjectIdentifier(base).hashValue)
+	}
+
+
+	public var hashValue: Int
+	{
+		ObjectIdentifier(base).hashValue
 	}
 }

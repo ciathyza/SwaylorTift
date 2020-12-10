@@ -10,12 +10,12 @@
 import Foundation
 
 
-extension Optional where Wrapped:Collection
+extension Optional where Wrapped: Collection
 {
 	///
 	/// Determines whether an optional collection is nil or empty (true), or not (false).
 	///
-	var isNilOrEmpty:Bool
+	var isNilOrEmpty: Bool
 	{
 		switch self
 		{

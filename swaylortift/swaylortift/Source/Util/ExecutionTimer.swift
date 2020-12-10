@@ -18,46 +18,46 @@ public class ExecutionTimer
 	// ------------------------------------------------------------------------------------------------
 	// Properties
 	// ------------------------------------------------------------------------------------------------
-	
-	public private(set) var duration:TimeInterval = 0.0
+
+	public private(set) var duration: TimeInterval = 0.0
 	private var _date = Date()
-	
-	
+
+
 	// ------------------------------------------------------------------------------------------------
 	// Derived Properties
 	// ------------------------------------------------------------------------------------------------
-	
-	public var milliseconds:Int
+
+	public var milliseconds: Int
 	{
-		return Int((duration * 1000).truncatingRemainder(dividingBy: 1000))
+		Int((duration * 1000).truncatingRemainder(dividingBy: 1000))
 	}
-	
-	public var seconds:Int
+
+	public var seconds: Int
 	{
-		return Int((duration).truncatingRemainder(dividingBy: 60))
+		Int((duration).truncatingRemainder(dividingBy: 60))
 	}
-	
-	var minutes:Int
+
+	var minutes: Int
 	{
-		return Int((duration / 60).truncatingRemainder(dividingBy: 60))
+		Int((duration / 60).truncatingRemainder(dividingBy: 60))
 	}
-	
-	var hours:Int
+
+	var hours: Int
 	{
-		return Int((duration / 3600).truncatingRemainder(dividingBy: 60))
+		Int((duration / 3600).truncatingRemainder(dividingBy: 60))
 	}
-	
-	var days:Int
+
+	var days: Int
 	{
-		return Int((duration / 86400).truncatingRemainder(dividingBy: 60))
+		Int((duration / 86400).truncatingRemainder(dividingBy: 60))
 	}
-	
-	var time:String
+
+	var time: String
 	{
-		return "\(days)d \(hours)h \(minutes)m \(seconds)s \(milliseconds)ms"
+		"\(days)d \(hours)h \(minutes)m \(seconds)s \(milliseconds)ms"
 	}
-	
-	var timeShort:String
+
+	var timeShort: String
 	{
 		if days > 0
 		{
@@ -73,8 +73,8 @@ public class ExecutionTimer
 		}
 		return "\(seconds)s"
 	}
-	
-	var timeLong:String
+
+	var timeLong: String
 	{
 		if days > 0
 		{
@@ -90,18 +90,18 @@ public class ExecutionTimer
 		}
 		return "\(seconds) seconds"
 	}
-	
-	
+
+
 	// ------------------------------------------------------------------------------------------------
 	// Methods
 	// ------------------------------------------------------------------------------------------------
-	
+
 	public func start()
 	{
 		_date = Date()
 	}
-	
-	
+
+
 	public func stop()
 	{
 		duration = _date.timeIntervalSinceNow * -1

@@ -15,7 +15,7 @@ extension DispatchTimeInterval
 	///
 	/// Returns the time in seconds using the TimeInterval type.
 	///
-	public var timeInterval:TimeInterval
+	public var timeInterval: TimeInterval
 	{
 		switch self
 		{

@@ -23,14 +23,14 @@ extension UIView
 		UIGraphicsEndImageContext()
 		return image
 	}
-	
-	
+
+
 	///
 	/// Provides a reference to the view's parent view controller.
 	///
-	public var parentViewController:UIViewController?
+	public var parentViewController: UIViewController?
 	{
-		var parentResponder:UIResponder? = self
+		var parentResponder: UIResponder? = self
 		while parentResponder != nil
 		{
 			parentResponder = parentResponder!.next
@@ -41,8 +41,8 @@ extension UIView
 		}
 		return nil
 	}
-	
-	
+
+
 	///
 	/// Removes all sub views from the view.
 	///

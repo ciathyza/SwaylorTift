@@ -12,31 +12,31 @@ import Foundation
 
 extension NSObject
 {
-	public class func swizzleMethods(_ origSelector:Selector, withSelector:Selector, forClass:AnyClass)
+	public class func swizzleMethods(_ origSelector: Selector, withSelector: Selector, forClass: AnyClass)
 	{
 		let originalMethod = class_getInstanceMethod(forClass, origSelector)
 		let swizzledMethod = class_getInstanceMethod(forClass, withSelector)
-		
+
 		method_exchangeImplementations(originalMethod!, swizzledMethod!)
 	}
-	
-	
-	public func swizzleMethods(_ origSelector:Selector, withSelector:Selector)
+
+
+	public func swizzleMethods(_ origSelector: Selector, withSelector: Selector)
 	{
-		let aClass:AnyClass! = object_getClass(self)
+		let aClass: AnyClass! = object_getClass(self)
 		NSObject.swizzleMethods(origSelector, withSelector: withSelector, forClass: aClass)
 	}
-	
-	
+
+
 	///
 	/// Creates a new object of self with its concrete type maintained.
 	///
 	public func createNew() -> Self
 	{
-		return type(of: self).init()
+		type(of: self).init()
 	}
-	
-	
+
+
 	///
 	/// Dumps a property-value list of the object.
 	///
@@ -51,29 +51,29 @@ extension NSObject
 		}
 		return "\(result)]"
 	}
-	
-	
+
+
 	///
 	/// Dumps a formatted property-value table of the object.
 	///
-	public class func dump(_ obj:Any) -> String
+	public class func dump(_ obj: Any) -> String
 	{
 		let table = TabularText(2, true, String.Space, String.Space, String.Empty, 120, ["Property", "Value"])
 		let mirror = Mirror(reflecting: obj)
 		mirror.children.forEach
 		{
 			child in
-				if let label = child.label
-				{
-					table.add([label, "\(child.value)"])
-				}
+			if let label = child.label
+			{
+				table.add([label, "\(child.value)"])
+			}
 		}
 		return table.toString()
 	}
-	
-	
+
+
 	public func dumpTable() -> String
 	{
-		return NSObject.dump(self)
+		NSObject.dump(self)
 	}
 }

@@ -15,8 +15,8 @@ extension UIDevice
 	///
 	/// Checks whether the app is currently running on simulator or not.
 	///
-	public static var isSimulator:Bool
+	public static var isSimulator: Bool
 	{
-		return ProcessInfo.processInfo.environment["SIMULATOR_DEVICE_NAME"] != nil
+		ProcessInfo.processInfo.environment["SIMULATOR_DEVICE_NAME"] != nil
 	}
 }

@@ -21,8 +21,8 @@ extension TimeInterval
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Properties
 	// ----------------------------------------------------------------------------------------------------
-	
-	public var timeFormatted:String
+
+	public var timeFormatted: String
 	{
 		if (seconds < 60)
 		{
@@ -34,135 +34,135 @@ extension TimeInterval
 		}
 		return String(format: "%dm %02ds", minutes, seconds)
 	}
-	
-	public var minutes:Int
+
+	public var minutes: Int
 	{
-		return Int((self / 60).truncatingRemainder(dividingBy: 60))
+		Int((self / 60).truncatingRemainder(dividingBy: 60))
 	}
-	
-	public var seconds:Int
+
+	public var seconds: Int
 	{
-		return Int(truncatingRemainder(dividingBy: 60))
+		Int(truncatingRemainder(dividingBy: 60))
 	}
-	
-	public var milliseconds:Int
+
+	public var milliseconds: Int
 	{
-		return Int((self * 1000).truncatingRemainder(dividingBy: 1000))
+		Int((self * 1000).truncatingRemainder(dividingBy: 1000))
 	}
-	
-	internal static var secondsPerDay:Double
+
+	internal static var secondsPerDay: Double
 	{
-		return 24 * 60 * 60
+		24 * 60 * 60
 	}
-	internal static var secondsPerHour:Double
+	internal static var secondsPerHour: Double
 	{
-		return 60 * 60
+		60 * 60
 	}
-	internal static var secondsPerMinute:Double
+	internal static var secondsPerMinute: Double
 	{
-		return 60
+		60
 	}
-	internal static var millisecondsPerSecond:Double
+	internal static var millisecondsPerSecond: Double
 	{
-		return 1_000
+		1_000
 	}
-	internal static var microsecondsPerSecond:Double
+	internal static var microsecondsPerSecond: Double
 	{
-		return 1_000 * 1_000
+		1_000 * 1_000
 	}
-	internal static var nanosecondsPerSecond:Double
+	internal static var nanosecondsPerSecond: Double
 	{
-		return 1_000 * 1_000 * 1_000
+		1_000 * 1_000 * 1_000
 	}
-	
+
 	/// - Returns: The `TimeInterval` in days.
-	public var days:Double
+	public var days: Double
 	{
-		return self / TimeInterval.secondsPerDay
+		self / TimeInterval.secondsPerDay
 	}
-	
+
 	/// - Returns: The `TimeInterval` in hours.
-	public var hours:Double
+	public var hours: Double
 	{
-		return self / TimeInterval.secondsPerHour
+		self / TimeInterval.secondsPerHour
 	}
-	
+
 	/// - Returns: The `TimeInterval` in minutes.
-	public var mins:Double
+	public var mins: Double
 	{
-		return self / TimeInterval.secondsPerMinute
+		self / TimeInterval.secondsPerMinute
 	}
-	
+
 	/// - Returns: The `TimeInterval` in seconds.
-	public var secs:Double
+	public var secs: Double
 	{
-		return self
+		self
 	}
-	
+
 	/// - Returns: The `TimeInterval` in milliseconds.
-	public var ms:Double
+	public var ms: Double
 	{
-		return self * TimeInterval.millisecondsPerSecond
+		self * TimeInterval.millisecondsPerSecond
 	}
-	
+
 	/// - Returns: The `TimeInterval` in microseconds.
-	public var microseconds:Double
+	public var microseconds: Double
 	{
-		return self * TimeInterval.microsecondsPerSecond
+		self * TimeInterval.microsecondsPerSecond
 	}
-	
+
 	/// - Returns: The `TimeInterval` in nanoseconds.
-	public var nanoseconds:Double
+	public var nanoseconds: Double
 	{
-		return self * TimeInterval.nanosecondsPerSecond
+		self * TimeInterval.nanosecondsPerSecond
 	}
-	
+
 	// MARK: - Type Methods
 	/// - Returns: The time in days using the `TimeInterval` type.
-	public static func days(_ value:Double) -> TimeInterval
+	public static func days(_ value: Double) -> TimeInterval
 	{
-		return value * secondsPerDay
+		value * secondsPerDay
 	}
-	
-	
+
+
 	/// - Returns: The time in hours using the `TimeInterval` type.
-	public static func hours(_ value:Double) -> TimeInterval
+	public static func hours(_ value: Double) -> TimeInterval
 	{
-		return value * secondsPerHour
+		value * secondsPerHour
 	}
-	
-	
+
+
 	/// - Returns: The time in minutes using the `TimeInterval` type.
-	public static func minutes(_ value:Double) -> TimeInterval
+	public static func minutes(_ value: Double) -> TimeInterval
 	{
-		return value * secondsPerMinute
+		value * secondsPerMinute
 	}
-	
-	
+
+
 	/// - Returns: The time in seconds using the `TimeInterval` type.
-	public static func seconds(_ value:Double) -> TimeInterval
+	public static func seconds(_ value: Double) -> TimeInterval
 	{
-		return value
+		value
 	}
-	
-	
+
+
 	/// - Returns: The time in milliseconds using the `TimeInterval` type.
-	public static func milliseconds(_ value:Double) -> TimeInterval
+	public static func milliseconds(_ value: Double) -> TimeInterval
 	{
-		return value / millisecondsPerSecond
+		value / millisecondsPerSecond
 	}
-	
-	
+
+
 	/// - Returns: The time in microseconds using the `TimeInterval` type.
-	public static func microseconds(_ value:Double) -> TimeInterval
+	public static func microseconds(_ value: Double) -> TimeInterval
 	{
-		return value / microsecondsPerSecond
+		value / microsecondsPerSecond
 	}
-	
-	
+
+
 	/// - Returns: The time in nanoseconds using the `TimeInterval` type.
-	public static func nanoseconds(_ value:Double) -> TimeInterval
+	public static func nanoseconds(_ value: Double) -> TimeInterval
 	{
-		return value / nanosecondsPerSecond
+		value / nanosecondsPerSecond
 	}
 }
