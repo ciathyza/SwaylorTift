@@ -34,7 +34,7 @@ public struct LogMode: OptionSet
 	}
 
 
-	public static let None     = LogMode(rawValue: 0)
+	public static let None     = LogMode([])
 	public static let FileName = LogMode(rawValue: 1 << 0)
 	public static let FuncName = LogMode(rawValue: 1 << 1)
 	public static let Line     = LogMode(rawValue: 1 << 2)
@@ -55,12 +55,13 @@ public struct Log
 	public static let DELIMITER_STRONG = "===================================================================================================="
 	public static let DEFAULT_CATEGORY = String.Empty
 
-	public static var mode: LogMode = .None
-	public static var enabled       = true
-	public static var logLevel      = LogLevel.System
-	public static var prompt        = "> "
-	public static var separator     = String.Space
-	public static var terminator    = String.LF
+	public static var mode: LogMode      = .None
+	public static var enabled            = true
+	public static var useAsyncFileAccess = true
+	public static var logLevel           = LogLevel.System
+	public static var prompt             = "> "
+	public static var separator          = String.Space
+	public static var terminator         = String.LF
 
 	public static var logFilePath: String?
 	public static var logFile: LogFile?
@@ -228,11 +229,25 @@ public struct Log
 			if Log.logFile == nil
 			{
 				Log.logFile = LogFile(logFilePath)
-				_ = Log.logFile!.delete()
+				if Log.useAsyncFileAccess
+				{
+					DispatchQueue.main.async { _ = Log.logFile!.delete() }
+				}
+				else
+				{
+					_ = Log.logFile!.delete()
+				}
 			}
 			if let logFile = Log.logFile
 			{
-				_ = logFile.append(content: "\(line)\(Log.terminator)")
+				if Log.useAsyncFileAccess
+				{
+					DispatchQueue.main.async { _ = logFile.append(content: "\(line)\(Log.terminator)") }
+				}
+				else
+				{
+					_ = logFile.append(content: "\(line)\(Log.terminator)")
+				}
 			}
 		}
 	}
@@ -354,16 +369,32 @@ extension Log
 // ------------------------------------------------------------------------------------------------
 public extension Log
 {
-	/// Use custom UIColor desription
+	/// Use custom UIColor description
 	static func enableVisualColorLog()
 	{
-		UIColor.swizzleDescription()
+		if #available(macCatalyst 13.0, *)
+		{
+			UIColor.swizzleDescription()
+		}
+		else
+		{
+			// Fallback on earlier versions
+			Swift.print("[ERROR] Operation not supported: UIColor.swizzleDescription", terminator: Log.terminator)
+		}
 	}
 
 
-	/// Restore default UIColor desription
+	/// Restore default UIColor description
 	static func disableVisualColorLog()
 	{
-		UIColor.undoDesriptionSwizzling()
+		if #available(macCatalyst 13.0, *)
+		{
+			UIColor.undoDesriptionSwizzling()
+		}
+		else
+		{
+			// Fallback on earlier versions
+			Swift.print("[ERROR] Operation not supported: UIColor.undoDesriptionSwizzling", terminator: Log.terminator)
+		}
 	}
 }

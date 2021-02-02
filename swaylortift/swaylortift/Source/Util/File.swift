@@ -23,11 +23,19 @@ public class File
 	{
 		if let fileHandle = FileHandle(forWritingAtPath: filePath)
 		{
-			fileHandle.seekToEndOfFile()
-			if let data = content.data(using: encoding)
+			if #available(macCatalyst 13.0, *)
 			{
-				fileHandle.write(data)
-				fileHandle.closeFile()
+				fileHandle.seekToEndOfFile()
+				if let data = content.data(using: encoding)
+				{
+					fileHandle.write(data)
+					fileHandle.closeFile()
+				}
+			}
+			else
+			{
+				// Fallback on earlier versions
+				Swift.print("[ERROR] Operation not supported: fileHandle.write", terminator: Log.terminator)
 			}
 		}
 		else
@@ -53,7 +61,15 @@ public class File
 	{
 		do
 		{
-			try FileManager.default.removeItem(atPath: filePath)
+			if #available(macCatalyst 13.0, *)
+			{
+				try FileManager.default.removeItem(atPath: filePath)
+			}
+			else
+			{
+				// Fallback on earlier versions
+				Swift.print("[ERROR] Operation not supported: FileManager.default.removeItem", terminator: Log.terminator)
+			}
 		}
 		catch
 		{

@@ -69,26 +69,17 @@ open class HashID_<T>: HashIDGenerator where T: UnsignedInteger
 		let _seps = HashIDOptions.SEPARATORS
 
 		self.minHashLength = minHashLength
-		self.guards = [Char]()
-		self.salt = salt.unicodeScalars.map()
-		{
-			numericCast($0.value)
-		}
-		self.seps = _seps.unicodeScalars.map()
-		{
-			numericCast($0.value)
-		}
-		self.alphabet = unique(_alphabet.unicodeScalars.map()
-							   {
-								   numericCast($0.value)
-							   })
+		guards = [Char]()
+		self.salt = salt.unicodeScalars.map { numericCast($0.value) }
+		seps = _seps.unicodeScalars.map { numericCast($0.value) }
+		self.alphabet = unique(_alphabet.unicodeScalars.map { numericCast($0.value) })
 
-		self.seps = intersection(self.alphabet, self.seps)
-		self.alphabet = difference(self.alphabet, self.seps)
-		shuffle(&self.seps, self.salt)
+		seps = intersection(self.alphabet, seps)
+		self.alphabet = difference(self.alphabet, seps)
+		shuffle(&seps, self.salt)
 
 
-		let sepsLength = self.seps.count
+		let sepsLength = seps.count
 		let alphabetLength = self.alphabet.count
 
 		if (0 == sepsLength) || (Double(alphabetLength) / Double(sepsLength) > HashIDOptions.SEP_DIV)
@@ -104,13 +95,13 @@ open class HashID_<T>: HashIDGenerator where T: UnsignedInteger
 			{
 				let diff = self.alphabet.startIndex.advanced(by: newSepsLength - sepsLength)
 				let range = 0 ..< diff
-				self.seps += self.alphabet[range]
+				seps += self.alphabet[range]
 				self.alphabet.removeSubrange(range)
 			}
 			else
 			{
-				let pos = self.seps.startIndex.advanced(by: newSepsLength)
-				self.seps.removeSubrange(pos + 1 ..< self.seps.count)
+				let pos = seps.startIndex.advanced(by: newSepsLength)
+				seps.removeSubrange(pos + 1 ..< seps.count)
 			}
 		}
 
@@ -119,16 +110,16 @@ open class HashID_<T>: HashIDGenerator where T: UnsignedInteger
 		let guard_i = Int(ceil(Double(alphabetLength) / HashIDOptions.GUARD_DIV))
 		if alphabetLength < 3
 		{
-			let seps_guard = self.seps.startIndex.advanced(by: guard_i)
+			let seps_guard = seps.startIndex.advanced(by: guard_i)
 			let range = 0 ..< seps_guard
-			self.guards += self.seps[range]
-			self.seps.removeSubrange(range)
+			guards += seps[range]
+			seps.removeSubrange(range)
 		}
 		else
 		{
 			let alphabet_guard = self.alphabet.startIndex.advanced(by: guard_i)
 			let range = 0 ..< alphabet_guard
-			self.guards += self.alphabet[range]
+			guards += self.alphabet[range]
 			self.alphabet.removeSubrange(range)
 		}
 	}
@@ -153,18 +144,18 @@ open class HashID_<T>: HashIDGenerator where T: UnsignedInteger
 	open func encode(_ values: [Int64]) -> String?
 	{
 		encode(values.map
-		{
-		   Int($0)
-		})
+			   {
+				   Int($0)
+			   })
 	}
 
 
 	open func encode(_ values: [UInt32]) -> String?
 	{
 		encode(values.map
-		{
-		   Int($0)
-		})
+			   {
+				   Int($0)
+			   })
 	}
 
 
@@ -204,7 +195,7 @@ open class HashID_<T>: HashIDGenerator where T: UnsignedInteger
 	open func decode(_ value: String!) -> [Int]
 	{
 		let trimmed = value.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-		let hash: [Char] = trimmed.unicodeScalars.map()
+		let hash: [Char] = trimmed.unicodeScalars.map
 		{
 			numericCast($0.value)
 		}
@@ -214,7 +205,7 @@ open class HashID_<T>: HashIDGenerator where T: UnsignedInteger
 
 	open func decode(_ value: [Char]) -> [Int]
 	{
-		self._decode(value)
+		_decode(value)
 	}
 
 
@@ -263,25 +254,25 @@ open class HashID_<T>: HashIDGenerator where T: UnsignedInteger
 			if index + 1 < numbers.count
 			{
 				let number = value % (numericCast(hash[lastIndex]) + index)
-				let seps_index = number % self.seps.count
-				hash.append(self.seps[seps_index])
+				let seps_index = number % seps.count
+				hash.append(seps[seps_index])
 			}
 
 			lsalt.replaceSubrange(lsaltARange, with: alphabet)
 		}
 
-		let minLength: Int = numericCast(self.minHashLength)
+		let minLength: Int = numericCast(minHashLength)
 
 		if hash.count < minLength
 		{
-			let guard_index = (numbers_hash_int + numericCast(hash[0])) % self.guards.count
-			let guard_t = self.guards[guard_index]
+			let guard_index = (numbers_hash_int + numericCast(hash[0])) % guards.count
+			let guard_t = guards[guard_index]
 			hash.insert(guard_t, at: 0)
 
 			if hash.count < minLength
 			{
-				let guard_index = (numbers_hash_int + numericCast(hash[2])) % self.guards.count
-				let guard_t = self.guards[guard_index]
+				let guard_index = (numbers_hash_int + numericCast(hash[2])) % guards.count
+				let guard_t = guards[guard_index]
 				hash.append(guard_t)
 			}
 		}
@@ -316,7 +307,7 @@ open class HashID_<T>: HashIDGenerator where T: UnsignedInteger
 
 		let hashes = hash.split(maxSplits: hash.count, omittingEmptySubsequences: false)
 		{
-			contains(self.guards, $0)
+			contains(guards, $0)
 		}
 		let hashesCount = hashes.count, i = ((hashesCount == 2) || (hashesCount == 3)) ? 1 : 0
 		let hash = hashes[i]

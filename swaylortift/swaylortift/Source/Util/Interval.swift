@@ -40,23 +40,31 @@ public class Interval
 	public func start(interval: TimeInterval = 1.0, repeats: Int = 0, callback: (() -> Void)? = nil)
 	{
 		_counter = 0
-		_timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true)
+		if #available(macCatalyst 13.0, *)
 		{
-			t in
-				if let closure = callback
-				{
-					closure()
-				}
-				if repeats < 1
-				{
-					return
-				}
-				self._counter += 1
-				if (self._counter < repeats)
-				{
-					return
-				}
-				self.stop()
+			_timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true)
+			{
+				t in
+					if let closure = callback
+					{
+						closure()
+					}
+					if repeats < 1
+					{
+						return
+					}
+					self._counter += 1
+					if (self._counter < repeats)
+					{
+						return
+					}
+					self.stop()
+			}
+		}
+		else
+		{
+			// Fallback on earlier versions
+			Swift.print("[ERROR] Operation not supported: Timer.scheduledTimer", terminator: Log.terminator)
 		}
 	}
 
