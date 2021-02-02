@@ -1,5 +1,5 @@
 PODS:
-  - SwaylorTift (1.0.12)
+  - SwaylorTift (1.0.14)
 
 DEPENDENCIES:
   - SwaylorTift (from `SwaylorTift.podspec`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: SwaylorTift.podspec
 
 SPEC CHECKSUMS:
-  SwaylorTift: 0981e6edfc9eebb6dc92adbdcfc53effd16673e9
+  SwaylorTift: 244cb59312135cec920c44ccf9ed0842ea6b6fda
 
 PODFILE CHECKSUM: 1ffe6a6987fb55e080ccb5f35056de2ba8639cd4
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.1
