@@ -362,7 +362,7 @@ open class HashID_<T>: HashIDGenerator where T: UnsignedInteger
 			{
 				value, token in
 				var tokenValue = 0.0
-				if let token_index = alphabet.index(of: token as Char)
+				if let token_index = alphabet.firstIndex(of: token as Char)
 				{
 					hashLength = hashLength - 1
 					let mul = pow(Double(alphabetLength), Double(hashLength))
@@ -394,7 +394,7 @@ open class HashID_<T>: HashIDGenerator where T: UnsignedInteger
 
 internal func contains<T: Collection>(_ a: T, _ e: T.Iterator.Element) -> Bool where T.Iterator.Element: Equatable
 {
-	(a.index(of: e) != nil)
+	(a.firstIndex(of: e) != nil)
 }
 
 

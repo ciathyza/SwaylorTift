@@ -24,6 +24,9 @@ extension DispatchTimeInterval
 			case .microseconds(let microseconds): return Double(microseconds) / Timespan.microsecondsPerSecond
 			case .nanoseconds(let nanoseconds): return Double(nanoseconds) / Timespan.nanosecondsPerSecond
 			case .never: return TimeInterval.infinity
+			@unknown default:
+				Swift.print("[ERROR] Unknown default: \(self)", terminator: Log.terminator)
+				return 0
 		}
 	}
 }

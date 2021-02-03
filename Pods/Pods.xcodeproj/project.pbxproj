@@ -564,42 +564,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0C6DFA48F1B33FF6036D40CE2603D7DF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C992FC8FFA207D82CF2401446A513D64 /* SwaylorTift.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/SwaylorTift/SwaylorTift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwaylorTift/SwaylorTift-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwaylorTift/SwaylorTift.modulemap";
-				PRODUCT_MODULE_NAME = SwaylorTift;
-				PRODUCT_NAME = SwaylorTift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		253293F21980FFCDD9C41B7AB300AE7F /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 962881BDC54030708C8FE338280C6EA0 /* Pods-SwaylorTift.release.xcconfig */;
@@ -716,7 +680,7 @@
 			};
 			name = Debug;
 		};
-		6F2D7045D8211F7E97977AC1F15643E6 /* Release */ = {
+		6F7F4D4C631CF9C6B41DD443A9133C15 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CCCF18DA840D9AABC48FA2B018709827 /* SwaylorTift.release.xcconfig */;
 			buildSettings = {
@@ -745,7 +709,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -919,6 +883,42 @@
 			};
 			name = Debug;
 		};
+		FBE9CA74F3536D205038F92F5159A230 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C992FC8FFA207D82CF2401446A513D64 /* SwaylorTift.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/SwaylorTift/SwaylorTift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwaylorTift/SwaylorTift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwaylorTift/SwaylorTift.modulemap";
+				PRODUCT_MODULE_NAME = SwaylorTift;
+				PRODUCT_NAME = SwaylorTift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -952,8 +952,8 @@
 		9C79B8B99795164AA195235618FDCFF2 /* Build configuration list for PBXNativeTarget "SwaylorTift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0C6DFA48F1B33FF6036D40CE2603D7DF /* Debug */,
-				6F2D7045D8211F7E97977AC1F15643E6 /* Release */,
+				FBE9CA74F3536D205038F92F5159A230 /* Debug */,
+				6F7F4D4C631CF9C6B41DD443A9133C15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

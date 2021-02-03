@@ -22,6 +22,13 @@ class SwaylorTiftTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+		Log.trace("Tracing...")
+		Log.debug("Debugging...")
+		Log.info("Info...")
+		Log.notice("Notice...")
+		Log.warning("Warning...")
+		Log.error("Error...")
+		Log.fatal("Fatal...")
     }
 
     func testPerformanceExample() {

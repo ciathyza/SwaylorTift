@@ -168,7 +168,7 @@ public struct SortedArray<Element: Comparable>
 	///   - newElement: The new element to be inserted into the array.
 	public mutating func insert(newElement: Element)
 	{
-		let insertIndex = internalArray.index
+		let insertIndex = internalArray.firstIndex
 		{
 			$0 >= newElement
 		} ?? internalArray.endIndex

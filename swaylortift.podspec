@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 	spec.name                  = "SwaylorTift"
-	spec.version               = "1.0.14"
+	spec.version               = "1.0.15"
 	spec.license               = { :type => "MIT", :file => "LICENSE" }
 	spec.homepage              = "https://github.com/ciathyza/SwaylorTift"
 	spec.authors               = { "Ciathyza" => "ciathyza@ciathyza.com" }
@@ -10,6 +10,6 @@ Pod::Spec.new do |spec|
 	spec.framework             = "UIKit"
 	spec.source_files          = "SwaylorTift/SwaylorTift/Source/**/*.{swift,h,m}"
 	spec.ios.deployment_target = "10.0"
-	spec.swift_version         = "4.2"
+	spec.swift_version         = "5.0"
 	spec.requires_arc          = true
 end
