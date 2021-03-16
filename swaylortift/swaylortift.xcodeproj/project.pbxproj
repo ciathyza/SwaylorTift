@@ -45,6 +45,7 @@
 		5BA64DC822F9693D006735E9 /* FrequencyTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA64DA722F9693D006735E9 /* FrequencyTable.swift */; };
 		5BA64DC922F9693D006735E9 /* SortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA64DA822F9693D006735E9 /* SortedArray.swift */; };
 		78369F9FA39DCA1705557BB9 /* SetOnceFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78369785328F923C6B7F1DB8 /* SetOnceFlag.swift */; };
+		9253441826007D17003FA95E /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253441726007D17003FA95E /* FileManager.swift */; };
 		EC530B71C26F69DC7FDDBC22 /* Pods_SwaylorTift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BEE1635C80D29160D8BEC6 /* Pods_SwaylorTift.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		67BEE1635C80D29160D8BEC6 /* Pods_SwaylorTift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwaylorTift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78369785328F923C6B7F1DB8 /* SetOnceFlag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetOnceFlag.swift; sourceTree = "<group>"; };
 		833D65D8551BC8142ECF32E7 /* Pods-SwaylorTift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwaylorTift.debug.xcconfig"; path = "Target Support Files/Pods-SwaylorTift/Pods-SwaylorTift.debug.xcconfig"; sourceTree = "<group>"; };
+		9253441726007D17003FA95E /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FileManager.swift; path = ../../../../swaylortift/swaylortift/Source/Extensions/FileManager.swift; sourceTree = "<group>"; };
 		E41BA6CF95F677E881353D0C /* Pods-SwaylorTiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwaylorTiftTests.release.xcconfig"; path = "Target Support Files/Pods-SwaylorTiftTests/Pods-SwaylorTiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		E4802AFDD5D11750CD14771D /* Pods-SwaylorTift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwaylorTift.release.xcconfig"; path = "Target Support Files/Pods-SwaylorTift/Pods-SwaylorTift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,6 +238,7 @@
 				5BA64D9D22F9693C006735E9 /* UIDevice.swift */,
 				5BA64D9622F9693C006735E9 /* UInt.swift */,
 				5BA64D9422F9693C006735E9 /* UIView.swift */,
+				9253441726007D17003FA95E /* FileManager.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				5BA64DB422F9693D006735E9 /* File.swift in Sources */,
 				5BA64DB222F9693D006735E9 /* JSON.swift in Sources */,
 				5BA64DC222F9693D006735E9 /* Double.swift in Sources */,
+				9253441826007D17003FA95E /* FileManager.swift in Sources */,
 				5BA64DC822F9693D006735E9 /* FrequencyTable.swift in Sources */,
 				5BA64DAB22F9693D006735E9 /* Delay.swift in Sources */,
 				5BA64DB822F9693D006735E9 /* UInt.swift in Sources */,
