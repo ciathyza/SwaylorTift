@@ -260,7 +260,7 @@ public struct Log
 
 		Swift.print(line, terminator: Log.terminator)
 
-		// check if 100MB  free memory is available
+		// check if minFreeDiskSpaceRequired condition is met
 		guard FileManager.default.availableDiskSpaceInMB() > Log.minFreeDiskSpaceRequired else
 		{
 			if Log.enabled && Log.fileLoggingEnabled
@@ -272,7 +272,7 @@ public struct Log
 			}
 			return
 		}
-		
+
 
 		log(line)
 	}
