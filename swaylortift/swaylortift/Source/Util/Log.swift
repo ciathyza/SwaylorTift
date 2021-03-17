@@ -272,8 +272,7 @@ public struct Log
 			}
 			return
 		}
-
-
+		
 		log(line)
 	}
 
