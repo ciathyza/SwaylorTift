@@ -69,6 +69,9 @@ public struct Log
 	public static var logFilePath: String?
 	public static var logFile: LogFile?
 
+	// This is to disable file logging when minFreeDiskSpaceRequired condition is not met
+	private static var fileLoggingEnabled = true
+
 
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Logging API
@@ -218,27 +221,8 @@ public struct Log
 	// MARK: - Private Methods
 	// ----------------------------------------------------------------------------------------------------
 
-	private static func output(logLevel: LogLevel, items: [Any], category: String, file: String? = nil, function: String? = nil, line: Int? = nil)
+	private static func log(_ line: String)
 	{
-		let prefix = modePrefix(Date(), file: file, function: function, line: line)
-		let itemsString = items.map { "\($0)" }.joined(separator: Log.separator)
-		let cat = category.isEmpty ? category : category + String.Space
-		let line = "\(Log.prompt)\(Log.getLogLevelName(logLevel))\(cat)\(prefix)\(itemsString)"
-
-		Swift.print(line, terminator: Log.terminator)
-
-		// check if 100MB  free memory is available
-		guard FileManager.default.availableDiskSpaceInMB() > Log.minFreeDiskSpaceRequired else
-		{
-			if Log.enabled
-			{
-				Swift.print("\(SWAYLOR_TIFT_NAME) [ERROR] : Unable to write logs.Disk memory less than 100MB.", terminator: Log.terminator)
-				// Disable logs if Logs are enabled and Disk free space is less than the `minFreeDiskSpaceRequired`
-				Log.enabled = false
-			}
-			return
-		}
-
 		if let logFilePath = Log.logFilePath
 		{
 			if Log.logFile == nil
@@ -265,6 +249,32 @@ public struct Log
 				}
 			}
 		}
+	}
+
+	private static func output(logLevel: LogLevel, items: [Any], category: String, file: String? = nil, function: String? = nil, line: Int? = nil)
+	{
+		let prefix = modePrefix(Date(), file: file, function: function, line: line)
+		let itemsString = items.map { "\($0)" }.joined(separator: Log.separator)
+		let cat = category.isEmpty ? category : category + String.Space
+		let line = "\(Log.prompt)\(Log.getLogLevelName(logLevel))\(cat)\(prefix)\(itemsString)"
+
+		Swift.print(line, terminator: Log.terminator)
+
+		// check if 100MB  free memory is available
+		guard FileManager.default.availableDiskSpaceInMB() > Log.minFreeDiskSpaceRequired else
+		{
+			if Log.enabled && Log.fileLoggingEnabled
+			{
+				let error = "\(SWAYLOR_TIFT_NAME) [ERROR] : Unable to write logs.Disk memory less than \(Log.minFreeDiskSpaceRequired) MB."
+				Swift.print(error, terminator: Log.terminator)
+				log(error)
+				Log.fileLoggingEnabled = false
+			}
+			return
+		}
+		
+
+		log(line)
 	}
 
 
