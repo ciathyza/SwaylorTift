@@ -66,6 +66,8 @@ public struct Log
 	public static var logFilePath: String?
 	public static var logFile: LogFile?
 
+	private static let serialQueue = DispatchQueue(label: "swaylortift.queue.serial", qos: .default)
+
 
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Logging API
@@ -229,25 +231,11 @@ public struct Log
 			if Log.logFile == nil
 			{
 				Log.logFile = LogFile(logFilePath)
-				if Log.useAsyncFileAccess
-				{
-					DispatchQueue.main.async { _ = Log.logFile!.delete() }
-				}
-				else
-				{
-					_ = Log.logFile!.delete()
-				}
+				serialQueue.async { _ = Log.logFile!.delete() }
 			}
 			if let logFile = Log.logFile
 			{
-				if Log.useAsyncFileAccess
-				{
-					DispatchQueue.main.async { _ = logFile.append(content: "\(line)\(Log.terminator)") }
-				}
-				else
-				{
-					_ = logFile.append(content: "\(line)\(Log.terminator)")
-				}
+				serialQueue.async { _ = logFile.append(content: "\(line)\(Log.terminator)") }
 			}
 		}
 	}
