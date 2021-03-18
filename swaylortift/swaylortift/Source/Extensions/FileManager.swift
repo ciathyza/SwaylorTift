@@ -13,19 +13,18 @@ import Foundation
 extension FileManager
 {
 	///
-	/// Returns free disk space in MB.
+	/// Returns free disk space as file size.
 	///
-	public func availableDiskSpaceInMB() -> Int64
+	public var availableDiskSpace: Filesize
 	{
-		let freeSizeResult = FileManager.default.systemFreeSizeBytes()
+		let freeSizeResult = FileManager.default.systemFreeSizeBytes
 		switch freeSizeResult
 		{
 			case .failure(let error):
 				Log.error(category: SWAYLOR_TIFT_NAME, error)
-				return 0
-			case .success(let freeSize):
-				let freeSpaceInMB = freeSize / (1024 * 1024)
-				return freeSpaceInMB
+				return Filesize(byte: -1)
+			case .success(let filesize):
+				return filesize
 		}
 	}
 
@@ -33,7 +32,7 @@ extension FileManager
 	///
 	/// Returns free disk space in Bytes.
 	///
-	public func systemFreeSizeBytes() -> Result<Int64, Error>
+	public var systemFreeSizeBytes: Result<Filesize, Error>
 	{
 		do
 		{
@@ -47,11 +46,11 @@ extension FileManager
 				return .failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "attributesOfFileSystem API not available on this system."]))
 			}
 
-			guard let freeSize = attrs?[.systemFreeSize] as? Int64 else
+			guard let bytes = attrs?[.systemFreeSize] as? Int64 else
 			{
 				return .failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Can't retrieve system free size."]))
 			}
-			return .success(freeSize)
+			return .success(Filesize(byte: bytes))
 		}
 		catch
 		{

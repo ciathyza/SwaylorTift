@@ -22,3 +22,23 @@ extension UInt
 		return T(value)
 	}
 }
+
+
+extension UInt64
+{
+	public var kilobyte: Double { Double(self) / 1_024 }
+	public var megabyte: Double { kilobyte / 1_024 }
+	public var gigabyte: Double { megabyte / 1_024 }
+
+	public var readableUnit: String
+	{
+		switch self
+		{
+			case 0 ..< 1_024:                            return "\(self) byte"
+			case 1_024 ..< (1_024 * 1_024):              return "\(String(format: "%.2f", kilobyte)) kb"
+			case 1_024 ..< (1_024 * 1_024 * 1_024):      return "\(String(format: "%.2f", megabyte)) mb"
+			case (1_024 * 1_024 * 1_024) ... UInt64.max: return "\(String(format: "%.2f", gigabyte)) gb"
+			default:                                     return "\(self) byte"
+		}
+	}
+}

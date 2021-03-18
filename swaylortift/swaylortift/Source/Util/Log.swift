@@ -55,22 +55,47 @@ public struct Log
 	public static let DELIMITER_STRONG = "===================================================================================================="
 	public static let DEFAULT_CATEGORY = String.Empty
 
-	public static var mode: LogMode      = .None
-	public static var enabled            = true
-	public static var useAsyncFileAccess = true
-	public static var logLevel           = LogLevel.System
-	public static var prompt             = "> "
-	public static var separator          = String.Space
-	public static var terminator         = String.LF
+	// Log mode used for log statements. See LogMode. By default uses no code location or time stamp.
+	public static var mode: LogMode = .None
 
+	// Enables or disables the log functionality
+	public static var enabled = true
+
+	// Default minimum log filter level. Everything below this log level is omitted from logging.
+	public static var logLevel = LogLevel.System
+
+	// Prompt string used to designate the beginning of a new log statement line.
+	public static var prompt = "> "
+
+	// Separator string used between different components in a log staement,
+	public static var separator = String.Space
+
+	// EOL terminator used for log statements in screen and file logs.
+	public static var terminator = String.LF
+
+	// If set to false will not log to screen output. Can be used to only log to log file.
+	public static var screenLoggingEnabled = true
+
+	// Path to the log file being written on disk.
 	public static var logFilePath: String?
+
+	// The maximum size a log file may reach. Default is 100 mb. Set to 0 for unlimited (not recommended).
+	public static var logFileMaxSize = Filesize(megabyte: 100.0)
+
+	// Reference to log file, if enabled
 	public static var logFile: LogFile?
 
-	private static let serialQueue = DispatchQueue(label: "swaylortift.queue.serial", qos: .default)
-	// Toggles log-writing to file. Will also be disabled if not enough free space available on disk.
-	public static var fileLoggingEnabled = true
-	// Minimum free disk space required (in MB) to write to log file.
-	public static var fileLoggingMinFreeDiskSpaceRequired: Int64  = 100
+	// Toggles log-writing to file. Disabled by default. Will also be disabled if not enough free space available on disk.
+	public static var fileLoggingEnabled = false
+
+	// If set to true disables the logger completely if file log max size/disk near full was reached. Default: false
+	public static var disableLogOnFileLogFull = false
+
+	// Minimum free disk space required (in MB) to write to log file. Default is 2gb.
+	public static var fileLoggingMinFreeDiskSpaceRequired = Filesize(gigabyte: 2.0)
+
+	private static let _serialQueue = DispatchQueue(label: "swaylortift.queue.serial", qos: .default)
+
 
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Logging API
@@ -220,45 +245,57 @@ public struct Log
 	// MARK: - Private Methods
 	// ----------------------------------------------------------------------------------------------------
 
-	private static func log(_ line: String)
-	{
-		if let logFilePath = Log.logFilePath
-		{
-			if Log.logFile == nil
-			{
-				Log.logFile = LogFile(logFilePath)
-				serialQueue.async { _ = Log.logFile!.delete() }
-			}
-			if let logFile = Log.logFile
-			{
-				serialQueue.async { _ = logFile.append(content: "\(line)\(Log.terminator)") }
-			}
-		}
-	}
-
 	private static func output(logLevel: LogLevel, items: [Any], category: String, file: String? = nil, function: String? = nil, line: Int? = nil)
 	{
 		let prefix = modePrefix(Date(), file: file, function: function, line: line)
 		let itemsString = items.map { "\($0)" }.joined(separator: Log.separator)
 		let cat = category.isEmpty ? category : category + String.Space
-		let line = "\(Log.prompt)\(Log.getLogLevelName(logLevel))\(cat)\(prefix)\(itemsString)"
+		let statement = "\(Log.prompt)\(Log.getLogLevelName(logLevel))\(cat)\(prefix)\(itemsString)"
 
-		Swift.print(line, terminator: Log.terminator)
+		if Log.screenLoggingEnabled { Swift.print(statement, terminator: Log.terminator) }
+		if Log.fileLoggingEnabled { logToFile(statement) }
+	}
 
-		// Check if minFreeDiskSpaceRequired condition is met
-		if Log.fileLoggingEnabled
+
+	private static func logToFile(_ statement: String)
+	{
+		/* Check if minFreeDiskSpaceRequired condition is met */
+		guard FileManager.default.availableDiskSpace.byte > Log.fileLoggingMinFreeDiskSpaceRequired.byte else
 		{
-			guard FileManager.default.availableDiskSpaceInMB() > Log.fileLoggingMinFreeDiskSpaceRequired else
-			{
-				Log.fileLoggingEnabled = false
-				let errorLine = "\(Log.prompt)\(Log.getLogLevelName(LogLevel.Error))\(prefix)Unable to write logs. Disk memory less than \(Log.fileLoggingMinFreeDiskSpaceRequired) MB."
-				Swift.print(errorLine, terminator: Log.terminator)
-				log(errorLine)
-				return
-			}
+			output(logLevel: .Error, items: ["Unable to write logs. Disk space is less than \(Log.fileLoggingMinFreeDiskSpaceRequired.readableUnit). File-logging disabled!"], category: DEFAULT_CATEGORY)
+			Log.fileLoggingEnabled = false
+			if Log.disableLogOnFileLogFull { Log.enabled = false }
+			return
 		}
 
-		log(line)
+		if let logFilePath = Log.logFilePath
+		{
+			/* Create new log file, if not yet done. */
+			if Log.logFile == nil
+			{
+				Log.logFile = LogFile(logFilePath)
+				_serialQueue.async { _ = Log.logFile!.delete() }
+			}
+
+			if let logFile = Log.logFile
+			{
+				_serialQueue.async
+				{
+					/* Check if max. log file size was reached. */
+					guard logFile.fileSize.byte < 1 || logFile.fileSize.byte < Log.logFileMaxSize.byte else
+					{
+						output(logLevel: .Warning, items: ["Log file max size reached (\(Log.logFileMaxSize.readableUnit)). File-logging disabled!"], category: DEFAULT_CATEGORY)
+						Log.fileLoggingEnabled = false
+						if Log.disableLogOnFileLogFull { Log.enabled = false }
+						return
+					}
+
+					let success = logFile.append(content: "\(statement)\(Log.terminator)")
+					/* If last log writing was not successful, disable file logging! */
+					if !success { Log.fileLoggingEnabled = false }
+				}
+			}
+		}
 	}
 
 

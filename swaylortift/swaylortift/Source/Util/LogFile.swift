@@ -21,6 +21,28 @@ public class LogFile
 
 	public private(set) var filePath = String.Empty
 
+
+	// ----------------------------------------------------------------------------------------------------
+	// MARK: - Accessors
+	// ----------------------------------------------------------------------------------------------------
+
+	// Current log file size
+	public var fileSize: Filesize
+	{
+		do
+		{
+			let attr = try FileManager.default.attributesOfItem(atPath: filePath)
+			let fileSizeInBytes = attr[FileAttributeKey.size] as! Int64
+			return Filesize(byte: fileSizeInBytes)
+		}
+		catch
+		{
+			Swift.print("[ERROR] Operation unsuccessful: FileManager.default.attributesOfItem", terminator: Log.terminator)
+		}
+		return Filesize(byte: -1)
+	}
+
+
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Init
 	// ----------------------------------------------------------------------------------------------------
