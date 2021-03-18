@@ -66,11 +66,11 @@ public struct Log
 	public static var logFilePath: String?
 	public static var logFile: LogFile?
 
+	private static let serialQueue = DispatchQueue(label: "swaylortift.queue.serial", qos: .default)
 	// Toggles log-writing to file. Will also be disabled if not enough free space available on disk.
 	public static var fileLoggingEnabled = true
 	// Minimum free disk space required (in MB) to write to log file.
 	public static var fileLoggingMinFreeDiskSpaceRequired: Int64  = 100
-
 
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Logging API
@@ -227,25 +227,11 @@ public struct Log
 			if Log.logFile == nil
 			{
 				Log.logFile = LogFile(logFilePath)
-				if Log.useAsyncFileAccess
-				{
-					DispatchQueue.main.async { _ = Log.logFile!.delete() }
-				}
-				else
-				{
-					_ = Log.logFile!.delete()
-				}
+				serialQueue.async { _ = Log.logFile!.delete() }
 			}
 			if let logFile = Log.logFile
 			{
-				if Log.useAsyncFileAccess
-				{
-					DispatchQueue.main.async { _ = logFile.append(content: "\(line)\(Log.terminator)") }
-				}
-				else
-				{
-					_ = logFile.append(content: "\(line)\(Log.terminator)")
-				}
+				serialQueue.async { _ = logFile.append(content: "\(line)\(Log.terminator)") }
 			}
 		}
 	}
