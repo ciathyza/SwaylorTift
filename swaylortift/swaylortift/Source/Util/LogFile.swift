@@ -20,7 +20,6 @@ public class LogFile
 	// ----------------------------------------------------------------------------------------------------
 
 	public private(set) var filePath = String.Empty
-	private var fileHandle: FileHandle?
 
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Init
@@ -32,7 +31,6 @@ public class LogFile
 	public init(_ filePath: String)
 	{
 		self.filePath = filePath
-		self.fileHandle = FileHandle(forWritingAtPath: filePath)
 	}
 
 
@@ -45,7 +43,7 @@ public class LogFile
 	///
 	public func append(content: String, encoding: String.Encoding = .utf16) -> Bool
 	{
-		if let fileHandle = fileHandle
+		if let fileHandle = FileHandle(forWritingAtPath: filePath)
 		{
 			if #available(macCatalyst 13.0, *)
 			{
