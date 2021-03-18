@@ -63,14 +63,13 @@ public struct Log
 	public static var separator          = String.Space
 	public static var terminator         = String.LF
 
-	// Minimum free disk space required (in MB) to write to log file.
-	public static var minFreeDiskSpaceRequired: Int64  = 100
-
 	public static var logFilePath: String?
 	public static var logFile: LogFile?
 
-	// This is to disable file logging when minFreeDiskSpaceRequired condition is not met
-	private static var fileLoggingEnabled = true
+	// Toggles log-writing to file. Will also be disabled if not enough free space available on disk.
+	public static var fileLoggingEnabled = true
+	// Minimum free disk space required (in MB) to write to log file.
+	public static var fileLoggingMinFreeDiskSpaceRequired: Int64  = 100
 
 
 	// ----------------------------------------------------------------------------------------------------
@@ -260,19 +259,19 @@ public struct Log
 
 		Swift.print(line, terminator: Log.terminator)
 
-		// check if minFreeDiskSpaceRequired condition is met
-		guard FileManager.default.availableDiskSpaceInMB() > Log.minFreeDiskSpaceRequired else
+		// Check if minFreeDiskSpaceRequired condition is met
+		if Log.fileLoggingEnabled
 		{
-			if Log.enabled && Log.fileLoggingEnabled
+			guard FileManager.default.availableDiskSpaceInMB() > Log.fileLoggingMinFreeDiskSpaceRequired else
 			{
-				let error = "\(SWAYLOR_TIFT_NAME) [ERROR] : Unable to write logs.Disk memory less than \(Log.minFreeDiskSpaceRequired) MB."
-				Swift.print(error, terminator: Log.terminator)
-				log(error)
 				Log.fileLoggingEnabled = false
+				let errorLine = "\(Log.prompt)\(Log.getLogLevelName(LogLevel.Error))\(prefix)Unable to write logs. Disk memory less than \(Log.fileLoggingMinFreeDiskSpaceRequired) MB."
+				Swift.print(errorLine, terminator: Log.terminator)
+				log(errorLine)
+				return
 			}
-			return
 		}
-		
+
 		log(line)
 	}
 

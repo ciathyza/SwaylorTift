@@ -228,6 +228,7 @@
 				5BA64D9B22F9693C006735E9 /* DispatchTimeInterval.swift */,
 				5BA64DA022F9693C006735E9 /* Double.swift */,
 				5BA64D9A22F9693C006735E9 /* Encodable.swift */,
+				9253441726007D17003FA95E /* FileManager.swift */,
 				5BA64D9C22F9693C006735E9 /* Int.swift */,
 				5BA64D9922F9693C006735E9 /* NSObject.swift */,
 				5BA64DA322F9693C006735E9 /* Optional.swift */,
@@ -238,7 +239,6 @@
 				5BA64D9D22F9693C006735E9 /* UIDevice.swift */,
 				5BA64D9622F9693C006735E9 /* UInt.swift */,
 				5BA64D9422F9693C006735E9 /* UIView.swift */,
-				9253441726007D17003FA95E /* FileManager.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

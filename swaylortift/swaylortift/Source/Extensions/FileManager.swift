@@ -9,6 +9,7 @@
 
 import Foundation
 
+
 extension FileManager
 {
 	///
@@ -19,14 +20,15 @@ extension FileManager
 		let freeSizeResult = FileManager.default.systemFreeSizeBytes()
 		switch freeSizeResult
 		{
-		case .failure(let error):
-			Log.error(category: SWAYLOR_TIFT_NAME, error)
-			return 0
-		case .success(let freeSize):
-			let freeSpaceInMB = freeSize / (1024*1024)
-			return freeSpaceInMB
+			case .failure(let error):
+				Log.error(category: SWAYLOR_TIFT_NAME, error)
+				return 0
+			case .success(let freeSize):
+				let freeSpaceInMB = freeSize / (1024 * 1024)
+				return freeSpaceInMB
 		}
 	}
+
 
 	///
 	/// Returns free disk space in Bytes.
@@ -35,10 +37,19 @@ extension FileManager
 	{
 		do
 		{
-			let attrs = try attributesOfFileSystem(forPath: NSHomeDirectory())
-			guard let freeSize = attrs[.systemFreeSize] as? Int64 else
+			var attrs: [FileAttributeKey : Any]?
+			if #available(macCatalyst 13.0, *)
 			{
-				return .failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Can't retrieve system free size"]))
+				attrs = try attributesOfFileSystem(forPath: NSHomeDirectory())
+			}
+			else
+			{
+				return .failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "attributesOfFileSystem API not available on this system."]))
+			}
+
+			guard let freeSize = attrs?[.systemFreeSize] as? Int64 else
+			{
+				return .failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Can't retrieve system free size."]))
 			}
 			return .success(freeSize)
 		}
