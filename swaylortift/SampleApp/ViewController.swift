@@ -8,14 +8,19 @@
 
 import UIKit
 import SwaylorTift
-class ViewController: UIViewController {
 
-	override func viewDidLoad() {
+
+class ViewController: UIViewController
+{
+	override func viewDidLoad()
+	{
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 		setDebugLogging()
 	}
-	 func setDebugLogging()
+
+
+	func setDebugLogging()
 	{
 		let currentLogfile = "current-launch.txt"
 		let oldLogfile = "old-launch.txt"
@@ -42,6 +47,7 @@ class ViewController: UIViewController {
 				}
 			}
 		}
+
 		documentsPath.append("/\(currentLogfile)")
 		FileManager.default.createFile(atPath: documentsPath, contents: nil, attributes: nil)
 		Log.logFilePath = documentsPath
@@ -56,9 +62,5 @@ class ViewController: UIViewController {
 		Log.debug("Locale: \(String(describing: Locale.current.languageCode))")
 		Log.debug("Available disk space: \(FileManager.default.availableDiskSpace.megabyte) MB")
 		Log.debug("FileLoggingMinFreeDiskSpaceRequired: \(Log.fileLoggingMinFreeDiskSpaceRequired.megabyte) MB")
-
 	}
-
-
 }
-

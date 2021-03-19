@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 	spec.name                  = "SwaylorTift"
-	spec.version               = "1.0.17"
+	spec.version               = "1.0.18"
 	spec.license               = { :type => "MIT", :file => "LICENSE" }
 	spec.homepage              = "https://github.com/ciathyza/SwaylorTift"
 	spec.authors               = { "Ciathyza" => "ciathyza@ciathyza.com" }

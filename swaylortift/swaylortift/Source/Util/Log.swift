@@ -241,6 +241,22 @@ public struct Log
 	}
 
 
+	public static func getLogLevelName(_ logLevel: LogLevel) -> String
+	{
+		switch (logLevel)
+		{
+			case LogLevel.System:  return " [SYSTEM]  "
+			case LogLevel.Trace:   return " [TRACE]   "
+			case LogLevel.Debug:   return " [DEBUG]   "
+			case LogLevel.Info:    return " [INFO]    "
+			case LogLevel.Notice:  return " [NOTICE]  "
+			case LogLevel.Warning: return " [WARNING] "
+			case LogLevel.Error:   return " [ERROR]   "
+			case LogLevel.Fatal:   return " [FATAL]   "
+		}
+	}
+
+
 	// ----------------------------------------------------------------------------------------------------
 	// MARK: - Private Methods
 	// ----------------------------------------------------------------------------------------------------
@@ -260,12 +276,14 @@ public struct Log
 	private static func logToFile(_ statement: String)
 	{
 		var logStatement = statement
+
 		/* Check if minFreeDiskSpaceRequired condition is met */
 		if FileManager.default.availableDiskSpace.byte < Log.fileLoggingMinFreeDiskSpaceRequired.byte
 		{
-			let errorLine = "> [Error] Unable to write logs. Disk space is less than \(Log.fileLoggingMinFreeDiskSpaceRequired.readableUnit). File-logging disabled!"
+			let prefix = modePrefix(Date())
+			let errorLine = "\(Log.prompt)\(Log.getLogLevelName(.System))\(prefix)Unable to write logs. Disk space is less than \(Log.fileLoggingMinFreeDiskSpaceRequired.readableUnit). File-logging disabled!"
 			Swift.print(errorLine, terminator: Log.terminator)
-			logStatement.append("\n \(errorLine)")
+			logStatement.append("\(Log.terminator)\(errorLine)")
 			Log.fileLoggingEnabled = false
 			if Log.disableLogOnFileLogFull { Log.enabled = false }
 		}
@@ -283,13 +301,18 @@ public struct Log
 			{
 				_serialQueue.async
 				{
-					/* Check if max. log file size was reached. */
-					guard logFile.fileSize.byte < 1 || logFile.fileSize.byte < Log.logFileMaxSize.byte else
+					if !Log.fileLoggingEnabled { return }
+
+					/* Check if max. log file size was reached. Do check only if max size not disabled (0). Subtracting a 10th
+					   of the max size as leeway for safety. */
+					if Log.logFileMaxSize.byte > 0 && logFile.fileSize.byte >= (Log.logFileMaxSize.byte - (Log.logFileMaxSize.byte / 10))
 					{
-						output(logLevel: .Warning, items: ["Log file max size reached (\(Log.logFileMaxSize.readableUnit)). File-logging disabled!"], category: DEFAULT_CATEGORY)
+						let prefix = modePrefix(Date())
+						let errorLine = "\(Log.prompt)\(Log.getLogLevelName(.System))\(prefix)Log file max size reached (\(Log.logFileMaxSize.readableUnit)). File-logging disabled!"
+						Swift.print(errorLine, terminator: Log.terminator)
+						logStatement.append("\(Log.terminator)\(errorLine)")
 						Log.fileLoggingEnabled = false
 						if Log.disableLogOnFileLogFull { Log.enabled = false }
-						return
 					}
 
 					let success = logFile.append(content: "\(logStatement)\(Log.terminator)")
@@ -297,22 +320,6 @@ public struct Log
 					if !success { Log.fileLoggingEnabled = false }
 				}
 			}
-		}
-	}
-
-
-	private static func getLogLevelName(_ logLevel: LogLevel) -> String
-	{
-		switch (logLevel)
-		{
-			case LogLevel.System:  return " [SYSTEM]  "
-			case LogLevel.Trace:   return " [TRACE]   "
-			case LogLevel.Debug:   return " [DEBUG]   "
-			case LogLevel.Info:    return " [INFO]    "
-			case LogLevel.Notice:  return " [NOTICE]  "
-			case LogLevel.Warning: return " [WARNING] "
-			case LogLevel.Error:   return " [ERROR]   "
-			case LogLevel.Fatal:   return " [FATAL]   "
 		}
 	}
 }
@@ -371,7 +378,7 @@ struct ColorLog
 extension Log
 {
 	/// Create an output string for the currect log Mode
-	static func modePrefix(_ date: Date, file: String?, function: String?, line: Int?) -> String
+	static func modePrefix(_ date: Date, file: String? = nil, function: String? = nil, line: Int? = nil) -> String
 	{
 		var result: String = String.Empty
 		if mode.contains(.Date)

@@ -29,6 +29,7 @@ public class LogFile
 	// Current log file size
 	public var fileSize: Filesize
 	{
+		if !FileManager.default.fileExists(atPath: filePath) { return Filesize(byte: -1) }
 		do
 		{
 			let attr = try FileManager.default.attributesOfItem(atPath: filePath)
@@ -37,7 +38,7 @@ public class LogFile
 		}
 		catch
 		{
-			Swift.print("[ERROR] Operation unsuccessful: FileManager.default.attributesOfItem", terminator: Log.terminator)
+			Swift.print("\(Log.prompt)\(Log.getLogLevelName(.Error))Operation unsuccessful: FileManager.default.attributesOfItem", terminator: Log.terminator)
 		}
 		return Filesize(byte: -1)
 	}
@@ -79,7 +80,7 @@ public class LogFile
 			else
 			{
 				// Fallback on earlier versions
-				Swift.print("[ERROR] Operation not supported: fileHandle.write", terminator: Log.terminator)
+				Swift.print("\(Log.prompt)\(Log.getLogLevelName(.Error))Operation not supported: fileHandle.write", terminator: Log.terminator)
 
 			}
 		}
@@ -91,7 +92,7 @@ public class LogFile
 			}
 			catch
 			{
-				Log.error(category: SWAYLOR_TIFT_NAME, "Failed to write to \(filePath).")
+				Swift.print("\(Log.prompt)\(Log.getLogLevelName(.Error))Failed to write to \(filePath).", terminator: Log.terminator)
 				return false
 			}
 		}
@@ -113,7 +114,7 @@ public class LogFile
 			else
 			{
 				// Fallback on earlier versions
-				Swift.print("[ERROR] Operation not supported: FileManager.default.removeItem", terminator: Log.terminator)
+				Swift.print("\(Log.prompt)\(Log.getLogLevelName(.Error))Operation not supported: FileManager.default.removeItem", terminator: Log.terminator)
 			}
 		}
 		catch
