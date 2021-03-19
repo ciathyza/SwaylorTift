@@ -262,7 +262,9 @@ public struct Log
 		/* Check if minFreeDiskSpaceRequired condition is met */
 		guard FileManager.default.availableDiskSpace.byte > Log.fileLoggingMinFreeDiskSpaceRequired.byte else
 		{
-			output(logLevel: .Error, items: ["Unable to write logs. Disk space is less than \(Log.fileLoggingMinFreeDiskSpaceRequired.readableUnit). File-logging disabled!"], category: DEFAULT_CATEGORY)
+			//output(logLevel: .Error, items: ["Unable to write logs. Disk space is less than \(Log.fileLoggingMinFreeDiskSpaceRequired.readableUnit). File-logging disabled!"], category: DEFAULT_CATEGORY)
+			let errorLine = "Unable to write logs. Disk space is less than \(Log.fileLoggingMinFreeDiskSpaceRequired.readableUnit). File-logging disabled!"
+			Swift.print(errorLine, terminator: Log.terminator)
 			Log.fileLoggingEnabled = false
 			if Log.disableLogOnFileLogFull { Log.enabled = false }
 			return
