@@ -259,15 +259,15 @@ public struct Log
 
 	private static func logToFile(_ statement: String)
 	{
+		var logStatement = statement
 		/* Check if minFreeDiskSpaceRequired condition is met */
-		guard FileManager.default.availableDiskSpace.byte > Log.fileLoggingMinFreeDiskSpaceRequired.byte else
+		if FileManager.default.availableDiskSpace.byte < Log.fileLoggingMinFreeDiskSpaceRequired.byte
 		{
-			//output(logLevel: .Error, items: ["Unable to write logs. Disk space is less than \(Log.fileLoggingMinFreeDiskSpaceRequired.readableUnit). File-logging disabled!"], category: DEFAULT_CATEGORY)
-			let errorLine = "Unable to write logs. Disk space is less than \(Log.fileLoggingMinFreeDiskSpaceRequired.readableUnit). File-logging disabled!"
+			let errorLine = "> [Error] Unable to write logs. Disk space is less than \(Log.fileLoggingMinFreeDiskSpaceRequired.readableUnit). File-logging disabled!"
 			Swift.print(errorLine, terminator: Log.terminator)
+			logStatement.append("\n \(errorLine)")
 			Log.fileLoggingEnabled = false
 			if Log.disableLogOnFileLogFull { Log.enabled = false }
-			return
 		}
 
 		if let logFilePath = Log.logFilePath
@@ -292,7 +292,7 @@ public struct Log
 						return
 					}
 
-					let success = logFile.append(content: "\(statement)\(Log.terminator)")
+					let success = logFile.append(content: "\(logStatement)\(Log.terminator)")
 					/* If last log writing was not successful, disable file logging! */
 					if !success { Log.fileLoggingEnabled = false }
 				}
