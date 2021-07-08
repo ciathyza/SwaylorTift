@@ -15,6 +15,7 @@ extension FileManager
 	///
 	/// Returns free disk space as file size.
 	///
+    @available(*, deprecated, message: "Use UIDevice.current.freeDiskSpaceInBytes instead.")
 	public var availableDiskSpace: Filesize
 	{
 		let freeSizeResult = FileManager.default.systemFreeSizeBytes
@@ -32,6 +33,7 @@ extension FileManager
 	///
 	/// Returns free disk space in Bytes.
 	///
+    @available(*, deprecated, message: "Use UIDevice.current.freeDiskSpaceInBytes instead.")
 	public var systemFreeSizeBytes: Result<Filesize, Error>
 	{
 		do

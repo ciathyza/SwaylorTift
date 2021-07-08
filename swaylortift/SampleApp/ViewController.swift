@@ -60,7 +60,7 @@ class ViewController: UIViewController
 		Log.mode = [.FileName, .FuncName, .Line, .Date]
 		Log.debug("Doc Dir Logfile Path ...\(documentsPath)")
 		Log.debug("Locale: \(String(describing: Locale.current.languageCode))")
-		Log.debug("Available disk space: \(FileManager.default.availableDiskSpace.megabyte) MB")
+		Log.debug("Available disk space: \(UIDevice.current.freeDiskSpaceInGB)")
 		Log.debug("FileLoggingMinFreeDiskSpaceRequired: \(Log.fileLoggingMinFreeDiskSpaceRequired.megabyte) MB")
 	}
 }

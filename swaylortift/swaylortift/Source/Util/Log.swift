@@ -278,7 +278,7 @@ public struct Log
 		var logStatement = statement
 
 		/* Check if minFreeDiskSpaceRequired condition is met */
-		if FileManager.default.availableDiskSpace.byte < Log.fileLoggingMinFreeDiskSpaceRequired.byte
+		if UIDevice.current.freeDiskSpaceInBytes < Log.fileLoggingMinFreeDiskSpaceRequired.byte
 		{
 			let prefix = modePrefix(Date())
 			let errorLine = "\(Log.prompt)\(Log.getLogLevelName(.System))\(prefix)Unable to write logs. Disk space is less than \(Log.fileLoggingMinFreeDiskSpaceRequired.readableUnit). File-logging disabled!"
